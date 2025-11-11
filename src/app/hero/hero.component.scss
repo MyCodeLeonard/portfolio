@@ -1,0 +1,154 @@
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/assets/img/hero-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    > h2{
+        font-size: 40px;
+        font-family: 'firaCode', sans-serif;
+        color: #D9D9D9;
+        font-weight: 400;
+    }
+
+    > h1{
+        font-size: 128px;
+        font-family: 'karla', sans-serif;
+        color: #D9D9D9;
+        font-weight: 700;
+    }
+}
+
+.section-links{
+    display: flex;
+    gap: 48px;
+
+    > a{
+        text-decoration: none;
+        color: white;
+        border: solid 1px;
+        border-radius: 100px;
+        padding: 12px;
+        font-family: 'karla', sans-serif;
+        font-size: 18px;
+    }
+}
+
+.left-object{
+    position: absolute;
+    left: 96px;
+    // bottom: 83px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    > span{
+        border: solid 1px;
+        border-radius: 100px;
+        padding: 14px 10px;
+        color: #3DCFB6;
+
+        > img{
+            animation: arrow-down-animation 1.75s ease-in-out infinite;
+        }
+    }
+
+    > div{
+        height: 240px;
+        width: 0px;
+        color: #3DCFB6;
+        border: solid 1px;
+    } 
+}
+
+.right-object{
+    position: absolute;
+    right: 96px;
+    // bottom: 83px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    > a{
+        text-decoration: none;
+        color: white;
+        position: relative;
+        height: 32px;
+        width: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &:first-of-type{
+            rotate: calc(-90deg);
+            transform:translateX(20px) ;
+            text-wrap: nowrap;
+            align-content: center;
+
+            &:hover{
+                color: #3DCFB6;
+            }
+        }
+
+        &:nth-of-type(2){
+            background-image: url('./../../assets/img/github-icon.png');
+            
+            &:hover{
+                background-image: url('./../../assets/img/github-hover-icon.png');
+
+                &::after{
+                    content: '•';
+                    position: absolute;
+                    right: -14px;
+                    color: #6ad7bf;
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &:nth-of-type(3){
+            background-image: url('./../../assets/img/linkedIn-icon.png');
+            
+            &:hover{
+                background-image: url('./../../assets/img/linkedIn-hover-icon.png');
+                
+                &::after{
+                    content: '•';
+                    position: absolute;
+                    right: -14px;
+                    color: #6ad7bf;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    >div{
+        width: 0px;
+        height: 186px;
+        border: solid 1px;
+        color: white;
+    }
+}
+
+@keyframes arrow-down-animation{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(12px);
+    }
+    
+    100%{
+        transform: translateY(0px);
+    }
+}

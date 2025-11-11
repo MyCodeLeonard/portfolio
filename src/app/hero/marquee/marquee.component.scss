@@ -1,0 +1,42 @@
+section{
+    position: absolute;
+    background-color: rgb(0,0,0,0.5);
+    width: 100%;
+    overflow: hidden;
+    rotate: calc(-3deg);
+    left: 0;
+    bottom: 40px;
+    padding: 12px 0;
+    backdrop-filter: blur(2.5px);
+    
+    >div {
+        display: flex;
+        >div{
+            display: flex;
+            align-items: center;
+            gap: 56px;
+            animation: marquee 5s linear infinite;
+            color: #3DCFB6;
+            text-wrap: nowrap;
+            will-change: transform;
+    
+            >span{
+                font-family: 'karla', sans-serif;
+                font-weight: 400;
+                font-size: 32px;
+            }
+        }
+    }
+    
+
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
