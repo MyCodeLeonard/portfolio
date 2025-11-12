@@ -36,7 +36,16 @@ section {
         padding: 12px;
         font-family: 'karla', sans-serif;
         font-size: 18px;
+
+        &:hover{
+            animation: darken-color 1.25s forwards;
+
+            >span{
+
+            }
+        }
     }
+
 }
 
 .left-object{
@@ -150,5 +159,11 @@ section {
     
     100%{
         transform: translateY(0px);
+    }
+}
+
+@keyframes darken-color{
+    100%{
+        color: #3DCFB6;
     }
 }
