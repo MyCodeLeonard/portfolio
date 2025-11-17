@@ -1,0 +1,68 @@
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 104px;
+
+    >div > .logo-name-a{
+        background-image: url('/assets/img/logo_name.png');
+        height: 48px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &:hover{
+            background-image: url('/assets/img/logo_name-hover.png');
+        }
+    }
+
+    >span{
+        font-family: 'firaCode', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: #3DCFB6;
+    }
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    >span{
+        font-family: 'karla', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: white;
+    }
+}
+
+.right-div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    >a{
+        font-family: 'karla', sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        position: relative;
+        
+
+        &:hover{
+            color: #3DCFB6;
+            transition: color .2s linear;
+
+            &::before{
+                content: '•';
+                position: absolute;
+                color: #3DCFB6;
+                font-size: 28px;
+                top: -48%;
+                left: -16px;
+            }
+        }
+    }
+}

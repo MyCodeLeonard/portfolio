@@ -2,8 +2,8 @@
     <h2>Frontend Developer</h2>
     <h1>Leonard Fritzmann</h1>
     <div class="section-links">
-        <a href=""><span>Check my work</span></a>
-        <a href=""><span>Contact me</span></a>
+        <app-button [content] = 'checkMyWork' [contentId]="'portfolio'"></app-button>
+        <app-button [content] = 'contactMe' [contentId]="'contact'"></app-button>
     </div>
 
     <div class="left-object">
@@ -11,9 +11,9 @@
         <div></div>
     </div>
     <div class="right-object">
-        <a href="mailto:">E-mail</a>
-        <a target="_blank" href="https://github.com/mycodeleonard"></a> <!-- <img src="assets/img/github-icon.png" alt=""> -->
-        <a target="_blank" href="https://de.linkedin.com/in/leonard-fritzmann-302269352"></a> <!-- <img src="assets/img/linkedIn-icon.png" alt=""> -->
+        <a href="mailto:contact@leonard-fritzmann.com">contact&#64;leonard-fritzmann.com</a>
+        <a target="_blank" href="https://github.com/mycodeleonard"></a>
+        <a target="_blank" href="https://de.linkedin.com/in/leonard-fritzmann-302269352"></a>
         <div></div>
     </div>
     <app-marquee></app-marquee>

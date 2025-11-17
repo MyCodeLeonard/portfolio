@@ -28,31 +28,23 @@ section {
     display: flex;
     gap: 48px;
 
-    > a{
-        text-decoration: none;
-        color: white;
-        border: solid 1px;
-        border-radius: 100px;
-        padding: 12px;
-        font-family: 'karla', sans-serif;
-        font-size: 18px;
-
-        &:hover{
-            animation: darken-color 1.25s forwards;
-
-            >span{
-
-            }
-        }
+    >app-button:nth-of-type(1){
+        // width: 124px;
+        width: 166px;
     }
 
+    >app-button:nth-of-type(2){
+        // width: 95px;
+        width: 137px;
+    }
 }
 
 .left-object{
     position: absolute;
     left: 96px;
     // bottom: 83px;
-    bottom: 0;
+    // bottom: 0;
+    top: 596px;;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +73,8 @@ section {
     position: absolute;
     right: 96px;
     // bottom: 83px;
-    bottom: 0;
+    // bottom: 0;
+    top: 602px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,9 +91,11 @@ section {
 
         &:first-of-type{
             rotate: calc(-90deg);
-            transform:translateX(20px) ;
+            // transform:translateX(20px);
+            transform:translate3d(10px, -2px, 0);
             text-wrap: nowrap;
             align-content: center;
+            font-family: 'karla', sans-serif;
 
             &:hover{
                 color: #3DCFB6;

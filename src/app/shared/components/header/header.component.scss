@@ -26,6 +26,20 @@ section{
                 font-family: 'firaCode', sans-serif;
                 color: #3DCFB680;
                 cursor: pointer;
+
+                &.selected{
+                    background-color: #3DCFB6 !important;
+                    color: white !important;
+                    cursor: context-menu !important;
+                    margin: -1px;
+                }
+            }
+
+            &:hover {
+                border-color: white;
+                >div{
+                    color: #3DCFB6;
+                }
             }
         }
 
@@ -37,7 +51,7 @@ section{
             font-size: 20px;
             position: relative;
 
-            &:hover{
+            &:hover, &.active{
                 color: #3DCFB6;
                 &::after{
                     content: '•';
@@ -48,7 +62,6 @@ section{
                     font-size: 28px;
                 }
             }
-            
         }
     }
 
@@ -65,10 +78,4 @@ section{
             background-image: url('./../../../../assets/img/logo_name-hover.png');
         }
     }
-}
-
-.selected-button{
-    background-color: #3DCFB6 !important;
-    color: white !important;
-    cursor: context-menu !important;
 }

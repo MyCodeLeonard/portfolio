@@ -1,0 +1,44 @@
+a{
+    text-decoration: none;
+    color: white;
+    border: solid 1px;
+    border-radius: 100px;
+    padding: 16px 20px;
+    font-family: 'karla', sans-serif;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    cursor: pointer;
+
+    >div{
+        display: flex;
+        white-space: nowrap;
+        animation: marquee-animation 2s linear infinite;
+        animation-play-state: paused;
+
+        >span{
+            display: flex;
+            padding-right: 200px;
+        }
+    }
+    
+    &:hover{
+        transition: color 1s linear;
+        color: #3DCFB6;
+
+        >div{
+            animation-play-state: running;
+        }
+    }
+}
+
+@keyframes marquee-animation {
+    0% { 
+        transform: translateX(0); 
+    }
+
+    100% { 
+        transform: translateX(-100%);
+    }
+}

@@ -1,13 +1,13 @@
 <section>
     <div>
         <div>
-            <div class="selected-button">EN</div>
-            <div>DE</div>
+            <div [class.selected]="select == 'EN'" (click)="setSelect('EN')" >EN</div>
+            <div [class.selected]="select == 'DE'" (click)="setSelect('DE')" >DE</div>
         </div>
         
-        <a href="#">About me</a>
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
+        <a href="#aboutMe" [class.active]="activeLink == 1" (click)="setActive(1)">About me</a>
+        <a href="#skills" [class.active]="activeLink == 2" (click)="setActive(2)">Skills</a>
+        <a href="#portfolio" [class.active]="activeLink == 3" (click)="setActive(3)">Projects</a>
     </div>
 
     <a href=""></a>
