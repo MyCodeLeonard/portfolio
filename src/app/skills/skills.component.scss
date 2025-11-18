@@ -1,0 +1,72 @@
+section{
+    margin: 128px 104px;
+    display: flex;
+    flex-direction: column;
+
+    >span{
+        font-family: 'karla', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        color: #3DCFB6;
+    }
+    
+    >div{
+        display: flex;
+        margin-top: 20px;
+        gap: 100px;
+        align-items: flex-start;
+
+        >div:nth-of-type(1){
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+
+            background-color: #3DCFB61A;
+            border-radius: 30px;
+            border: 1px solid #3DCFB6;
+            padding: 32px;
+            
+            >h1{
+                font-family: 'firaCode', sans-serif;
+                font-weight: 700;
+                font-size: 64px;
+                color: #3DCFB6;
+            }
+
+            >span{
+                font-family: 'karla', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                color: white;
+                text-align: justify;
+            }
+
+            >h2{
+                font-family: 'karla', sans-serif;
+                color: white;
+                margin-top: 8px;
+                
+                >span{
+                    color: #3DCFB6;
+                }
+            }
+
+            >span:nth-of-type(2){
+                font-size: 16px;
+                width: 32ch;
+                margin-bottom: 16px;
+            }
+
+            > app-button{
+                width: 116px;
+            }
+        }
+
+        >div:nth-of-type(2){
+            display: flex;
+            flex-wrap: wrap;
+            gap: 64px 100px;
+        }
+    }
+}
