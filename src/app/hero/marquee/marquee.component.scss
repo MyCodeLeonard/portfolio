@@ -4,8 +4,9 @@ section{
     width: 100%;
     overflow: hidden;
     rotate: calc(-3deg);
-    left: 0;
-    top: 812px;
+    transform-origin: left bottom;
+    left: 2px;
+    top: 850px;
     padding: 12px 0;
     backdrop-filter: blur(2.5px);
     

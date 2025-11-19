@@ -1,0 +1,108 @@
+section{
+    margin: 128px 104px;
+    display: flex;
+    flex-direction: column;
+
+    >h2{
+        font-family: "karla", sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        color: #3DCFB6;
+    }
+
+    >h1{
+        font-family: "firaCode", sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        color: #3DCFB6;
+        padding: 16px 0;
+    }
+
+    >span{
+        font-family: "karla", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: white;
+        text-align: justify;
+        width: 40ch;
+        padding: 16px 0;
+    }
+
+    >div{
+        padding: 16px 0;
+        // width: 70%;
+        width: 68%;
+
+        >hr{
+            border-color: #3DCFB6
+        }
+
+        >div{
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 32px;
+            position: relative;
+            cursor: pointer;
+
+            h3{
+                position: relative;
+                font-family: "karla", sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                color: white;
+            }
+
+            >div:nth-of-type(1){
+                font-family: "karla", sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                color: white;
+                display: flex;
+                gap: 4px;
+
+                >span{
+                    color: #3DCFB6;
+                }
+            }
+
+            >div:nth-of-type(2){
+                width: 300px;
+                // height: 200px;
+                height: 188px;
+                background-image: url('/assets/img/background-profile-picture.png');
+                position: absolute;
+                right: -380px;
+                border-radius: 16px;
+                visibility: hidden;
+
+                >img{
+                    width: 100%;
+                    // height: 100%;
+                    position: absolute;
+                    // top: -20px;
+                    left: -20px;
+                }
+            }
+
+            &:hover{
+                background-color: #3dcfb633;
+
+                >h3::after{
+                    content: "";
+                    background-image: url(/assets/img/arrow_outward.png);
+                    height: 12px;
+                    width: 12px;
+                    display: block;
+                    background-size: cover;
+                    position: absolute;
+                    right: -26px;
+                    top: 6px;
+                }
+
+                >div:nth-of-type(2){
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
