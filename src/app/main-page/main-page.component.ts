@@ -7,11 +7,12 @@ import { SkillsComponent } from "../skills/skills.component";
 import { PortfolioComponent } from "../portfolio/portfolio.component";
 import { OverlayComponent } from "../portfolio/overlay/overlay.component";
 import { ReferencesComponent } from "../references/references.component";
+import { ContactMeComponent } from "../contact-me/contact-me.component";
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [HeroComponent, HeaderComponent, AboutMeComponent, FooterComponent, SkillsComponent, PortfolioComponent, OverlayComponent, ReferencesComponent],
+  imports: [HeroComponent, HeaderComponent, AboutMeComponent, FooterComponent, SkillsComponent, PortfolioComponent, OverlayComponent, ReferencesComponent, ContactMeComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })

@@ -1,0 +1,174 @@
+section{
+    margin: 128px 104px;
+    display: flex;
+    gap: 80px;
+    
+    >div:nth-of-type(1){
+        >h2{
+            font-family: 'karla', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            color: #3DCFB6;
+        }
+    
+        >h1{
+            font-family: 'firaCode', sans-serif;
+            font-weight: 700;
+            font-size: 64px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: #3DCFB6;
+            width: 12ch;
+            line-height: 1;
+        }
+    
+        >h3{
+            font-family: 'firaCode', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #3DCFB6;
+        }
+
+        >span{
+            font-family: 'karla', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: white;
+            display: flex;
+            width: 60ch;
+            margin: 16px 0;
+        }
+    
+        >p{
+            >span{
+                font-family: 'karla', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                color: white;
+            }
+    
+            >span:nth-of-type(2){
+                font-weight: 700;
+                color: #3DCFB6;
+            }
+        }
+    }
+
+    >div:nth-of-type(2){
+        flex: 1;
+
+        >hr{
+            border-color: #3DCFB680
+        }
+
+        >div:nth-of-type(-n+3){
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+            gap: 10px;
+
+            >h4{
+                font-family: 'firaCode', sans-serif;
+                font-weight: 500;
+                font-size: 24px;
+                color: #3DCFB6;
+            }
+
+            >input{
+                background-color: transparent;
+                border: none;
+                font-family: 'karla', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                color: white;
+
+                &::placeholder{
+                    color: #FFFFFFCC;
+                }
+
+                &:focus::placeholder{
+                    color: transparent;
+                }
+            }
+        }
+
+        >div:nth-of-type(4){
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 40px;
+
+            >input{
+                display: none;
+            }
+    
+            >label{
+                font-family: 'karla', sans-serif;
+                font-weight: 400;
+                font-size: 15px;
+                color: white;
+                position: relative;
+                padding-left: 30px;
+                cursor: pointer;
+    
+                >a{
+                    text-decoration: none;
+                    color: #3DCFB6;
+                    position: relative;
+    
+                    &:hover{
+                        color: white;
+    
+                        &::after{
+                            content: "";
+                            display: flex;
+                            position: absolute;
+                            height: 0.5px;
+                            right: -2px;
+                            left: -2px;
+                            bottom: -8px;
+                            background-color: #3DCFB6;
+                        }
+                    }
+                }
+            }
+    
+            >label::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 18px;
+                height: 18px;
+                border: 1px solid #3DCFB6;
+                border-radius: 4px;
+            }
+    
+            >input:checked + label::after {
+                content: "✔";
+                position: absolute;
+                left: 4px;
+                top: 0px;
+                color: #3DCFB6;
+            }
+
+            >span{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                font-family: 'karla', sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                color: #EC7B7B;
+                visibility: hidden;
+            }
+        }
+
+        >app-click-button{
+            display: flex;
+            width: 130px;
+            justify-self: center;
+            margin-top: 12px;
+        }
+    }
+}
