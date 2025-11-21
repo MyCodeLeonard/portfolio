@@ -4,7 +4,8 @@ section{
     align-items: center;
     gap: 8px;
     position: relative;
-    width: 70px;
+    width: 104px;
+    height: 116px;
 
     >img{
         height: 64px;
@@ -15,6 +16,10 @@ section{
         width: 1ch;
         display: flex;
         justify-content: center;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "firaCode", sans-serif;
     }
 
     &:hover{

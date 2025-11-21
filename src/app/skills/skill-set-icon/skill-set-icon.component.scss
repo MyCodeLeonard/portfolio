@@ -3,7 +3,8 @@ section{
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    width: 70px;
+    width: 104px;
+    height: 116px;
 
     >img{
         height: 64px;
@@ -14,6 +15,10 @@ section{
         display: flex;
         justify-content: center;
         text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "firaCode", sans-serif;
+        white-space: nowrap;
     }
 
     &:hover >img{
