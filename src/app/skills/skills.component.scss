@@ -1,7 +1,10 @@
 section{
-    margin: 128px 104px;
+    padding: 128px 104px;
     display: flex;
     flex-direction: column;
+    background-image: url('/assets/img/skills-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     >span{
         font-family: 'karla', sans-serif;
