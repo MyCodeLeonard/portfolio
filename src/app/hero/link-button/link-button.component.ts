@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, ElementRef, inject, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  selector: 'app-link-button',
   standalone: true,
   imports: [],
-  templateUrl: './button.component.html',
-  styleUrl: './button.component.scss'
+  templateUrl: './link-button.component.html',
+  styleUrl: './link-button.component.scss'
 })
 
-export class ButtonComponent implements AfterViewInit{
+export class LinkButtonComponent implements AfterViewInit{
   @Input() content!:string;
   @Input() contentId!:string;
 

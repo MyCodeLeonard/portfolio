@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { MarqueeComponent } from "./marquee/marquee.component";
-import { ButtonComponent } from "./button/button.component";
+import { LinkButtonComponent } from "./link-button/link-button.component";
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [MarqueeComponent, ButtonComponent],
+  imports: [MarqueeComponent, LinkButtonComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

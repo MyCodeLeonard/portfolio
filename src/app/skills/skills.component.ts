@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from "../hero/button/button.component";
+import { LinkButtonComponent } from "../hero/link-button/link-button.component";
 import { SkillSetIconComponent } from "./skill-set-icon/skill-set-icon.component";
 import { SpecialIconComponent } from "./skill-set-icon/special-icon/special-icon.component";
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [ButtonComponent, SkillSetIconComponent, SpecialIconComponent],
+  imports: [LinkButtonComponent, SkillSetIconComponent, SpecialIconComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
