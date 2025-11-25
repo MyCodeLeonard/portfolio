@@ -1,5 +1,5 @@
 section{
-    margin: 128px 104px;
+    padding: 128px 104px;
     display: flex;
     gap: 80px;
     
@@ -66,6 +66,11 @@ section{
             flex-direction: column;
             padding: 32px;
             gap: 10px;
+            cursor: pointer;
+
+            *{
+                cursor: pointer;
+            }
 
             >h4{
                 font-family: 'firaCode', sans-serif;
@@ -90,6 +95,18 @@ section{
                     color: transparent;
                 }
             }
+        }
+
+        >div:nth-of-type(1):hover > input:not(:focus)::placeholder {
+            color: #FFFFFF;
+        }
+
+        >div:nth-of-type(2):hover > input:not(:focus)::placeholder {
+            color: #FFFFFF;
+        }
+
+        >div:nth-of-type(3):hover > input:not(:focus)::placeholder {
+            color: #FFFFFF;
         }
 
         >div:nth-of-type(4){

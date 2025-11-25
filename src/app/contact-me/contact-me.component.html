@@ -1,4 +1,4 @@
-<section>
+<section id="contact">
     <div>
         <h2>Contact me</h2>
         <h1>Let's work together</h1>
@@ -10,22 +10,22 @@
         </p>
     </div>
     <div>
-        <hr>
-        <div>
+        <hr #hr1>
+        <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="reset(hr1, hr2)">
             <h4>What's your name?</h4>
-            <input type="text" placeholder="Your name goes here">
+            <input #inputName type="text" placeholder="Your name goes here">
         </div>
-        <hr>
-        <div>
+        <hr #hr2>
+        <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="reset(hr2, hr3)">
             <h4>What's your email?</h4>
-            <input type="text" placeholder="youremail@email.com">
+            <input #inputMail type="text" placeholder="youremail@email.com">
         </div>
-        <hr>
-        <div>
+        <hr #hr3>
+        <div (click)="setFocus(inputMessage)" (mouseenter)="highlight(hr3, hr4)" (mouseleave)="reset(hr3, hr4)">
             <h4>How can I help you?</h4>
-            <input type="text" placeholder="Hello Leonard, I am interested in ...">
+            <input #inputMessage type="text" placeholder="Hello Leonard, I am interested in ...">
         </div>
-        <hr>
+        <hr #hr4>
 
         <div>
             <div>
@@ -36,6 +36,6 @@
             </div>
             <span>Please accept the privacy policy.</span>
         </div>
-        <app-click-button [content] = "'Say Hello ;)'" (click)="test()"></app-click-button>
+        <app-click-button [content] = "'Say Hello ;)'"></app-click-button>
     </div>
 </section>
