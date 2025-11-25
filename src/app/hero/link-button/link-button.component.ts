@@ -13,17 +13,6 @@ export class LinkButtonComponent {
   @Input() content!:string;
   @Input() contentId!:string;
 
-  mouseenter(event: Event){
-    // const target= event.currentTarget as HTMLElement;
-    // const children = target.children;
-
-    // Array.from(children).forEach(child => {
-    //   (child as HTMLElement).style.animation = '';
-    //   (child as HTMLElement).style.transition = '';
-    //   (child as HTMLElement).style.transform = '';
-    // });
-  }
-
   mouseleave(event: Event){
     const target = event.currentTarget as HTMLElement;
     const children = target.children;
