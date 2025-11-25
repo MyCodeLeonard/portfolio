@@ -28,8 +28,12 @@
         <hr>
 
         <div>
-            <input type="checkbox" name="" id="privacy-policy">
-            <label for="privacy-policy">I've read the <a target="_blank" href="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</label>
+            <div>
+                <input type="checkbox" name="" id="privacy-policy">
+                <label for="privacy-policy"></label>
+                <div></div>
+                <span>I've read the <a target="_blank" href="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
+            </div>
             <span>Please accept the privacy policy.</span>
         </div>
         <app-click-button [content] = "'Say Hello ;)'" (click)="test()"></app-click-button>

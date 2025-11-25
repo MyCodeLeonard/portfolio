@@ -98,58 +98,80 @@ section{
             gap: 16px;
             margin-top: 40px;
 
-            >input{
-                display: none;
-            }
-    
-            >label{
-                font-family: 'karla', sans-serif;
-                font-weight: 400;
-                font-size: 15px;
-                color: white;
+            div{
                 position: relative;
-                padding-left: 30px;
-                cursor: pointer;
+
+                >input{
+                    display: none;
+                }
     
-                >a{
-                    text-decoration: none;
-                    color: #3DCFB6;
+                >label{
                     position: relative;
-    
-                    &:hover{
-                        color: white;
-    
-                        &::after{
-                            content: "";
-                            display: flex;
-                            position: absolute;
-                            height: 0.5px;
-                            right: -2px;
-                            left: -2px;
-                            bottom: -8px;
-                            background-color: #3DCFB6;
+                    cursor: pointer;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 18px;
+                        height: 18px;
+                        border: 1px solid #3DCFB6;
+                        border-radius: 4px;
+                    }
+
+                    &:hover + div{
+                        background-color: #2b524c;
+                    }
+                }
+                
+                >input:checked + label::after {
+                    content: "✔";
+                    position: absolute;
+                    left: 4px;
+                    top: -1px;
+                    color: #3DCFB6;
+                }
+
+                >div{
+                    position: absolute;
+                    background-color: transparent;
+                    height: 26px;
+                    width: 26px;
+                    z-index: -1;
+                    top: -3px;
+                    left: -3px;
+                    border-radius: 25px;
+                }
+                
+                >span{
+                    font-family: 'karla', sans-serif;
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: white;
+                    padding-left: 30px;
+        
+                    >a{
+                        text-decoration: none;
+                        color: #3DCFB6;
+                        position: relative;
+        
+                        &:hover{
+                            color: white;
+        
+                            &::after{
+                                content: "";
+                                display: flex;
+                                position: absolute;
+                                height: 0.5px;
+                                right: -2px;
+                                left: -2px;
+                                bottom: -8px;
+                                background-color: #3DCFB6;
+                            }
                         }
                     }
                 }
-            }
-    
-            >label::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 18px;
-                height: 18px;
-                border: 1px solid #3DCFB6;
-                border-radius: 4px;
-            }
-    
-            >input:checked + label::after {
-                content: "✔";
-                position: absolute;
-                left: 4px;
-                top: 0px;
-                color: #3DCFB6;
             }
 
             >span{

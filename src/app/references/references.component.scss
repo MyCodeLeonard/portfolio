@@ -15,6 +15,7 @@ section{
         gap: 64px;
         margin: 0 -332.5px;
         align-items: center;
+        position: relative;
 
         >div{
             display: flex;
@@ -25,8 +26,8 @@ section{
             padding: 48px 40px;
             border: solid 1px #3DCFB6;
             justify-content: space-between;
-
-            width: 33%; /*---*/
+            width: 33%;
+            cursor: pointer;
 
             >span{
                 font-family: "karla", sans-serif;
@@ -63,6 +64,7 @@ section{
             background-color: #3DCFB64D;
             position: relative;
             height: 176px;
+            cursor: default;
 
             >span{
                 color: white;
@@ -90,6 +92,24 @@ section{
                 background-repeat: no-repeat;
                 width: 90px;
             }
+        }
+
+        >aside{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(
+                to right,
+                #000 10%,
+                #1C1C1C 15%,
+                rgba(28, 28, 28, 0) 25%,
+                rgba(29, 28, 28, 0) 75%,
+                #1C1C1C 85%,
+                #000 90%
+            );
+            pointer-events: none;
         }
     }
 
