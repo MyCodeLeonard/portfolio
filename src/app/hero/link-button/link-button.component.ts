@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, inject, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-link-button',
@@ -8,37 +9,41 @@ import { AfterViewInit, Component, ElementRef, inject, Input } from '@angular/co
   styleUrl: './link-button.component.scss'
 })
 
-export class LinkButtonComponent implements AfterViewInit{
+export class LinkButtonComponent {
   @Input() content!:string;
   @Input() contentId!:string;
 
-  private host = inject(ElementRef<HTMLElement>).nativeElement;
+  mouseenter(event: Event){
+    // const target= event.currentTarget as HTMLElement;
+    // const children = target.children;
 
-  ngAfterViewInit(): void {
-    const div = this.host.querySelectorAll('div');
+    // Array.from(children).forEach(child => {
+    //   (child as HTMLElement).style.animation = '';
+    //   (child as HTMLElement).style.transition = '';
+    //   (child as HTMLElement).style.transform = '';
+    // });
+  }
 
-    this.host.addEventListener('mouseenter', () => {
-      div.forEach((el:HTMLElement) => {
-        el.style.animation = '';
-        el.style.transition = '';
-        el.style.transform = '';
+  mouseleave(event: Event){
+    const target = event.currentTarget as HTMLElement;
+    const children = target.children;
+
+    Array.from(children).forEach(child => {
+      const x = new DOMMatrix(getComputedStyle(child).transform).m41;
+
+      (child as HTMLElement).style.animation = 'none';
+      (child as HTMLElement).style.transform = `translateX(${x}px)`;
+
+      requestAnimationFrame(() => {
+        (child as HTMLElement).style.transition = 'transform 0.3s ease-out';
+        (child as HTMLElement).style.transform = 'translateX(0)';
       });
-    });
 
-    this.host.addEventListener('mouseleave', () => {
-      div.forEach((el:HTMLElement) => {
-        const computed = getComputedStyle(el);
-        const matrix = computed.transform == 'none' ? new DOMMatrix(): new DOMMatrix(computed.transform);
-        const x = matrix.m41;
-
-        el.style.animation = 'none';
-        el.style.transform = `translateX(${x}px)`;
-
-        requestAnimationFrame(() => {
-          el.style.transition = 'transform 0.3s ease-out';
-          el.style.transform = 'translateX(0)';
-        });
-      });
+      setTimeout(() => {
+        (child as HTMLElement).style.animation = '';
+        (child as HTMLElement).style.transition = '';
+        (child as HTMLElement).style.transform = '';
+      }, 305);
     });
   }
 }
