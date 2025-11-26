@@ -18,7 +18,7 @@ section{
             margin-top: 20px;
             margin-bottom: 40px;
             color: #3DCFB6;
-            width: 12ch;
+            width: 14ch;
             line-height: 1;
         }
     
@@ -117,6 +117,7 @@ section{
 
             div{
                 position: relative;
+                display: flex;
 
                 >input{
                     display: none;
