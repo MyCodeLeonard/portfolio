@@ -1,13 +1,13 @@
 <section>
     <div>
         <div>
-            <div [class.selected]="select == 'EN'" (click)="setSelect('EN')" >EN</div>
-            <div [class.selected]="select == 'DE'" (click)="setSelect('DE')" >DE</div>
+            <div [class.selected]="translateContent.select == 'EN'" (click)="translateContent.setSelect('EN')" >EN</div>
+            <div [class.selected]="translateContent.select == 'DE'" (click)="translateContent.setSelect('DE')" >DE</div>
         </div>
         
-        <a href="#aboutMe" [class.active]="activeLink == 1" (click)="setActive(1)">About me</a>
-        <a href="#skills" [class.active]="activeLink == 2" (click)="setActive(2)">Skills</a>
-        <a href="#portfolio" [class.active]="activeLink == 3" (click)="setActive(3)">Projects</a>
+        <a href="#aboutMe" [class.active]="activeLink == 1" (click)="setActive(1)">{{translateContent[translateContent.language].aboutMeLink}}</a>
+        <a href="#skills" [class.active]="activeLink == 2" (click)="setActive(2)">{{translateContent[translateContent.language].skillsLink}}</a>
+        <a href="#portfolio" [class.active]="activeLink == 3" (click)="setActive(3)">{{translateContent[translateContent.language].projectsLink}}</a>
     </div>
 
     <a href=""></a>

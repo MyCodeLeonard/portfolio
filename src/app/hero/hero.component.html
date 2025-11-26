@@ -1,9 +1,9 @@
 <section>
-    <h2>Frontend Developer</h2>
+    <h2>{{translateContent[translateContent.language].frontendDeveloper}}</h2>
     <h1>Leonard Fritzmann</h1>
     <div class="section-links">
-        <app-link-button [content] = 'checkMyWork' [contentId]="'portfolio'"></app-link-button>
-        <app-link-button [content] = 'contactMe' [contentId]="'contact'"></app-link-button>
+        <app-link-button [content] = translateContent[translateContent.language].checkMyWorkLink [contentId]="'portfolio'"></app-link-button>
+        <app-link-button [content] = translateContent[translateContent.language].contactMeLink [contentId]="'contact'"></app-link-button>
     </div>
 
     <div class="left-object">

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MarqueeComponent } from "./marquee/marquee.component";
 import { LinkButtonComponent } from "./link-button/link-button.component";
+import { TranslateContentService } from '../shared/translate-content.service';
 
 @Component({
   selector: 'app-hero',
@@ -10,9 +11,5 @@ import { LinkButtonComponent } from "./link-button/link-button.component";
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  checkMyWork:string = 'Check my work';
-  contactMe:string = 'Contact me';
-
-  checkMyWorkId:string = 'portfolio';
-  contactMeId:string = 'contact';
+  translateContent = inject(TranslateContentService);
 }

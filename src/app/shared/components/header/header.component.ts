@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateContentService } from '../../translate-content.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +9,12 @@ import { Component} from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  activeLink!: number;
-  select:"DE" | "EN" = 'EN';
+  activeLink!: 1 | 2 | 3;
+  translateContent = inject(TranslateContentService)
+  
+  constructor(){}
 
-  setActive(linkNumber: number) {
+  setActive(linkNumber: 1 | 2 | 3) {
     this.activeLink = linkNumber;
-  }
-
-  setSelect(selectInitials:"DE" | "EN"){
-    this.select = selectInitials
   }
 }

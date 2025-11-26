@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateContentService } from '../shared/translate-content.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
   hovered = false;
+  translateContent = inject(TranslateContentService)
 }

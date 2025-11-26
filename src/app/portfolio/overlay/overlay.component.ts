@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateContentService } from '../../shared/translate-content.service';
 
 @Component({
   selector: 'app-overlay',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './overlay.component.scss'
 })
 export class OverlayComponent {
-
+  translateContent = inject(TranslateContentService);
 }

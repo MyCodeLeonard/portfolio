@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateContentService } from '../shared/translate-content.service';
 
 @Component({
   selector: 'app-references',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
-
+translateContent = inject(TranslateContentService);
 }

@@ -1,29 +1,29 @@
 <section id="contact">
     <div>
-        <h2>Contact me</h2>
-        <h1>Let's work together</h1>
-        <h3>Got a problem to solve?</h3>
-        <span>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</span> 
+        <h2>{{translateContent[translateContent.language].contactMe}}</h2>
+        <h1>{{translateContent[translateContent.language].letsWorkTogether}}</h1>
+        <h3>{{translateContent[translateContent.language].gotAProblemToSolve}}</h3>
+        <span>{{translateContent[translateContent.language].contactMeFirstContent}}</span> 
         <p>
-            <span>Need a Frontend developer? </span>
-            <span>Let’s talk!</span>
+            <span>{{translateContent[translateContent.language].contactMeSecondOneContent}} </span>
+            <span>{{translateContent[translateContent.language].contactMeSecondTwoContent}}</span>
         </p>
     </div>
     <div>
         <hr #hr1>
         <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="reset(hr1, hr2)">
-            <h4>What's your name?</h4>
-            <input #inputName type="text" placeholder="Your name goes here">
+            <h4>{{translateContent[translateContent.language].whatsYourName}}</h4>
+            <input #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
         </div>
         <hr #hr2>
         <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="reset(hr2, hr3)">
-            <h4>What's your email?</h4>
-            <input #inputMail type="text" placeholder="youremail@email.com">
+            <h4>{{translateContent[translateContent.language].whatsYourEmail}}</h4>
+            <input #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
         </div>
         <hr #hr3>
         <div (click)="setFocus(inputMessage)" (mouseenter)="highlight(hr3, hr4)" (mouseleave)="reset(hr3, hr4)">
-            <h4>How can I help you?</h4>
-            <input #inputMessage type="text" placeholder="Hello Leonard, I am interested in ...">
+            <h4>{{translateContent[translateContent.language].howCanIHelpyou}}</h4>
+            <input #inputMessage type="text" placeholder={{translateContent[translateContent.language].placeholderHelpyou}}>
         </div>
         <hr #hr4>
 
@@ -32,10 +32,10 @@
                 <input type="checkbox" name="" id="privacy-policy">
                 <label for="privacy-policy"></label>
                 <div></div>
-                <span>I've read the <a target="_blank" href="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                <span>{{translateContent[translateContent.language].privacyPolicyPartOne}} <a target="_blank" href="privacy-policy">{{translateContent[translateContent.language].privacyPolicyPartTwo}}</a> {{translateContent[translateContent.language].privacyPolicyPartThree}}</span>
             </div>
-            <span>Please accept the privacy policy.</span>
+            <span>{{translateContent[translateContent.language].privacyPolicyError}}</span>
         </div>
-        <app-click-button [content] = "'Say Hello ;)'"></app-click-button>
+        <app-click-button [ngStyle]="{'width': translateContent.select == 'DE' ? '134px' : ''}" [content] = translateContent[translateContent.language].formButton></app-click-button>
     </div>
 </section>

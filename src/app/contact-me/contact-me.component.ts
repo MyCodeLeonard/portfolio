@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ClickButtonComponent } from "./click-button/click-button.component";
+import { TranslateContentService } from '../shared/translate-content.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [ClickButtonComponent],
+  imports: [ClickButtonComponent, CommonModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
+  translateContent = inject(TranslateContentService);
 
   setFocus(input: HTMLInputElement) {
     input.focus();

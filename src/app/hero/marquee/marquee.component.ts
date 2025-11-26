@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateContentService } from '../../shared/translate-content.service';
 
 @Component({
   selector: 'app-marquee',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './marquee.component.scss'
 })
 export class MarqueeComponent {
-
+  translateContent = inject(TranslateContentService)
 }

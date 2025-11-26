@@ -2,30 +2,26 @@
     <div>
         <button></button>
         <div>
-            <h1>01</h1>
-            <h2>Join</h2>
-            <h3>What is this project about?</h3>
-            <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</span>
+            <h1>{{translateContent[translateContent.language].projectOne.projectNumber}}</h1>
+            <h2>{{translateContent[translateContent.language].projectOne.projectName}}</h2>
+            <h3>{{translateContent[translateContent.language].portfolioOverlayQuestion}}</h3>
+            <span>{{translateContent[translateContent.language].projectOne.projectDescription}}</span>
             <div>
                 <div>
-                    <img src="/assets/img/css-hover.png" alt="">
-                    <span>CSS</span>
+                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.html.icon}} alt="">
+                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.html.name}}</span>
                 </div>
                 <div>
-                    <img src="/assets/img/html-hover.png" alt="">
-                    <span>HTML</span>
+                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.css.icon}} alt="">
+                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.css.name}}</span>
                 </div>
                 <div>
-                    <img src="/assets/img/firebase-hover.png" alt="">
-                    <span>Firebase</span>
+                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.javascript.icon}} alt="">
+                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.javascript.name}}</span>
                 </div>
                 <div>
-                    <img src="/assets/img/angular-hover.png" alt="">
-                    <span>Angular</span>
-                </div>
-                <div>
-                    <img src="/assets/img/typescript-hover.png" alt="">
-                    <span>TypeScript</span>
+                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.firebase.icon}} alt="">
+                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.firebase.name}}</span>
                 </div>
             </div>
             <div>
@@ -33,7 +29,7 @@
                 <a><span>Live Test</span></a>
             </div>
         </div>
-        <img src="/assets/img/placeholder.png" alt="">
-        <button><span>Next project</span></button>
+        <img src={{translateContent[translateContent.language].projectOne.projectImg}} alt="">
+        <button><span>{{translateContent[translateContent.language].portfolioOverlayNextProject}}</span></button>
     </div>
 </section>

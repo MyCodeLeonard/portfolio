@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-link-button',

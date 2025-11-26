@@ -1,11 +1,11 @@
 <section>
     <img src="assets/img/growth-mindset.png" alt="">
-    <span>Growth mindset</span>
+    <span>{{translateContent[translateContent.language].growthMindset}}</span>
 
     <div>
-        <div>
-            <span>I have a special</span>
-            <span>interest in learning</span>
+        <div [ngStyle]="{'width': translateContent.select == 'DE' ? '160px' : ''}">
+            <span>{{translateContent[translateContent.language].hoverWindowFirstContent}}</span>
+            <span>{{translateContent[translateContent.language].hoverWindowSecondContent}}</span>
             <div>
                 <div>
                     <img src="assets/img/react-hover.png" alt="">

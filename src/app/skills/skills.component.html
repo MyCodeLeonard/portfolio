@@ -1,12 +1,12 @@
 <section id="skills">
-    <span>Technologies</span>
+    <span>{{translateContent[translateContent.language].technologies}}</span>
     <div>
         <div>
-            <h1>Skill Set</h1>
-            <span>A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.</span>
-            <h2>You need <span>another skill?</span></h2>
-            <span>Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-            <app-link-button [content] = "LetsTalk" [contentId]="'contact'"></app-link-button>
+            <h1>{{translateContent[translateContent.language].skillSet}}</h1>
+            <span>{{translateContent[translateContent.language].skillSetMeFirstContent}}</span>
+            <h2>{{translateContent[translateContent.language].skillSetMeSecondOneContent}} <span>{{translateContent[translateContent.language].skillSetMeSecondTwoContent}}</span></h2>
+            <span>{{translateContent[translateContent.language].skillSetMeThirdContent}}</span>
+            <app-link-button [ngStyle]="{'width': translateContent.select == 'DE' ? '164px' : ''}" [content] = translateContent[translateContent.language].buttonLetsTalk [contentId]="'contact'"></app-link-button>
         </div>
 
         <div>

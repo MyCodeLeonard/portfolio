@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateContentService } from '../shared/translate-content.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  translateContent = inject(TranslateContentService)
 }
