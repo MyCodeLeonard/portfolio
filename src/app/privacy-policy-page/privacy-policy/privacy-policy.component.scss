@@ -1,0 +1,29 @@
+*{
+    font-family: "firaCode", sans-serif;
+    color: #3DCFB6;
+}
+
+h2,h3,h4,h5{
+    font-family: "karla", sans-serif;
+    color: white;
+}
+
+section{
+    padding: 128px 237px 0;
+    display: flex;
+    flex-direction: column;
+
+    >h1{
+        font-family: "firaCode", sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        color: #3DCFB6;
+        text-align: center;
+        margin: 40px 0 64px;
+    }
+    >div{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

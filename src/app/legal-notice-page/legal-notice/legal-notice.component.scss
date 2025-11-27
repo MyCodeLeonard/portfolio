@@ -1,0 +1,65 @@
+section{
+    padding: 128px 237px 0;
+    display: flex;
+    flex-direction: column;
+
+    >h1{
+        font-family: "firaCode", sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        color: #3DCFB6;
+        text-align: center;
+        margin: 40px 0 64px;
+    }
+    >div{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+        h2{
+            font-family: "karla", sans-serif;
+            font-weight: 700;
+            font-size: 19px;
+            color: white;
+        }
+
+        span{
+            font-family: "karla", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #3DCFB6;
+        }
+
+        >div:nth-of-type(1){
+            >div{
+                display: flex;
+                flex-direction: column;
+                margin: 16px 0;
+
+                >span{
+                    position: relative;
+
+                    &::before{
+                        content: '•';
+                        color: #6ad7bf;
+                        font-size: 16px;
+                        margin: 0 9px 12px;
+                    }
+                }
+            }
+        }
+
+        >div:nth-of-type(2), 
+        >div:nth-of-type(3), 
+        >div:nth-of-type(4), 
+        >div:nth-of-type(5),
+        >div:nth-of-type(6),
+        >div:nth-of-type(7){
+            >span{
+                >span{
+                    color: white;
+                }
+            }
+        }
+    }
+}
