@@ -1,5 +1,6 @@
 <div>
     <app-header></app-header>
-    <app-legal-notice></app-legal-notice>
+    <app-legal-notice-english *ngIf="translateContent.select =='EN'"></app-legal-notice-english>
+    <app-legal-notice-german *ngIf="translateContent.select =='DE'"></app-legal-notice-german>
     <app-footer></app-footer>
 </div>

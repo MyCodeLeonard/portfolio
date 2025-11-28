@@ -5,11 +5,10 @@ import { Injectable } from '@angular/core';
 })
 
 export class TranslateContentService {
-    select:"DE" | "EN" = 'EN';
+    select:"EN" | "DE" = "EN";
+    language: 'english' | 'german' = 'english';
 
-    language: 'englisch' | 'deutsch' = this.select == 'DE' ? 'deutsch' : 'englisch';
-
-    englisch = {
+    english = {
         aboutMeLink: 'About me',
         skillsLink: 'Skills',
         projectsLink: 'Projects',
@@ -145,9 +144,9 @@ export class TranslateContentService {
         footerOne: 'Web Developer',
         footerTwo: 'Allgaeu Germany',
         footerThree: 'Legal Notice',
-    }
+    };
 
-    deutsch = {
+    german = {
         aboutMeLink: 'Über mich',
         skillsLink: 'Fähigkeiten',
         projectsLink: 'Projekte',
@@ -283,10 +282,10 @@ export class TranslateContentService {
         footerOne: 'Webentwickler',
         footerTwo: 'Allgäu Deutschland',
         footerThree: 'Impressum',
-    }
+    };
 
     setSelect(selectInitials:"DE" | "EN"){
       this.select = selectInitials;
-      this.language = selectInitials == "EN" ? 'englisch' : 'deutsch';
+      this.language = selectInitials == "EN" ? 'english' : 'german';
     }
 }
