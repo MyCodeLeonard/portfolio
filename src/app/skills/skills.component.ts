@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { LinkButtonComponent } from "../hero/link-button/link-button.component";
+import { LinkButtonComponent } from "../shared/components/link-button/link-button.component";
 import { SkillSetIconComponent } from "./skill-set-icon/skill-set-icon.component";
 import { SpecialIconComponent } from "./skill-set-icon/special-icon/special-icon.component";
 import { TranslateContentService } from '../shared/translate-content.service';

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ClickButtonComponent } from "./click-button/click-button.component";
+import { ClickButtonComponent } from "../shared/components/click-button/click-button.component";
 import { TranslateContentService } from '../shared/translate-content.service';
 import { CommonModule } from '@angular/common';
 
