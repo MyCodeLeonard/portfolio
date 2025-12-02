@@ -1,6 +1,6 @@
 <section>
     <div>
-        <div>
+        <div [ngStyle]="{'animation-duration': translateContent.select == 'DE' ? '8s' : ''}">
             <span>{{translateContent[translateContent.language].marqueeFrontendDeveloper}}</span>
             •
             <span>{{translateContent[translateContent.language].marqueeBasedInAllgaeu}}</span>
@@ -11,7 +11,7 @@
             •
             <span></span>
         </div>
-        <div>
+        <div [ngStyle]="{'animation-duration': translateContent.select == 'DE' ? '8s' : ''}">
             <span>{{translateContent[translateContent.language].marqueeFrontendDeveloper}}</span>
             •
             <span>{{translateContent[translateContent.language].marqueeBasedInAllgaeu}}</span>

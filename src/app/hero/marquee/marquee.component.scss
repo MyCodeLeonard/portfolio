@@ -16,7 +16,7 @@ section{
             display: flex;
             align-items: center;
             gap: 56px;
-            animation: marquee 5s linear infinite;
+            animation: marquee 7s linear infinite;
             color: #3DCFB6;
             text-wrap: nowrap;
             will-change: transform;
@@ -28,8 +28,6 @@ section{
             }
         }
     }
-    
-
 }
 
 @keyframes marquee {

@@ -22,7 +22,7 @@ section{
         >div:nth-of-type(1){
             display: flex;
             flex-direction: column;
-            width: 100%;
+            max-width: 486px;
             gap: 20px;
 
             background-color: #3DCFB61A;
@@ -71,7 +71,30 @@ section{
         >div:nth-of-type(2){
             display: flex;
             flex-wrap: wrap;
-            gap: 64px;
+            flex-direction: column;
+            flex-direction: row;
+
+            >div{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 64px;
+            }
+
+            span{
+                font-family: "karla", sans-serif;
+                font-weight:700;
+                font-size: 20px;
+                // color: #ffffff1c;
+                margin: 20px 0 16px;
+                position: relative;
+                display: flex;
+                gap: 8px;
+                cursor: pointer;
+
+                &:nth-of-type(2){
+                    margin-left: 64px;
+                }
+            }
         }
     }
 }

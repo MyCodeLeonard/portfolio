@@ -32,7 +32,7 @@ export class TranslateContentService {
 
         technologies: 'Technologies',
         skillSet: 'Skill Set',
-        skillSetMeFirstContent: 'I have solid knowledge of various front-end technologies, including HTML, CSS, JavaScript, TypeScript, and modern frameworks like Angular. I place great importance on staying up to date with the latest developments in web development and am eager to quickly learn and apply new technologies and approaches. Continuous growth is essential to me in order to meet the rapidly evolving demands of the industry.',
+        skillSetMeFirstContent: 'I have experience with various full-stack technologies and am enthusiastic about learning new tools and adapting flexibly. Staying up to date with the fast-moving changes in web development is very important to me.',
         skillSetMeSecondOneContent: 'You need',
         skillSetMeSecondTwoContent: 'another skill?',
         skillSetMeThirdContent: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
@@ -41,6 +41,8 @@ export class TranslateContentService {
         growthMindset:'Growth mindset',
         hoverWindowFirstContent: 'I have a special',
         hoverWindowSecondContent: 'interest in learning',
+        itSecurity: 'IT Security',
+        cloudAutomation: 'Cloud Automation',
 
         portfolio: 'Portfolio',
         featuredProjects: 'Featured Projects',
@@ -169,20 +171,22 @@ export class TranslateContentService {
         aboutMeFourthContent: 'Ich lerne leidenschaftlich gerne dazu und erweitere mein Wissen kontinuierlich – besonders in Richtung Full-Stack-Architektur und sicheren und effizienten Deployment-Prozessen im Sinne von DevSecOps. Mein Ansatz beim Problemlösen kombiniert analytisches Denken, Kreativität, Ausdauer und teamorientierte Zusammenarbeit. Jede Herausforderung sehe ich als Chance, eine effizientere, sichere und elegante Lösung zu entwickeln.',
 
         technologies: 'Technologien',
-        skillSet: 'Fähigkeitenprofil',
-        skillSetMeFirstContent: 'Ich verfüge über fundierte Kenntnisse in verschiedenen Fullstack-Technologien wie HTML, CSS, JavaScript, TypeScript und modernen Frameworks wie Angular. Ich lege großen Wert darauf, stets auf dem neuesten Stand der Webentwicklung zu bleiben und bin offen dafür, neue Technologien und Ansätze schnell zu erlernen und anzuwenden. Für mich ist es essenziell, mich kontinuierlich weiterzuentwickeln, um den sich schnell verändernden Anforderungen der Branche gerecht zu werden.',
+        skillSet: 'Fähigkeiten',
+        skillSetMeFirstContent: 'Ich habe Erfahrung mit verschiedenen Full-Stack-Technologien und zeige meine Begeisterung dafür, neue Technologien zu erlernen und mich flexibel anzupassen. Es ist mir sehr wichtig, mit den schnellen Entwicklungen in der Webentwicklung Schritt zu halten.',
         skillSetMeSecondOneContent: 'Benötigen Sie',
-        skillSetMeSecondTwoContent: 'weitere Fähigkeiten?',
+        skillSetMeSecondTwoContent: 'andere Fähigkeiten?',
         skillSetMeThirdContent: 'Kontaktieren Sie mich gerne – ich freue mich, mein Wissen weiter auszubauen.',
         buttonLetsTalk: "Lass uns reden",
 
         growthMindset:'Wachstums- mentalität',
-        hoverWindowFirstContent: 'Ich habe ein besonderes',
-        hoverWindowSecondContent: 'Interesse am Lernen.',
+        hoverWindowFirstContent: 'Ich bin daran interessiert,',
+        hoverWindowSecondContent: 'das Folgende noch zu lernen.',
+        itSecurity: 'IT-Security',
+        cloudAutomation: 'Cloud-Automation',
 
         portfolio: 'Portfolio',
         featuredProjects: 'Hervorgehobene Projekte',
-        featuredProjectsFirstContent: 'Werfen Sie einen Blick auf meine Arbeiten – klicken Sie sich durch die Projekte und sehen Sie meine Fähigkeiten live im Einsatz.',
+        featuredProjectsFirstContent: 'Eine Auswahl meiner Arbeiten – hier Projekte ausprobieren und meine Fähigkeiten sehen.',
 
         portfolioOverlayQuestion: 'Worum geht es in diesem Projekt?',
         portfolioOverlayNextProject: 'Nächstes Projekt',

@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { TranslateContentService } from '../../shared/translate-content.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-marquee',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './marquee.component.html',
   styleUrl: './marquee.component.scss'
 })
