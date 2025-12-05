@@ -62,12 +62,18 @@ export class TranslateContentService {
         },
 
         whatMyColleaguesSayAboutMe: 'What my colleagues say about me',
-        colleagueOne: 'Our project benefited enormously from Simon efficient way of working.',
-        colleagueOneName: 'T.Schulz - Frontend Developer',
-        colleagueTwo: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-        colleagueTwoName: 'H.Janisch - Team Partner',
-        colleagueThree: "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
-        colleagueThreeName: 'A. Fischer - Team Partner',
+        colleagueOne: {
+          colleagueReference: 'Our project benefited enormously from Simon efficient way of working.',
+          colleagueName: 'T. Schulz - Teampartner',
+        },
+        colleagueTwo: {
+          colleagueReference: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
+          colleagueName: 'H. Janisch - Teampartner',
+        },
+        colleagueThree: {
+          colleagueReference: "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
+          colleagueName: 'A. Fischer - Teampartner',
+        },
 
         contactMe: 'Contact me',
         letsWorkTogether: "Let's work together",
@@ -147,12 +153,18 @@ export class TranslateContentService {
         },
 
         whatMyColleaguesSayAboutMe: 'Was meine Kolleginnen und Kollegen über mich sagen',
-        colleagueOne: '',
-        colleagueOneName: 'T.Schulz - Frontend Developer',
-        colleagueTwo: '',
-        colleagueTwoName: 'H.Janisch - Team Partner',
-        colleagueThree: '',
-        colleagueThreeName: 'A. Fischer - Team Partner',
+        colleagueOne: {
+          colleagueReference: '',
+          colleagueName: 'T. Schulz - Teampartner',
+        },
+        colleagueTwo: {
+          colleagueReference: '',
+          colleagueName: 'H. Janisch - Teampartner',
+        },
+        colleagueThree: {
+          colleagueReference: '',
+          colleagueName: 'A. Fischer - Teampartner',
+        },
 
         contactMe: 'Nehmen Sie Kontakt mit mir auf',
         letsWorkTogether: "Lassen Sie uns zusammenarbeiten",
@@ -253,12 +265,4 @@ export class TranslateContentService {
       let iconValues = Object.keys(this.languageNeutral[project].projectTechnologies);
       return {iconValues};
     }
-
-    // nextProject(currentProject:"projectOne" | "projectTwo" | "projectThree"){
-    //   if(currentProject == 'projectOne') this.determineNumberIcons("projectTwo");
-    //   if(currentProject == 'projectTwo') this.determineNumberIcons("projectThree");
-    //   if(currentProject == 'projectThree') this.determineNumberIcons("projectOne");
-    //   console.log(currentProject);
-      
-    // }
   }

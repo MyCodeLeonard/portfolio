@@ -1,34 +1,34 @@
 <section>
     <h1>{{translateContent[translateContent.language].whatMyColleaguesSayAboutMe}}</h1>
     <div>
-        <div>
-            <span>{{translateContent[translateContent.language].colleagueOne}}</span>
+        <div (click)="previousReferences()">
+            <span>{{translateContent[translateContent.language][boxLeft].colleagueReference}}</span>
             <div>
                 <hr>
-                <span>{{translateContent[translateContent.language].colleagueOneName}}</span>
+                <span>{{translateContent[translateContent.language][boxLeft].colleagueName}}</span>
             </div>
         </div>
         <div>
-            <span>{{translateContent[translateContent.language].colleagueTwo}}</span>
+            <span>{{translateContent[translateContent.language][boxMiddle].colleagueReference}}</span>
             <div>
                 <hr>
-                <span>{{translateContent[translateContent.language].colleagueTwoName}}</span>
+                <span>{{translateContent[translateContent.language][boxMiddle].colleagueName}}</span>
             </div>
         </div>
-        <div>
-            <span>{{translateContent[translateContent.language].colleagueThree}}</span>
+        <div (click)="nextReferences()">
+            <span>{{translateContent[translateContent.language][boxRight].colleagueReference}}</span>
             <div>
                 <hr>
-                <span>{{translateContent[translateContent.language].colleagueThreeName}}</span>
+                <span>{{translateContent[translateContent.language][boxRight].colleagueName}}</span>
             </div>
         </div>
         <aside></aside>
     </div>
     <div>
-        <Button></Button>
-        <span class="active">•</span>
-        <span>•</span>
-        <span>•</span>
-        <Button></Button>
+        <Button (click)="previousReferences()"></Button>
+        <span [ngClass]="{ 'active': currentReference == 1 }">•</span>
+        <span [ngClass]="{ 'active': currentReference == 2 }">•</span>
+        <span [ngClass]="{ 'active': currentReference == 3 }">•</span>
+        <Button (click)="nextReferences()"></Button>
     </div>
 </section>
