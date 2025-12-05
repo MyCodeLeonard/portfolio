@@ -52,68 +52,13 @@ export class TranslateContentService {
         portfolioOverlayNextProject: 'Next project',
 
         projectOne:{
-          projectNumber:'01',
-          projectName:'Join',
           projectDescription:'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-          projectTechnologies: {
-            html:{
-              icon: '/assets/img/html-hover.png',
-              name: 'HTML'
-            },
-            css:{
-              icon: '/assets/img/css-hover.png',
-              name: 'CSS'
-            },
-            javascript:{
-              icon: '/assets/img/javascript-hover.png',
-              name: 'JavaScript'
-            },
-            firebase:{
-              icon: '/assets/img/firebase-hover.png',
-              name: 'Firebase'
-            },
-          },
-          projectImg:'/assets/img/placeholder.png',
         },
         projectTwo:{
-          projectNumber:'02',
-          projectName:'El Pollo Loco',
           projectDescription:'',
-          projectTechnologies: {
-            javascript:{
-              icon: '/assets/img/javascript-hover.png',
-              name: 'JavaScript'
-            },
-            html:{
-              icon: '/assets/img/html-hover.png',
-              name: 'HTML'
-            },
-            css:{
-              icon: '/assets/img/css-hover.png',
-              name: 'CSS'
-            },
-          },
-          projectImg:'/assets/img/placeholder.png',
         },
         projectThree:{
-          projectNumber:'03',
-          projectName:'DA Bubble',
           projectDescription:'',
-          projectTechnologies: {
-            angular:{
-              icon: '/assets/img/angular-hover.png',
-              name: 'Angular'
-            },
-            typescript:{
-              icon: '/assets/img/typescript-hover.png',
-              name: 'TypeScript'
-            },
-            firebase:{
-              icon: '/assets/img/firebase-hover.png',
-              name: 'Firebase'
-            },
-          },
-          projectImg:'/assets/img/placeholder.png',
         },
 
         whatMyColleaguesSayAboutMe: 'What my colleagues say about me',
@@ -192,68 +137,13 @@ export class TranslateContentService {
         portfolioOverlayNextProject: 'Nächstes Projekt',
 
         projectOne:{
-          projectNumber:'01',
-          projectName:'Join',
           projectDescription:'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzern und Kategorien zu.',
-          projectTechnologies: {
-            html:{
-              icon: '/assets/img/html-hover.png',
-              name: 'HTML'
-            },
-            css:{
-              icon: '/assets/img/css-hover.png',
-              name: 'CSS'
-            },
-            javascript:{
-              icon: '/assets/img/javascript-hover.png',
-              name: 'JavaScript'
-            },
-            firebase:{
-              icon: '/assets/img/firebase-hover.png',
-              name: 'Firebase'
-            },
-          },
-          projectImg:'/assets/img/placeholder.png',
         },
         projectTwo:{
-          projectNumber:'02',
-          projectName:'El Pollo Loco',
           projectDescription:'',
-          projectTechnologies: {
-            javascript:{
-              icon: '/assets/img/javascript-hover.png',
-              name: 'JavaScript'
-            },
-            html:{
-              icon: '/assets/img/html-hover.png',
-              name: 'HTML'
-            },
-            css:{
-              icon: '/assets/img/css-hover.png',
-              name: 'CSS'
-            },
-          },
-          projectImg:'/assets/img/placeholder.png',
         },
         projectThree:{
-          projectNumber:'03',
-          projectName:'DA Bubble',
           projectDescription:'',
-          projectTechnologies: {
-            angular:{
-              icon: '/assets/img/angular-hover.png',
-              name: 'Angular'
-            },
-            typescript:{
-              icon: '/assets/img/typescript-hover.png',
-              name: 'TypeScript'
-            },
-            firebase:{
-              icon: '/assets/img/firebase-hover.png',
-              name: 'Firebase'
-            },
-          },
-          projectImg:'/assets/img/placeholder.png',
         },
 
         whatMyColleaguesSayAboutMe: 'Was meine Kolleginnen und Kollegen über mich sagen',
@@ -288,8 +178,87 @@ export class TranslateContentService {
         footerThree: 'Impressum',
     };
 
+    languageNeutral = {
+      projectOne:{
+        projectNumber:'01',
+        projectName:'Join',
+        projectTechnologies: {
+          html: '',
+          css:'',
+          javascript:'',
+          firebase:'',
+        },
+        projectImg:'/assets/img/placeholder.png',
+        githubUrl: '#',
+        pageUrl: '#',
+      },
+      projectTwo:{
+        projectNumber:'02',
+        projectName:'El Pollo Loco',
+        projectTechnologies: {
+          javascript: '',
+          html:'',
+          css:'',
+        },
+        projectImg:'/assets/img/placeholder.png',
+        githubUrl: '#',
+        pageUrl: '#'
+      },
+      projectThree:{
+        projectNumber:'03',
+        projectName:'DA Bubble',
+        projectDescription:'',
+        projectTechnologies: {
+          angular: '',
+          typescript: '',
+          firebase: '',
+        },
+        projectImg:'/assets/img/placeholder.png',
+        githubUrl: '#',
+        pageUrl: '#'
+      },
+
+      html:{
+        icon: '/assets/img/html-hover.png',
+        name: 'HTML'
+      },
+      css:{
+        icon: '/assets/img/css-hover.png',
+        name: 'CSS'
+      },
+      javascript:{
+        icon: '/assets/img/javascript-hover.png',
+        name: 'JavaScript'
+      },
+      firebase:{
+        icon: '/assets/img/firebase-hover.png',
+        name: 'Firebase'
+      },
+      angular:{
+        icon: '/assets/img/angular-hover.png',
+        name: 'Angular'
+      },
+      typescript:{
+        icon: '/assets/img/typescript-hover.png',
+        name: 'TypeScript'
+      },
+    }
+
     setSelect(selectInitials:"DE" | "EN"){
       this.select = selectInitials;
       this.language = selectInitials == "EN" ? 'english' : 'german';
     }
-}
+
+    determineNumberIcons(project: "projectOne" | "projectTwo" | "projectThree" = "projectOne"){
+      let iconValues = Object.keys(this.languageNeutral[project].projectTechnologies);
+      return {iconValues};
+    }
+
+    // nextProject(currentProject:"projectOne" | "projectTwo" | "projectThree"){
+    //   if(currentProject == 'projectOne') this.determineNumberIcons("projectTwo");
+    //   if(currentProject == 'projectTwo') this.determineNumberIcons("projectThree");
+    //   if(currentProject == 'projectThree') this.determineNumberIcons("projectOne");
+    //   console.log(currentProject);
+      
+    // }
+  }

@@ -4,7 +4,7 @@
     <span>{{translateContent[translateContent.language].featuredProjectsFirstContent}}</span>
     <div>
         <hr>
-        <div>
+        <div (click)="isOpenOverlay = true; selectedProject = 'projectOne';">
             <h3>Join</h3>
             <div>HTML <span>|</span> CSS <span>|</span> JavaScript <span>|</span> Firebase</div>
             <div [ngStyle]="{top: '-12' + 'px'}">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <hr>
-        <div>
+        <div (click)="isOpenOverlay = true; selectedProject = 'projectTwo'">
             <h3>El Pollo Loco</h3>
             <div>HTML <span>|</span> CSS <span>|</span> JavaScript</div>
             <div [ngStyle]="{top: '-32' + 'px'}">
@@ -20,7 +20,7 @@
             </div>
         </div>
         <hr>
-        <div>
+        <div (click)="isOpenOverlay = true; selectedProject = 'projectThree'">
             <h3>DA Bubble</h3>
             <div>Angular <span>|</span> TypeScript <span>|</span> Firebase</div>
             <div [ngStyle]="{top: '-64' + 'px'}">
@@ -30,3 +30,4 @@
         <hr>
     </div>
 </section>
+<app-overlay [(isOpen)]="isOpenOverlay" [selectedProject]="selectedProject"></app-overlay>

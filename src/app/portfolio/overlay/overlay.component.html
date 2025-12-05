@@ -1,35 +1,54 @@
-<section>
-    <div>
-        <button></button>
+<section [ngStyle]="{'display': isOpen ? 'flex' : ''}" (click)="closed()">
+    <div (click)="stopClickBubbling($event)">
+        <button (click)="closed()"></button>
         <div>
-            <h1>{{translateContent[translateContent.language].projectOne.projectNumber}}</h1>
-            <h2>{{translateContent[translateContent.language].projectOne.projectName}}</h2>
+            <h1>{{translateContent.languageNeutral[selectedProject]?.projectNumber}}</h1>
+            <h2>{{translateContent.languageNeutral[selectedProject]?.projectName}}</h2>
             <h3>{{translateContent[translateContent.language].portfolioOverlayQuestion}}</h3>
-            <span>{{translateContent[translateContent.language].projectOne.projectDescription}}</span>
+            <span>{{translateContent[translateContent.language][selectedProject]?.projectDescription}}</span>
             <div>
-                <div>
-                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.html.icon}} alt="">
-                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.html.name}}</span>
-                </div>
-                <div>
-                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.css.icon}} alt="">
-                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.css.name}}</span>
-                </div>
-                <div>
-                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.javascript.icon}} alt="">
-                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.javascript.name}}</span>
-                </div>
-                <div>
-                    <img src={{translateContent[translateContent.language].projectOne.projectTechnologies.firebase.icon}} alt="">
-                    <span>{{translateContent[translateContent.language].projectOne.projectTechnologies.firebase.name}}</span>
-                </div>
+                @for (icon of translateContent.determineNumberIcons(selectedProject).iconValues; track $index){
+                    <div>
+                        @switch (icon) {
+                            @case ('html'){
+                                <img src= {{translateContent.languageNeutral.html.icon}} alt="">
+                                <span>{{translateContent.languageNeutral.html.name}}</span>
+                            }
+
+                            @case ('css'){
+                                <img src= {{translateContent.languageNeutral.css.icon}} alt="">
+                                <span>{{translateContent.languageNeutral.css.name}}</span>
+                            }
+
+                            @case ('javascript'){
+                                <img src= {{translateContent.languageNeutral.javascript.icon}} alt="">
+                                <span>{{translateContent.languageNeutral.javascript.name}}</span>
+                            }
+
+                            @case ('firebase'){
+                                <img src= {{translateContent.languageNeutral.firebase.icon}} alt="">
+                                <span>{{translateContent.languageNeutral.firebase.name}}</span>
+                            }
+
+                            @case ('angular'){
+                                <img src= {{translateContent.languageNeutral.angular.icon}} alt="">
+                                <span>{{translateContent.languageNeutral.angular.name}}</span>
+                            }
+
+                            @case ('typescript'){
+                                <img src= {{translateContent.languageNeutral.typescript.icon}} alt="">
+                                <span>{{translateContent.languageNeutral.typescript.name}}</span>
+                            }
+                        }
+                    </div>
+                }
             </div>
             <div>
-                <a><span>GitHub</span></a>
-                <a><span>Live Test</span></a>
+                <a target="_blank" href={{translateContent.languageNeutral[selectedProject]?.githubUrl}}><span>GitHub</span></a>
+                <a target="_blank" href={{translateContent.languageNeutral[selectedProject]?.pageUrl}}><span>Live Test</span></a>
             </div>
         </div>
-        <img src={{translateContent[translateContent.language].projectOne.projectImg}} alt="">
-        <button><span>{{translateContent[translateContent.language].portfolioOverlayNextProject}}</span></button>
+        <img src={{translateContent.languageNeutral[selectedProject]?.projectImg}} alt="">
+        <button (click)="nextProject()"><span>{{translateContent[translateContent.language].portfolioOverlayNextProject}}</span></button>
     </div>
 </section>
