@@ -1,3 +1,18 @@
+.placeholder-error::placeholder{
+    color: #EC7B7B !important;
+}
+
+.error-box{
+    position: absolute;
+    top: 100px;
+    font-family: "karla", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #1c1c1c;
+    color: #EC7B7B;
+    visibility: hidden;
+}
+
 section{
     padding: 128px 104px;
     display: flex;
@@ -56,6 +71,7 @@ section{
 
     >div:nth-of-type(2){
         flex: 1;
+        position: relative;
 
         >hr{
             border-color: #3DCFB680
@@ -67,6 +83,7 @@ section{
             padding: 32px;
             gap: 10px;
             cursor: pointer;
+            position: relative;
 
             *{
                 cursor: pointer;
@@ -79,7 +96,7 @@ section{
                 color: #3DCFB6;
             }
 
-            >input{
+            >input, >textarea{
                 background-color: transparent;
                 border: none;
                 font-family: 'karla', sans-serif;
@@ -95,18 +112,20 @@ section{
                     color: transparent;
                 }
             }
+
+            >textarea{
+                padding: 0;
+                resize: none;
+                height: 24px;
+                overflow: hidden;
+                padding-left: 2px;
+            }
         }
 
-        >div:nth-of-type(1):hover > input:not(:focus)::placeholder {
-            color: #FFFFFF;
-        }
-
-        >div:nth-of-type(2):hover > input:not(:focus)::placeholder {
-            color: #FFFFFF;
-        }
-
-        >div:nth-of-type(3):hover > input:not(:focus)::placeholder {
-            color: #FFFFFF;
+        >div:nth-of-type(-n+3):hover{
+            > input:not(:focus)::placeholder, >textarea:not(:focus)::placeholder{
+                color: #FFFFFF;
+            }
         }
 
         >div:nth-of-type(4){
@@ -204,7 +223,42 @@ section{
             }
         }
 
+        >div:nth-of-type(5){
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #1c1c1c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            >span{
+                font-family: "firaCode", sans-serif;
+                font-weight: 700;
+                font-size: 24px;
+                color: #3DCFB6;
+                text-align: center;
+            }
+        }
+
         >app-click-button{
+            display: flex;
+            width: 130px;
+            justify-self: center;
+            margin-top: 12px;
+        }
+
+        >button{
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.6);
+            border: solid 1px;
+            border-radius: 100px;
+            padding: 12px 18px 12px 20px;
+            font-family: "karla", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
             display: flex;
             width: 130px;
             justify-self: center;
