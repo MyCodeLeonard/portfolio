@@ -63,16 +63,16 @@ export class TranslateContentService {
 
         whatMyColleaguesSayAboutMe: 'What my colleagues say about me',
         colleagueOne: {
-          colleagueReference: 'Our project benefited enormously from Simon efficient way of working.',
-          colleagueName: 'T. Schulz - Teampartner',
+          colleagueReference: 'Leonard impresses with his reliability within the team and his calm, meticulous way of working. Especially when programming, he shows composure and precision, which clearly strengthens the quality of our projects.',
+          colleagueName: 'S. Seegets - Teampartner',
         },
         colleagueTwo: {
-          colleagueReference: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-          colleagueName: 'H. Janisch - Teampartner',
+          colleagueReference: 'Working with Leo was consistently positive. He executed agreed-upon tasks reliably and neatly. His code was always well-structured, and he contributed helpful, creative ideas that noticeably advanced the project.',
+          colleagueName: 'D. Kwiatkowski - Teampartner',
         },
         colleagueThree: {
-          colleagueReference: "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
-          colleagueName: 'A. Fischer - Teampartner',
+          colleagueReference: "Leonard stands out for his strong commitment and remarkable calmness, even in stressful situations. He has solid technical skills and consistently keeps both complex problems and the overall goal in mind. This enables him to contribute reliably to effective solutions and maintain a positive working atmosphere.",
+          colleagueName: 'M. Keller - Teampartner',
         },
 
         contactMe: 'Contact me',
@@ -161,16 +161,16 @@ export class TranslateContentService {
 
         whatMyColleaguesSayAboutMe: 'Was meine Kolleginnen und Kollegen über mich sagen',
         colleagueOne: {
-          colleagueReference: '',
-          colleagueName: 'T. Schulz - Teampartner',
+          colleagueReference: 'Leonard überzeugt durch seine Zuverlässigkeit im Team und seine besonnene, sorgfältige Arbeitsweise. Besonders beim Programmieren zeigt er Ruhe und Präzision, was die Qualität unserer Projekte deutlich stärkt.',
+          colleagueName: 'S. Seegets - Teampartner',
         },
         colleagueTwo: {
-          colleagueReference: '',
-          colleagueName: 'H. Janisch - Teampartner',
+          colleagueReference: 'Die Zusammenarbeit mit Leo war durchweg positiv. Abgesprochene Aufgaben setzte er zuverlässig und sauber um. Sein Code war stets klar strukturiert, und er brachte hilfreiche, kreative Ideen ein, die das Projekt spürbar vorangebracht haben.',
+          colleagueName: 'D. Kwiatkowski - Teampartner',
         },
         colleagueThree: {
-          colleagueReference: '',
-          colleagueName: 'A. Fischer - Teampartner',
+          colleagueReference: 'Leonard überzeugt durch sein hohes Engagement und seine bemerkenswerte Ruhe, auch in stressigen Situationen. Er verfügt über solide technische Kompetenz und behält selbst bei komplexeren Problemen stets den Überblick sowie das gemeinsame Ziel im Blick. Dadurch trägt er zuverlässig zu guten Lösungen und einer angenehmen Arbeitsatmosphäre bei.',
+          colleagueName: 'M. Keller - Teampartner',
         },
 
         contactMe: 'Nehmen Sie Kontakt mit mir auf',
