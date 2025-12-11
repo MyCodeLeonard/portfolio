@@ -10,33 +10,44 @@
         </div>
 
         <div>
-            <span (click)="toggle();" [ngStyle]="{'color': isActiveFrontend ? '#ffffff' : '#ffffff1c'}">Frontend <app-hamburger-button [isActive]="isActiveFrontend"></app-hamburger-button></span>
-            <span (click)="toggle();" [ngStyle]="{'color': isActiveBackend ? '#ffffff' : '#ffffff1c'}">Backend <app-hamburger-button [isActive]="isActiveBackend"></app-hamburger-button></span>
+            <div>
+                <span (click)="selectedFrontend();" [ngStyle]="{'color': isActiveFrontend ? '#ffffff' : '#ffffff1c'}">Frontend <app-hamburger-button [isActive]="isActiveFrontend"></app-hamburger-button></span>
+                <span (click)="selectedBackend();" [ngStyle]="{'color': isActiveBackend ? '#ffffff' : '#ffffff1c'}">Backend <app-hamburger-button [isActive]="isActiveBackend"></app-hamburger-button></span>
+                <span (click)="selectedDevSecOps();" [ngStyle]="{'color': isActiveDevSecOps ? '#ffffff' : '#ffffff1c'}">DevSecOps <app-hamburger-button [isActive]="isActiveDevSecOps"></app-hamburger-button></span>
+            </div>
             <div [ngStyle]="{'display': isActiveFrontend ? '' : 'none'}">
-                <app-skill-set-icon [skillUrl]="'assets/img/html.png'" [skilName]="'HTML'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/css.png'" [skilName]="'CSS'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/javascript.png'" [skilName]="'JavaScript'" [skilName2]="' '"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/html.png'" [skilName]="'HTML'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/css.png'" [skilName]="'CSS'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/javascript.png'" [skilName]="'JavaScript'"></app-skill-set-icon>
                 <app-skill-set-icon [skillUrl]="'assets/img/material-design.png'" [skilName]="'Material'" [skilName2]="'Design'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/typescript.png'" [skilName]="'TypeScript'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/angular.png'" [skilName]="'Angular'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/firebase.png'" [skilName]="'Firebase'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/git.png'" [skilName]="'Git'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/api.png'" [skilName]="'REST-API'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/scrum.png'" [skilName]="'Scrum'" [skilName2]="' '"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/typescript.png'" [skilName]="'TypeScript'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/angular.png'" [skilName]="'Angular'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/firebase.png'" [skilName]="'Firebase'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/git.png'" [skilName]="'Git'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/api.png'" [skilName]="'REST-API'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/scrum.png'" [skilName]="'Scrum'"></app-skill-set-icon>
                 <app-special-icon></app-special-icon>
             </div>
             <div [ngStyle]="{'display': isActiveBackend? '' : 'none'}">
-                <app-skill-set-icon [skillUrl]="'assets/img/python.png'" [skilName]="'Python'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/django.png'" [skilName]="'Django'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/linux.png'" [skilName]="'Linux'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/redis.png'" [skilName]="'Redis'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/flask.png'" [skilName]="'Flask'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/postgre-sql.png'" [skilName]="'PostgreSQL'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/heroku.png'" [skilName]="'Heroku'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/sql.png'" [skilName]="'SQL'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/docker.png'" [skilName]="'Docker'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/cloud.png'" [skilName]="'Cloud'" [skilName2]="' '"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/rxjs.png'" [skilName]="'RxJS'" [skilName2]="' '"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/python.png'" [skilName]="'Python'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/django.png'" [skilName]="'Django'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/linux.png'" [skilName]="'Linux'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/redis.png'" [skilName]="'Redis'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/flask.png'" [skilName]="'Flask'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/postgre-sql.png'" [skilName]="'PostgreSQL'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/heroku.png'" [skilName]="'Heroku'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/sql.png'" [skilName]="'SQL'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/docker.png'" [skilName]="'Docker'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/cloud.png'" [skilName]="'Cloud'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/rxjs.png'" [skilName]="'RxJS'"></app-skill-set-icon>
+                <app-special-icon></app-special-icon>
+            </div>
+            <div [ngStyle]="{'display': isActiveDevSecOps? '' : 'none'}">
+                <app-skill-set-icon [skillUrl]="'assets/img/shell-scripting.png'" [skilName]="'shell-'" [skilName2]="'scripting'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/yaml.png'" [skilName]="'yaml'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/drf.png'" [skilName]="'drf'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/ci-cd.png'" [skilName]="'ci-cd'"></app-skill-set-icon>
+                <app-skill-set-icon [skillUrl]="'assets/img/s2.png'" [skilName]="'s2'"></app-skill-set-icon>
                 <app-special-icon></app-special-icon>
             </div>
         </div>

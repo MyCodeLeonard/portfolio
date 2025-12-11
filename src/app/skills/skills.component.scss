@@ -19,80 +19,87 @@ section{
         gap: 72px;
         align-items: flex-start;
 
-        >div:nth-of-type(1){
-            display: flex;
-            flex-direction: column;
-            max-width: 486px;
-            gap: 20px;
+        >div{
 
-            background-color: #3DCFB61A;
-            border-radius: 30px;
-            border: 1px solid #3DCFB6;
-            padding: 32px;
-            
-            >h1{
-                font-family: 'firaCode', sans-serif;
-                font-weight: 700;
-                font-size: 64px;
-                color: #3DCFB6;
-                margin-bottom: 16px;
-            }
-
-            >span{
-                font-family: 'karla', sans-serif;
-                font-weight: 400;
-                font-size: 18px;
-                color: white;
-                text-align: justify;
-            }
-
-            >h2{
-                font-family: 'firaCode', sans-serif;
-                color: white;
-                margin-top: 8px;
-                font-size: 24px;
+            &:nth-of-type(1){
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-color: #3DCFB61A;
+                border-radius: 30px;
+                border: 1px solid #3DCFB6;
+                padding: 34.5px;
+                width: 1852.7px;
                 
-                >span{
+                >h1{
+                    font-family: 'firaCode', sans-serif;
+                    font-weight: 700;
+                    font-size: 64px;
                     color: #3DCFB6;
+                    margin-bottom: 16px;
+                }
+    
+                >span{
+                    font-family: 'karla', sans-serif;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: white;
+                    text-align: justify;
+    
+                    &:nth-of-type(1){
+                        min-height: 132px;
+                    }
+    
+                    &:nth-of-type(2){
+                        font-size: 16px;
+                        max-width: 32ch;
+                        margin-bottom: 16px;
+                    }
+                }
+    
+                >h2{
+                    font-family: 'firaCode', sans-serif;
+                    color: white;
+                    margin-top: 8px;
+                    font-size: 24px;
+                    
+                    >span{
+                        color: #3DCFB6;
+                    }
+                }
+    
+                > app-link-button{
+                    width: 116px;
                 }
             }
 
-            >span:nth-of-type(2){
-                font-size: 16px;
-                width: 32ch;
-                margin-bottom: 16px;
-            }
-
-            > app-link-button{
-                width: 116px;
-            }
-        }
-
-        >div:nth-of-type(2){
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            flex-direction: row;
-
-            >div{
+            &:nth-of-type(2){
                 display: flex;
                 flex-wrap: wrap;
-                gap: 64px;
-            }
-
-            span{
-                font-family: "karla", sans-serif;
-                font-weight:700;
-                font-size: 20px;
-                // color: #ffffff1c;
-                margin: 20px 0 16px;
-                position: relative;
-                display: flex;
-                gap: 8px;
-                cursor: pointer;
-
-                &:nth-of-type(2){
-                    margin-left: 64px;
+                gap: 16px;
+                width: 228.7%;
+    
+                >div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 58px;
+                    &:nth-of-type(1){
+                        gap: 12px 48px;
+                    }
+                }
+    
+                span{
+                    font-family: "karla", sans-serif;
+                    font-weight:700;
+                    font-size: 20px;
+                    position: relative;
+                    display: flex;
+                    gap: 8px;
+                    cursor: pointer;
+    
+                    &:nth-of-type(1){
+                        margin-left: 0;
+                    }
                 }
             }
         }

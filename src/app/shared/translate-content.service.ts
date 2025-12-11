@@ -32,7 +32,7 @@ export class TranslateContentService {
 
         technologies: 'Technologies',
         skillSet: 'Skill Set',
-        skillSetMeFirstContent: 'I have experience with various full-stack technologies and am enthusiastic about learning new tools and adapting flexibly. Staying up to date with the fast-moving changes in web development is very important to me.',
+        skillSetMeFirstContent: 'A short summary of my capabilities. I have worked with several full-end technologies and am open to learning new tools and methods. Keeping pace with rapid developments in web development is crucial for maintaining up-to-date expertise.',
         skillSetMeSecondOneContent: 'You need',
         skillSetMeSecondTwoContent: 'another skill?',
         skillSetMeThirdContent: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
@@ -130,7 +130,7 @@ export class TranslateContentService {
 
         technologies: 'Technologien',
         skillSet: 'Fähigkeiten',
-        skillSetMeFirstContent: 'Ich habe Erfahrung mit verschiedenen Full-Stack-Technologien und zeige meine Begeisterung dafür, neue Technologien zu erlernen und mich flexibel anzupassen. Es ist mir sehr wichtig, mit den schnellen Entwicklungen in der Webentwicklung Schritt zu halten.',
+        skillSetMeFirstContent: 'Eine kurze Zusammenfassung meiner Fähigkeiten. Ich habe mit mehreren Full-End-Technologien gearbeitet und lerne gern neue Tools und Methoden. Mit den schnellen Entwicklungen der Webentwicklung Schritt zu halten, ist entscheidend, um aktuelles Fachwissen zu bewahren.',
         skillSetMeSecondOneContent: 'Benötigen Sie',
         skillSetMeSecondTwoContent: 'andere Fähigkeiten?',
         skillSetMeThirdContent: 'Kontaktieren Sie mich gerne – ich freue mich, mein Wissen weiter auszubauen.',

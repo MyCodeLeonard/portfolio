@@ -18,15 +18,44 @@ export class SkillsComponent {
   
   isActiveFrontend:boolean = true;
   isActiveBackend:boolean = false;
+  isActiveDevSecOps:boolean = false;
 
-  toggle(){
-    if(this.isActiveFrontend){
-      this.isActiveFrontend = false;
-      this.isActiveBackend = true;
-    }
-    else{
-      this.isActiveFrontend = true;
-      this.isActiveBackend = false;
-    }
+  // toggle(){
+  //   if(this.isActiveFrontend){
+  //     this.isActiveFrontend = false;
+  //     this.isActiveBackend = true;
+  //     this.isActiveDevSecOps = false;
+  //   }
+
+  //   else if(this.isActiveBackend){
+  //     this.isActiveFrontend = false;
+  //     this.isActiveBackend = false;
+  //     this.isActiveDevSecOps = true;
+  //   }
+
+  //   else{
+  //     this.isActiveFrontend = true;
+  //     this.isActiveBackend = false;
+  //     this.isActiveDevSecOps = false;
+  //   }
+  // }
+
+  selectedFrontend(){
+    this.isActiveFrontend = true;
+    this.isActiveBackend = false;
+    this.isActiveDevSecOps = false;
   }
+
+  selectedBackend(){
+    this.isActiveFrontend = false;
+    this.isActiveBackend = true;
+    this.isActiveDevSecOps = false;
+  }
+
+  selectedDevSecOps(){
+    this.isActiveFrontend = false;
+    this.isActiveBackend = false;
+    this.isActiveDevSecOps = true;
+  }
+
 }
