@@ -15,4 +15,10 @@ export class PortfolioComponent {
 
   isOpenOverlay:boolean = false;
   selectedProject!: "projectOne" | "projectTwo" | "projectThree";
+
+  openOverlay(selectedProject: "projectOne" | "projectTwo" | "projectThree"){
+    this.isOpenOverlay = true;
+    this.selectedProject = selectedProject
+    document.body.style.overflow = 'hidden';
+  }
 }

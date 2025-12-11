@@ -20,6 +20,7 @@ export class OverlayComponent {
   closed() {
     this.isOpen = false;
     this.isOpenChange.emit(this.isOpen);
+    document.body.style.removeProperty('overflow');
   }
 
   stopClickBubbling(event: MouseEvent) {
