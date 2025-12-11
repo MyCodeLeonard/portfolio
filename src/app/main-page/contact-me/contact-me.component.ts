@@ -33,6 +33,8 @@ export class ContactMeComponent {
   
   senderFeedbackShow:boolean= false;
 
+  privacyPolicyTab: Window | null = null
+
   setFocus(input: HTMLElement) {
     input.focus();
   }
@@ -118,5 +120,12 @@ export class ContactMeComponent {
   checkPrivacyPolicy(){
     if(this.privacyPolicy) return this.isCheckPrivacyPolicy = true
     else return this.isCheckPrivacyPolicy = false
+  }
+
+  openPrivacyPolicy() {
+    console.log(this.privacyPolicyTab);
+    
+    if (!this.privacyPolicyTab || this.privacyPolicyTab.closed) this.privacyPolicyTab = window.open('privacy-policy', '_blank');
+    else this.privacyPolicyTab.focus();
   }
 }

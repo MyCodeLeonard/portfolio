@@ -1,6 +1,6 @@
 <section class="desktop-section">
     <div class="left-side">
-        <a class="logo-name-a" href=""></a>
+        <a (click)="closeTab()" class="logo-name-a" href=""></a>
         <span>{{translateContent[translateContent.language].footerOne}}</span>
         <span>{{translateContent[translateContent.language].footerTwo}}</span>
     </div>
@@ -11,6 +11,6 @@
         <a target="_blank" href="">Github</a>
         <a target="_blank" href="">LinkedIn</a>
         <a target="_blank" href="">Email</a>
-        <a target="_blank" href="legal-notice">{{translateContent[translateContent.language].footerThree}}</a>
+        <a (click)="openPrivacyPolicy()">{{translateContent[translateContent.language].footerThree}}</a>
     </div>
 </section>

@@ -40,4 +40,8 @@ export class HeaderMobileComponent {
       if(this.activeOverlay) this.overlayClose();
     });
   }
+
+  closeTab() {
+    window.close();
+  }
 }

@@ -20,4 +20,7 @@ export class HeaderDesktopComponent {
     this.activeLink = linkNumber;
   }
   
+  closeTab() {
+    window.close();
+  }
 }

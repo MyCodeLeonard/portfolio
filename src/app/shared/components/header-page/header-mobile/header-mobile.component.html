@@ -1,5 +1,5 @@
 <section class="mobile-section">
-    <a href=""></a>
+    <a (click)="closeTab()" href=""></a>
     <app-hamburger-button-v1 (click)="overlayOpen()" [(active)]="activeOverlay"></app-hamburger-button-v1>
 </section>
 <div class="mobile-overlay" *ngIf="activeOverlay" (click)="overlayClose()">
