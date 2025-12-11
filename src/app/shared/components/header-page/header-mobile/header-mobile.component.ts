@@ -36,6 +36,8 @@ export class HeaderMobileComponent {
   }
 
   ngOnInit() {
-    window.addEventListener('resize', () => this.overlayClose());
+    window.addEventListener('resize', () =>{
+      if(this.activeOverlay) this.overlayClose();
+    });
   }
 }
