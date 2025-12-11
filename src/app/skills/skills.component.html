@@ -11,9 +11,9 @@
 
         <div>
             <div>
-                <span (click)="selectedFrontend();" [ngStyle]="{'color': isActiveFrontend ? '#ffffff' : '#ffffff1c'}">Frontend <app-hamburger-button [isActive]="isActiveFrontend"></app-hamburger-button></span>
-                <span (click)="selectedBackend();" [ngStyle]="{'color': isActiveBackend ? '#ffffff' : '#ffffff1c'}">Backend <app-hamburger-button [isActive]="isActiveBackend"></app-hamburger-button></span>
-                <span (click)="selectedDevSecOps();" [ngStyle]="{'color': isActiveDevSecOps ? '#ffffff' : '#ffffff1c'}">DevSecOps <app-hamburger-button [isActive]="isActiveDevSecOps"></app-hamburger-button></span>
+                <span (click)="selectedFrontend();" [ngStyle]="{'color': isActiveFrontend ? '#ffffff' : '#ffffff1c'}">Frontend <app-hamburger-button-v2 [isActive]="isActiveFrontend"></app-hamburger-button-v2></span>
+                <span (click)="selectedBackend();" [ngStyle]="{'color': isActiveBackend ? '#ffffff' : '#ffffff1c'}">Backend <app-hamburger-button-v2 [isActive]="isActiveBackend"></app-hamburger-button-v2></span>
+                <span (click)="selectedDevSecOps();" [ngStyle]="{'color': isActiveDevSecOps ? '#ffffff' : '#ffffff1c'}">DevSecOps <app-hamburger-button-v2 [isActive]="isActiveDevSecOps"></app-hamburger-button-v2></span>
             </div>
             <div [ngStyle]="{'display': isActiveFrontend ? '' : 'none'}">
                 <app-skill-set-icon [skillUrl]="'assets/img/html.png'" [skilName]="'HTML'"></app-skill-set-icon>

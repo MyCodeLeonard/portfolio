@@ -4,12 +4,12 @@ import { SkillSetIconComponent } from "./skill-set-icon/skill-set-icon.component
 import { SpecialIconComponent } from "./skill-set-icon/special-icon/special-icon.component";
 import { TranslateContentService } from '../shared/translate-content.service';
 import { CommonModule } from '@angular/common';
-import { HamburgerButtonComponent } from "../shared/components/hamburger-button/hamburger-button.component";
+import { HamburgerButtonV2Component } from '../shared/components/hamburger-button-v2/hamburger-button-v2.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [LinkButtonComponent, SkillSetIconComponent, SpecialIconComponent, CommonModule, HamburgerButtonComponent],
+  imports: [LinkButtonComponent, SkillSetIconComponent, SpecialIconComponent, CommonModule, HamburgerButtonV2Component],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
@@ -19,26 +19,6 @@ export class SkillsComponent {
   isActiveFrontend:boolean = true;
   isActiveBackend:boolean = false;
   isActiveDevSecOps:boolean = false;
-
-  // toggle(){
-  //   if(this.isActiveFrontend){
-  //     this.isActiveFrontend = false;
-  //     this.isActiveBackend = true;
-  //     this.isActiveDevSecOps = false;
-  //   }
-
-  //   else if(this.isActiveBackend){
-  //     this.isActiveFrontend = false;
-  //     this.isActiveBackend = false;
-  //     this.isActiveDevSecOps = true;
-  //   }
-
-  //   else{
-  //     this.isActiveFrontend = true;
-  //     this.isActiveBackend = false;
-  //     this.isActiveDevSecOps = false;
-  //   }
-  // }
 
   selectedFrontend(){
     this.isActiveFrontend = true;
@@ -57,5 +37,4 @@ export class SkillsComponent {
     this.isActiveBackend = false;
     this.isActiveDevSecOps = true;
   }
-
 }
