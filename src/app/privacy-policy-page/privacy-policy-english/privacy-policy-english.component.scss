@@ -26,9 +26,10 @@ h5{
 }
 
 a{
-    text-underline-offset: 8px;
-    text-decoration-style: wavy;
+    text-underline-offset: 4px;
+    text-decoration-style: dotted;
     text-decoration-thickness: from-font;
+    text-decoration-color: white;
     
     &:hover{
         text-decoration: none;
@@ -65,5 +66,41 @@ section{
                 gap: 8px;
             }
         }        
+    }
+}
+
+@media (max-width: 1026px) {
+    section{
+        padding: 128px 118.5px 0;
+    }
+
+    a:nth-of-type(1){
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 799px) {
+    section{
+        padding: 128px 20px 72px;
+    }
+
+    h1{
+        font-size: 32px !important;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 18px;
+    }
+
+    h5{
+        font-size: 16.5px;
     }
 }
