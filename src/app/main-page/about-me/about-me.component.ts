@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { TranslateContentService } from '../shared/translate-content.service';
+import { TranslateContentService } from '../../shared/translate-content.service';
 
 @Component({
   selector: 'app-about-me',

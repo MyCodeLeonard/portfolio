@@ -1,10 +1,11 @@
-import { Component, inject, Input } from '@angular/core';
-import { LinkButtonComponent } from "../shared/components/link-button/link-button.component";
+import { Component, inject} from '@angular/core';
 import { SkillSetIconComponent } from "./skill-set-icon/skill-set-icon.component";
 import { SpecialIconComponent } from "./skill-set-icon/special-icon/special-icon.component";
-import { TranslateContentService } from '../shared/translate-content.service';
 import { CommonModule } from '@angular/common';
-import { HamburgerButtonV2Component } from '../shared/components/hamburger-button-v2/hamburger-button-v2.component';
+import { LinkButtonComponent } from '../../shared/components/link-button/link-button.component';
+import { HamburgerButtonV2Component } from '../../shared/components/hamburger-button-v2/hamburger-button-v2.component';
+import { TranslateContentService } from '../../shared/translate-content.service';
+
 
 @Component({
   selector: 'app-skills',

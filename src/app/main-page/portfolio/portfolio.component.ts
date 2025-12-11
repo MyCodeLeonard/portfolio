@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { TranslateContentService } from '../shared/translate-content.service';
 import { OverlayComponent } from './overlay/overlay.component';
+import { TranslateContentService } from '../../shared/translate-content.service';
 
 @Component({
   selector: 'app-portfolio',

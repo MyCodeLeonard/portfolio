@@ -1,8 +1,8 @@
 import { Component, inject} from '@angular/core';
-import { ClickButtonComponent } from "../shared/components/click-button/click-button.component";
-import { TranslateContentService } from '../shared/translate-content.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ClickButtonComponent } from '../../shared/components/click-button/click-button.component';
+import { TranslateContentService } from '../../shared/translate-content.service';
 
 @Component({
   selector: 'app-contact-me',

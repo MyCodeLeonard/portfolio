@@ -105,10 +105,10 @@ section {
         }
 
         &:nth-of-type(2){
-            background-image: url('./../../assets/img/github-icon.png');
+            background-image: url('./../../../assets/img/github-icon.png');
             
             &:hover{
-                background-image: url('./../../assets/img/github-hover-icon.png');
+                background-image: url('./../../../assets/img/github-hover-icon.png');
 
                 &::after{
                     content: '•';
@@ -121,10 +121,10 @@ section {
         }
 
         &:nth-of-type(3){
-            background-image: url('./../../assets/img/linkedIn-icon.png');
+            background-image: url('./../../../assets/img/linkedIn-icon.png');
             
             &:hover{
-                background-image: url('./../../assets/img/linkedIn-hover-icon.png');
+                background-image: url('./../../../assets/img/linkedIn-hover-icon.png');
                 
                 &::after{
                     content: '•';

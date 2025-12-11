@@ -1,6 +1,6 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { TranslateContentService } from '../../shared/translate-content.service';
 import { CommonModule } from '@angular/common';
+import { TranslateContentService } from '../../../shared/translate-content.service';
 
 @Component({
   selector: 'app-overlay',
