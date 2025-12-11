@@ -1,24 +1,59 @@
-section{
-    display: flex;
+.mobile-section{
+    display: none;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     position: absolute;
-    background-color: rgb(0, 0, 0, 0.04);
     width: 100%;
-    padding: 25px 0;
-    
-    > div{
-        padding-left: 96px;
+    padding-top: 32px;
+
+    >a{
+        height: 48px;
+        width: 28px;
+        margin-left: 16px;
+        cursor: pointer;
+        background-image: url('./../../../../../assets/img/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &:hover{
+            background-image: url('./../../../../../assets/img/logo-hover.png');
+        }
+    }
+}
+
+.mobile-overlay{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+
+    >div{
         display: flex;
         align-items: center;
+        flex-direction: column;
         gap: 24px;
-
-
+        background-image: url(/assets/img/hero-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 30px;
+        border: 1px solid #3DCFB6;
+        position: absolute;
+        right: 16px;
+        top: 80px;
+        width: 236px;
+        height: 250px;
+        justify-content: center;
+    
         > div{
             display: flex;
             border: solid 1px #3DCFB6;
             border-radius: 100px;
-    
+        
             > div{
                 padding: 3.5px 12.5px;
                 border-radius: 100px;
@@ -26,7 +61,7 @@ section{
                 font-family: 'firaCode', sans-serif;
                 color: #3DCFB680;
                 cursor: pointer;
-
+        
                 &.selected{
                     background-color: #3DCFB6 !important;
                     color: white !important;
@@ -34,23 +69,24 @@ section{
                     margin: -1px;
                 }
             }
-
+        
             &:hover {
                 border-color: white;
                 >div{
                     color: #3DCFB6;
                 }
             }
+    
         }
-
+        
         > a{
             text-decoration: none;
             color: white;
             font-weight: 400;
             font-family: 'firaCode', sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             position: relative;
-
+    
             &:hover, &.active{
                 color: #3DCFB6;
                 &::after{
@@ -64,18 +100,16 @@ section{
             }
         }
     }
+}
 
-    >a{
-        height: 48px;
-        width: 132px;
-        padding-right: 96px;
-        cursor: pointer;
-        background-image: url('./../../../../assets/img/logo_name.png');
-        background-repeat: no-repeat;
-        background-size: contain;
+@media (max-width: 799px) {
+    .mobile-section{
+        display: flex;
+    }
+}
 
-        &:hover{
-            background-image: url('./../../../../assets/img/logo_name-hover.png');
-        }
+@media (min-width: 800px) {
+    .mobile-overlay{
+        display: none;
     }
 }
