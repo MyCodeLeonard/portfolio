@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HamburgerButtonV1Component } from '../../hamburger-button-v1/hamburger-button-v1.component';
 import { TranslateContentService } from '../../../translate-content.service';
@@ -10,12 +10,18 @@ import { TranslateContentService } from '../../../translate-content.service';
   templateUrl: './header-mobile.component.html',
   styleUrl: './header-mobile.component.scss'
 })
-export class HeaderMobileComponent {
+export class HeaderMobileComponent implements OnDestroy{
   translateContent = inject(TranslateContentService);
   activeLink!: 1 | 2 | 3;
+  
   activeOverlay:boolean = false;
+  mq = window.matchMedia('(max-width: 799px)');
     
-  constructor(){}
+  constructor() {
+    this.mq.addEventListener('change', () =>{
+      if(!this.mq.matches) this.overlayClose();
+    });
+  }
   
   setActive(linkNumber: 1 | 2 | 3) {
     this.activeLink = linkNumber;
@@ -35,13 +41,11 @@ export class HeaderMobileComponent {
     event.stopPropagation();
   }
 
-  ngOnInit() {
-    window.addEventListener('resize', () =>{
-      if(this.activeOverlay) this.overlayClose();
-    });
-  }
-
   closeTab() {
     window.close();
+  } 
+
+  ngOnDestroy() {
+    this.mq.removeEventListener('change', () => this.activeOverlay = this.mq.matches);
   }
 }

@@ -11,7 +11,8 @@
         <div></div>
     </div>
     <div class="right-object">
-        <a href="mailto:contact@leonard-fritzmann.com">contact&#64;leonard-fritzmann.com</a>
+        <a class="mail-link-desktop" href="mailto:contact@leonard-fritzmann.com" *ngIf="!isMobile">contact&#64;leonard-fritzmann.com</a>
+        <a class="mail-link-mobile" href="mailto:contact@leonard-fritzmann.com" *ngIf="isMobile"></a>
         <a target="_blank" href="https://github.com/mycodeleonard"></a>
         <a target="_blank" href="https://de.linkedin.com/in/leonard-fritzmann-302269352"></a>
         <div></div>

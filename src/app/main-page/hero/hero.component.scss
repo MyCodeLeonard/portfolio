@@ -8,16 +8,18 @@ section {
     background-image: url('/assets/img/hero-background.png');
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    overflow: hidden;
 
     > h2{
-        font-size: 40px;
+        font-size: clamp(24px, 2.778vw, 40px);
         font-family: 'firaCode', sans-serif;
         color: #D9D9D9;
         font-weight: 400;
     }
 
     > h1{
-        font-size: 128px;
+        font-size: clamp(32px, 8.888vw, 128px);
         font-family: 'karla', sans-serif;
         color: #D9D9D9;
         font-weight: 700;
@@ -28,25 +30,21 @@ section {
 
 .section-links{
     display: flex;
-    gap: 48px;
+    gap: clamp(24px, 3.333vw, 48px);
 
     >app-link-button:nth-of-type(1){
-        // width: 124px;
         width: 166px;
     }
 
     >app-link-button:nth-of-type(2){
-        // width: 95px;
         width: 137px;
     }
 }
 
 .left-object{
     position: absolute;
-    left: 96px;
-    // bottom: 83px;
-    // bottom: 0;
-    top: 596px;;
+    left: clamp(16px, 6.667vw, 96px);
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +62,7 @@ section {
     }
 
     > div{
-        height: 240px;
+        height: clamp(141px, 36.153vw, 240px);
         width: 0px;
         color: #3DCFB6;
         border: solid 1px;
@@ -73,10 +71,8 @@ section {
 
 .right-object{
     position: absolute;
-    right: 96px;
-    // bottom: 83px;
-    // bottom: 0;
-    top: 602px;
+    right: clamp(16px, 6.667vw, 96px);
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,9 +87,8 @@ section {
         background-repeat: no-repeat;
         background-position: center;
 
-        &:first-of-type{
+        &.mail-link-desktop{
             rotate: calc(-90deg);
-            // transform:translateX(20px);
             transform:translate3d(10px, -2px, 0);
             text-wrap: nowrap;
             align-content: center;
@@ -101,6 +96,22 @@ section {
 
             &:hover{
                 color: #3DCFB6;
+            }
+        }
+
+        &.mail-link-mobile{
+            background-image: url('./../../../assets/img/mail-icon.png');
+            
+            &:hover{
+                background-image: url('./../../../assets/img/mail-hover-icon.png');
+
+                &::after{
+                    content: '•';
+                    position: absolute;
+                    right: -14px;
+                    color: #6ad7bf;
+                    font-size: 28px;
+                }
             }
         }
 
@@ -139,7 +150,7 @@ section {
 
     >div{
         width: 0px;
-        height: 186px;
+        height: clamp(72px, 29.034vw, 184px);
         border: solid 1px;
         color: white;
     }
@@ -162,5 +173,11 @@ section {
 @keyframes darken-color{
     100%{
         color: #3DCFB6;
+    }
+}
+
+@media (max-width: 350px) {
+    .section-links{
+        gap: 0;
     }
 }
