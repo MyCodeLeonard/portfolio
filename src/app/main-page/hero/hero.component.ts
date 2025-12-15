@@ -14,8 +14,9 @@ import { CommonModule } from '@angular/common';
 })
 export class HeroComponent implements OnDestroy{
   translateContent = inject(TranslateContentService);
-  isMobile = false;
-  mq = window.matchMedia('(max-width: 799px)');
+
+  mq:MediaQueryList = window.matchMedia('(max-width: 799px)');
+  isMobile:boolean = this.mq.matches;
 
   constructor() {
     this.mq.addEventListener('change', () => this.isMobile = this.mq.matches);
