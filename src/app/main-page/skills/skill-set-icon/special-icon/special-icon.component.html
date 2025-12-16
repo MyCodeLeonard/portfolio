@@ -2,14 +2,12 @@
     <img src="assets/img/growth-mindset.png" alt="">
     <span>{{translateContent[translateContent.language].growthMindset}}</span>
 
-    <div>
-        <div [ngStyle]="{'width': translateContent.select == 'DE' ? '190px' : ''}">
-            <span>{{translateContent[translateContent.language].hoverWindowFirstContent}}</span>
-            <span>{{translateContent[translateContent.language].hoverWindowSecondContent}}</span>
-            <span>{{translateContent[translateContent.language].itSecurity}}</span>
-            <span>&</span>
-            <span>{{translateContent[translateContent.language].cloudAutomation}}</span>
-        </div>
-        <div></div>
+    <div #infoBox [ngStyle]="{'width': translateContent.select == 'DE' ? '190px' : ''}">
+        <span>{{translateContent[translateContent.language].hoverWindowFirstContent}}</span>
+        <span>{{translateContent[translateContent.language].hoverWindowSecondContent}}</span>
+        <span>{{translateContent[translateContent.language].itSecurity}}</span>
+        <span>&</span>
+        <span>{{translateContent[translateContent.language].cloudAutomation}}</span>
     </div>
+    <div></div>
 </section>

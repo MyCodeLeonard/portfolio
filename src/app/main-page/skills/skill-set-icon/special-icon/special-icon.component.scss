@@ -6,6 +6,7 @@ section{
     position: relative;
     width: 104px;
     height: 116px;
+    cursor: pointer;
 
     >img{
         height: 64px;
@@ -28,72 +29,81 @@ section{
         }
         
         >div{
-            visibility: visible;
+            visibility: visible !important;
         }
     }
 
+
     >div{
-        position: absolute;
-        top: -108px;
-        left: 18px;
         visibility: hidden;
         pointer-events: none;
+        background-color: white;
+        position: absolute;
 
-        >div:nth-of-type(1){
+        &:nth-of-type(1){
             width: 150px;
-            background-color: white;
             border-radius: 16px;
-
+    
             padding: 12px 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
-
+    
+            bottom: 104px;
+            z-index: 1;
+    
             >span{
                 color: #3DCFB6;
-
+    
                 &:nth-of-type(3){
                     margin-top: 8px;
                     color: #007d67;
                 }
-
+    
                 &:nth-of-type(4), &:nth-of-type(5){
                     color: #007d67;
                 }
             }
-
-            // >div{
-            //     display: flex;
-            //     gap: 12px;
-            //     margin-top: 12px;
-
-            //     >div{
-            //         display: flex;
-            //         flex-direction: column;
-            //         gap: 4px;
-            //         align-items: center;
-
-            //         >img{
-            //             height: 33px;
-            //         }
-
-            //         >span{
-            //             font-size: 12px;
-            //             color: #3DCFB6;
-            //         }
-            //     }
-            // }
         }
 
-        >div:nth-of-type(2){
+        &:nth-of-type(2){
             width: 20px;
-            background-color: white;
             height: 20px;
             transform: rotate(45deg);
-            position: absolute;
-            bottom: -7px;
-            left: 24px;
             border-radius: 4px;
+        }
+    } 
+}
+
+@media (max-width:1110px) {
+    section {
+        width: 93px;
+        height: 110px;
+
+        >span{
+            font-size: clamp(16px, 1.621vw, 18px);
+        }
+
+
+        >div:nth-of-type(1){
+            bottom: 96px;
+        }
+    }
+    
+}
+
+@media (max-width:389px) {
+    section {
+        width: 75px;
+
+        >img{
+            height: 56px;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+        }
+
+        >span{
+            font-size: 13px;;
         }
     }
 }
