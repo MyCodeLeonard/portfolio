@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateContentService } from '../../../../shared/translate-content.service';
 import { FormsModule } from '@angular/forms';
@@ -11,39 +11,34 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './special-icon.component.scss'
 })
 export class SpecialIconComponent {
-  // @HostListener('window:resize') onResize() { 
-  //   this.customizationInfoBox();
-  // }
-
-  translateContent = inject(TranslateContentService);
+  @ViewChild('infoBox') infoBoxDivRef!:ElementRef<HTMLElement>;
   
-  // @ViewChild('infoBox') infoBoxDivRef!:ElementRef<HTMLElement>
-  // infoBoxDiv!:HTMLElement;
+  translateContent = inject(TranslateContentService);
+  infoBoxDiv!:HTMLElement;
+  
+  onHover(){
+    this.customizationInfoBox();
+  }
 
-  // ngAfterViewInit() {
-  //   this.infoBoxDiv = this.infoBoxDivRef.nativeElement;
-  //   this.customizationInfoBox();
-  // }
+  onLeave(){
+    this.removeMargin();
+  }
 
-  // customizationInfoBox(){
-  //   let left = this.infoBoxDiv.getBoundingClientRect().left;
-  //   let right = this.infoBoxDiv.getBoundingClientRect().right;
-
-  //   this.infoBoxDiv?.style.removeProperty('margin-left');
-  //   this.infoBoxDiv?.style.removeProperty('margin-right');
-
-  //   // console.log('right');
-  //   // console.log(right);
-  //   // console.log('left');
-  //   // console.log(left);
-  //   // console.log('window.innerWidth');
-  //   // console.log(window.innerWidth);
+  customizationInfoBox(){
+    this.infoBoxDiv = this.infoBoxDivRef.nativeElement;
+    let left = this.infoBoxDiv.getBoundingClientRect().left;
+    let right = this.infoBoxDiv.getBoundingClientRect().right;
     
-  //   if(right >= window.innerWidth){
-  //     this.infoBoxDiv.style.marginRight = '160px';
-  //   } 
-  //   else if(left <= 0){
-  //     this.infoBoxDiv.style.marginLeft = '160px';
-  //   }
-  // }
+    if(right +10 >= window.innerWidth){
+      this.infoBoxDiv.style.marginRight = '160px';
+    } 
+    else if(left -10 <= 0){
+      this.infoBoxDiv.style.marginLeft = '160px';
+    }
+  }
+
+  removeMargin(){
+    this.infoBoxDiv?.style.removeProperty('margin-left');
+    this.infoBoxDiv?.style.removeProperty('margin-right');
+  }
 }
