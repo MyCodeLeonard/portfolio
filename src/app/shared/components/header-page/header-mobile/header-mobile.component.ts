@@ -33,8 +33,10 @@ export class HeaderMobileComponent implements OnDestroy{
   }
 
   overlayClose(){
-    this.activeOverlay = false;
-    document.body.style.removeProperty('overflow');
+    if(this.activeOverlay){
+      this.activeOverlay = false;
+      document.body.style.removeProperty('overflow');
+    }
   }
   
   stopClickBubbling(event: MouseEvent) {
