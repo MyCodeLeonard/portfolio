@@ -19,14 +19,14 @@ export class ContactMeComponent {
   massage!:string;
   privacyPolicy!:boolean;
 
-  isCheckName:boolean = true;
-  isCheckEmail!:boolean;
-  isCheckMassage!:boolean;
-  isCheckPrivacyPolicy:boolean = true;
+  isCheckName:number = -1;
+  isCheckEmail:number = -1;
+  isCheckMassage:number = -1;
+  isCheckPrivacyPolicy:number = -1;
 
   yourNameError:string = this.translateContent[this.translateContent.language].yourNameError;
-  yourEmailError!:string;
-  helpyouError!:string;
+  yourEmailError:string = this.translateContent[this.translateContent.language].yourEmailFirstError;
+  helpyouError:string = this.translateContent[this.translateContent.language].helpyouFirstError;
   privacyPolicyError:string = this.translateContent[this.translateContent.language].privacyPolicyError;
 
   isButtonDisabled = true;
@@ -55,7 +55,7 @@ export class ContactMeComponent {
   }
 
   buttonDisabled(){
-    if(this.isCheckName && this.isCheckEmail && this.isCheckMassage && this.isCheckPrivacyPolicy){
+    if(this.isCheckName == 1 && this.isCheckEmail == 1 && this.isCheckMassage == 1 && this.isCheckPrivacyPolicy == 1){
       this.isButtonDisabled = false;
     }
     else{
@@ -69,7 +69,7 @@ export class ContactMeComponent {
     this.checkMassage();
     this.checkPrivacyPolicy();
 
-    if(this.isCheckName && this.isCheckEmail && this.isCheckMassage && this.isCheckPrivacyPolicy){
+    if(this.isCheckName == 1 && this.isCheckEmail == 1 && this.isCheckMassage == 1 && this.isCheckPrivacyPolicy == 1){
       
       this.senderFeedbackShow = true;
       
@@ -78,6 +78,12 @@ export class ContactMeComponent {
       this.massage = '';
       this.privacyPolicy = false;
 
+      this.isCheckName= -1;
+      this.isCheckEmail = -1;
+      this.isCheckMassage = -1;
+      this.isCheckPrivacyPolicy = -1;
+      this.isButtonDisabled = true;
+
       setTimeout(() => {
         this.senderFeedbackShow = false;
       }, 2000);
@@ -85,41 +91,41 @@ export class ContactMeComponent {
   }
 
   checkName(){
-    if (!this.name?.trim()) return this.isCheckName = false;
-    else return this.isCheckName = true;
+    if (!this.name?.trim()) return this.isCheckName = 0;
+    else return this.isCheckName = 1;
   }
 
   checkEmail(){
     if (!this.email?.trim()) {
       this.yourEmailError = this.translateContent[this.translateContent.language].yourEmailFirstError;
-      return this.isCheckEmail = false;
+      return this.isCheckEmail = 0;
     }
     else if (!/^\S+@\S+\.\S+$/.test(this.email)){
       this.yourEmailError = this.translateContent[this.translateContent.language].yourEmailSecondError; 
-      return this.isCheckEmail = false;
+      return this.isCheckEmail = 0;
     }
     else{
-      return this.isCheckEmail = true;
+      return this.isCheckEmail = 1;
     } 
   }
 
   checkMassage(){
     if (!this.massage?.trim()) {
       this.helpyouError = this.translateContent[this.translateContent.language].helpyouFirstError;
-      return this.isCheckMassage = false;
+      return this.isCheckMassage = 0;
     }
     else if(this.massage.length < 20){
       this.helpyouError = this.translateContent[this.translateContent.language].helpyouSecondError;
-      return this.isCheckMassage = false
+      return this.isCheckMassage = 0
     }
     else{
-      return this.isCheckMassage = true;
+      return this.isCheckMassage = 1;
     } 
   }
 
   checkPrivacyPolicy(){
-    if(this.privacyPolicy) return this.isCheckPrivacyPolicy = true
-    else return this.isCheckPrivacyPolicy = false
+    if(this.privacyPolicy) return this.isCheckPrivacyPolicy = 1
+    else return this.isCheckPrivacyPolicy = 0
   }
 
   openPrivacyPolicy() {

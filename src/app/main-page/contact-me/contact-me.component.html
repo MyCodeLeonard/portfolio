@@ -14,19 +14,19 @@
         <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="reset(hr1, hr2)">
             <h4>{{translateContent[translateContent.language].whatsYourName}}</h4>
             <input (input)="checkName(); buttonDisabled()" (blur)="checkName()" [(ngModel)]="name" #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
-            <span class="error-box" [ngStyle]="{'visibility': isCheckName ? '' : 'visible'}">{{yourNameError}}</span>
+            <span class="error-box" [ngStyle]="{'visibility': isCheckName == 0 ? 'visible' : ''}">{{yourNameError}}</span>
         </div>
         <hr #hr2>
         <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="reset(hr2, hr3)">
             <h4>{{translateContent[translateContent.language].whatsYourEmail}}</h4>
             <input (input)="checkEmail(); buttonDisabled()" (blur)="checkEmail()" [(ngModel)]="email" #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
-            <span class="error-box" [ngStyle]="{'visibility': isCheckEmail ? '' : 'visible'}">{{yourEmailError}}</span>
+            <span class="error-box" [ngStyle]="{'visibility': isCheckEmail == 0 ? 'visible' : ''}">{{yourEmailError}}</span>
         </div>
         <hr #hr3>
         <div (click)="setFocus(textareaMessage)" (mouseenter)="highlight(hr3, hr4)" (mouseleave)="reset(hr3, hr4)">
             <h4>{{translateContent[translateContent.language].howCanIHelpyou}}</h4>
             <textarea (input)="checkMassage(); buttonDisabled()" (blur)="checkMassage()" (input)="adjustHeight(textareaMessage)" [(ngModel)]="massage" #textareaMessage type="text" placeholder={{translateContent[translateContent.language].placeholderHelpyou}}></textarea>
-            <span class="error-box" [ngStyle]="{'visibility': isCheckMassage ? '' : 'visible'}">{{helpyouError}}</span>
+            <span class="error-box" [ngStyle]="{'visibility': isCheckMassage == 0 ? 'visible' : ''}">{{helpyouError}}</span>
         </div>
         <hr #hr4>
         <div>
@@ -36,7 +36,7 @@
                 <div></div>
                 <span>{{translateContent[translateContent.language].privacyPolicyPartOne}} <a (click)="openPrivacyPolicy()">{{translateContent[translateContent.language].privacyPolicyPartTwo}}</a> {{translateContent[translateContent.language].privacyPolicyPartThree}}</span>
             </div>
-            <span [ngStyle]="{'visibility': isCheckPrivacyPolicy ? '' : 'visible'}">{{privacyPolicyError}}</span>
+            <span [ngStyle]="{'visibility': isCheckPrivacyPolicy == 0 ? 'visible' : ''}">{{privacyPolicyError}}</span>
         </div>
         <app-click-button *ngIf="!isButtonDisabled" (click)="formSend()" [ngStyle]="{'width': translateContent.select == 'DE' ? '134px' : ''}" [content] = translateContent[translateContent.language].formButton></app-click-button>
         <button *ngIf="isButtonDisabled">{{translateContent[translateContent.language].formButton}}</button>
