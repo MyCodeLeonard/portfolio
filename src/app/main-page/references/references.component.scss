@@ -13,9 +13,9 @@ section{
 
     > div:nth-of-type(1){
         display: flex;
-        gap: 64px;
-        margin: 0 -332.5px;
+        gap: clamp(8px, calc(5.185vw - 10.667px), 64px);
         align-items: center;
+        justify-content: center;
         position: relative;
 
         >div{
@@ -23,17 +23,16 @@ section{
             flex-direction: column;
             background-color: #3DCFB61A;
             border-radius: 32px;
-            height: 150px;
+            height: clamp(150px, calc(-0.09074 * 100vw + 280.666px), 248px);
             padding: 48px 40px;
             border: solid 1px #3DCFB6;
             justify-content: space-between;
-            width: 33%;
             cursor: pointer;
 
             >span{
                 font-family: "karla", sans-serif;
                 font-weight: 400;
-                font-size: 20px;
+                font-size: clamp(18px, calc(0.185vw + 17.333px), 20px);
                 color: #FFFFFFCC;
                 width: 46ch;
             }
@@ -63,11 +62,13 @@ section{
         >div:nth-last-of-type(2){
             background-color: #3DCFB64D;
             position: relative;
-            height: 176px;
             cursor: default;
+            gap: 32px;
+            height: clamp(189px, calc(-0.1518 * 100vw + 407.576px), 359px);
 
             >span{
                 color: white;
+                max-width: clamp(20ch, 60vw, 46ch);
             }
 
             >div{
@@ -85,12 +86,16 @@ section{
             &::before{
                 content: "";
                 position: absolute;
-                top: -10px;
-                left: -47px;
+                // top: -10px;
+                top: clamp(-14px, calc(0.003571 * 100vw - 15.143px), -10px);
+                // left: -47px;
+                left: clamp(-47px, calc(-0.04196 * 100vw + 13.427px), 0px);
                 height: 64px;
                 background-image: url(/assets/img/quotes.png);
                 background-repeat: no-repeat;
-                width: 90px;
+                background-size: contain;
+                // width: 90px;
+                width: clamp(67px, calc(0.02054 * 100vw + 60.427px), 90px);
             }
         }
 
@@ -110,6 +115,7 @@ section{
                 #000 90%
             );
             pointer-events: none;
+            display: none; //wieder entfernen!!!!!!!!
         }
     }
 
