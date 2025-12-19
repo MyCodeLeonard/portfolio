@@ -107,15 +107,12 @@ section{
             left: 0;
             background: linear-gradient(
                 to right,
-                #000 10%,
-                #1C1C1C 15%,
-                rgba(28, 28, 28, 0) 25%,
-                rgba(29, 28, 28, 0) 75%,
-                #1C1C1C 85%,
-                #000 90%
+                #1C1C1C 0%,
+                rgba(28, 28, 28, 0) 10%,
+                rgba(29, 28, 28, 0) 90%,
+                #1C1C1C 100%,
             );
             pointer-events: none;
-            display: none; //wieder entfernen!!!!!!!!
         }
     }
 
@@ -183,4 +180,10 @@ section{
 
 .active{
     color: #3DCFB6 !important;
+}
+
+@media (max-width:533px) {
+    aside{
+        display: none;
+    }
 }
