@@ -131,3 +131,9 @@ section{
         }
     }
 }
+
+@media (max-width: 345px) {
+    .about-me-div >div >div{
+        padding: 20px;
+    }
+}

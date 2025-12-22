@@ -9,6 +9,7 @@ section{
         font-weight: 700;
         text-align: center;
         margin-bottom: clamp(32px, 3.333vw, 48px);
+        margin-inline: 8px;
     }
 
     > div:nth-of-type(1){
@@ -86,15 +87,12 @@ section{
             &::before{
                 content: "";
                 position: absolute;
-                // top: -10px;
                 top: clamp(-14px, calc(0.003571 * 100vw - 15.143px), -10px);
-                // left: -47px;
                 left: clamp(-47px, calc(-0.04196 * 100vw + 13.427px), 0px);
                 height: 64px;
                 background-image: url(/assets/img/quotes.png);
                 background-repeat: no-repeat;
                 background-size: contain;
-                // width: 90px;
                 width: clamp(67px, calc(0.02054 * 100vw + 60.427px), 90px);
             }
         }
