@@ -293,6 +293,12 @@ section{
     }
 }
 
+@media (max-width:350px) {
+    .placeholderUnder350{
+        font-size: 14px !important;
+    }
+}
+
 @media (max-width:329px) {
     section >div:nth-of-type(2) >div:nth-of-type(-n+3){
         padding-inline: 12px;

@@ -39,9 +39,19 @@ export class ContactMeComponent {
     input.focus();
   }
 
+  changePlaceholder(textarea: HTMLTextAreaElement){
+    if(textarea.value.length <=0){
+      textarea.classList.add('placeholderUnder350');
+      textarea.style.removeProperty('height');
+    } 
+    else {
+      textarea.classList.remove('placeholderUnder350');
+    }
+  }
+
   adjustHeight(textarea: any) {
     textarea.style.height = '24px';
-    textarea.style.height = (textarea.scrollHeight) + 'px';
+    textarea.style.height = (textarea.scrollHeight+2) + 'px';
   }
 
   highlight(prevHr: HTMLElement, nextHr: HTMLElement) {
@@ -69,25 +79,34 @@ export class ContactMeComponent {
     this.checkMassage();
     this.checkPrivacyPolicy();
 
+    this.checkBeforSend();
+  }
+
+  checkBeforSend(){
     if(this.isCheckName == 1 && this.isCheckEmail == 1 && this.isCheckMassage == 1 && this.isCheckPrivacyPolicy == 1){
-      
       this.senderFeedbackShow = true;
+      this.resetInputFelds();
+      this.resetIsCheck();
       
-      this.name = '';
-      this.email = '';
-      this.massage = '';
-      this.privacyPolicy = false;
-
-      this.isCheckName= -1;
-      this.isCheckEmail = -1;
-      this.isCheckMassage = -1;
-      this.isCheckPrivacyPolicy = -1;
-      this.isButtonDisabled = true;
-
       setTimeout(() => {
         this.senderFeedbackShow = false;
       }, 2000);
     } 
+  }
+
+  resetInputFelds(){
+    this.name = '';
+    this.email = '';
+    this.massage = '';
+    this.privacyPolicy = false;
+  }
+
+  resetIsCheck(){
+    this.isCheckName= -1;
+    this.isCheckEmail = -1;
+    this.isCheckMassage = -1;
+    this.isCheckPrivacyPolicy = -1;
+    this.isButtonDisabled = true;
   }
 
   checkName(){
@@ -133,5 +152,32 @@ export class ContactMeComponent {
     
     if (!this.privacyPolicyTab || this.privacyPolicyTab.closed) this.privacyPolicyTab = window.open('privacy-policy', '_blank');
     else this.privacyPolicyTab.focus();
+  }
+
+  inputEventName(){
+    this.checkName(); 
+    this.buttonDisabled();
+  }
+
+  inputEventEmail(){
+    this.checkEmail(); 
+    this.buttonDisabled();
+  }
+
+  inputEventMassage(textarea:HTMLTextAreaElement){
+    this.checkMassage(); 
+    this.buttonDisabled(); 
+    this.adjustHeight(textarea);
+    this.changePlaceholder(textarea);
+  }
+
+  blurEventMassage(textarea:HTMLTextAreaElement){
+    this.checkMassage(); 
+    this.changePlaceholder(textarea);
+  }
+
+  changeEventPrivacyPolicy(){
+    this.checkPrivacyPolicy(); 
+    this.buttonDisabled();
   }
 }

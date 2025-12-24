@@ -65,7 +65,7 @@ section{
             position: relative;
             cursor: default;
             gap: 32px;
-            height: clamp(189px, calc(-0.1518 * 100vw + 407.576px), 359px);
+            height: clamp(189px, calc(434.56px - 0.1705 * 100vw), 380px);
 
             >span{
                 color: white;
@@ -183,5 +183,11 @@ section{
 @media (max-width:533px) {
     aside{
         display: none;
+    }
+}
+
+@media (max-width:450px) {
+    section >div >div >div >span{
+        max-width: 120px;
     }
 }
