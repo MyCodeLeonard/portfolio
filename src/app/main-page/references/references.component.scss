@@ -65,11 +65,13 @@ section{
             position: relative;
             cursor: default;
             gap: 32px;
-            height: clamp(189px, calc(434.56px - 0.1705 * 100vw), 380px);
+            height: clamp(189px, calc(500px + (-0.2777 * (100vw - 320px))), 500px);
 
             >span{
                 color: white;
                 max-width: clamp(20ch, 60vw, 46ch);
+                height: 100%;
+                align-content: center;
             }
 
             >div{
