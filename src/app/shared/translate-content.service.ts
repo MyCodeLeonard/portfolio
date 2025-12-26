@@ -226,7 +226,7 @@ export class TranslateContentService {
           html:'',
           css:'',
         },
-        projectImg:'/assets/img/placeholder.png',
+        projectImg:'/assets/img/overlay-el-pollo-loco.png',
         githubUrl: '#',
         pageUrl: '#'
       },
