@@ -55,10 +55,10 @@ export class TranslateContentService {
           projectDescription:'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         },
         projectTwo:{
-          projectDescription:'',
+          projectDescription:'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
         },
         projectThree:{
-          projectDescription:'',
+          projectDescription:'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
         },
 
         whatMyColleaguesSayAboutMe: 'What my colleagues say about me',
@@ -153,10 +153,10 @@ export class TranslateContentService {
           projectDescription:'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzern und Kategorien zu.',
         },
         projectTwo:{
-          projectDescription:'',
+          projectDescription:'Spring-, Lauf- und Wurfspiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa gegen die verrückte Henne zu finden.',
         },
         projectThree:{
-          projectDescription:'',
+          projectDescription:'Dies ist eine Slack-Klon-App. Sie verbessert die Zusammenarbeit im Team und Kommunikation dank intuitiver Oberfläche, Echtzeit-Messaging und stabiler Kanalstruktur.',
         },
 
         whatMyColleaguesSayAboutMe: 'Was meine Kolleginnen und Kollegen über mich sagen',
@@ -214,9 +214,9 @@ export class TranslateContentService {
           javascript:'',
           firebase:'',
         },
-        projectImg:'/assets/img/placeholder.png',
-        githubUrl: '#',
-        pageUrl: '#',
+        projectImg:'/assets/img/join-overlay.png',
+        githubUrl: 'https://github.com/MyCodeLeonard/portfolio.join',
+        pageUrl: '#' //Seiten-URL einfügen, sobald sie bekannt ist.
       },
       projectTwo:{
         projectNumber:'02',
@@ -227,8 +227,8 @@ export class TranslateContentService {
           css:'',
         },
         projectImg:'/assets/img/overlay-el-pollo-loco.png',
-        githubUrl: '#',
-        pageUrl: '#'
+        githubUrl: 'https://github.com/MyCodeLeonard/portfolio.el_pollo_loco',
+        pageUrl: '#' //Seiten-URL einfügen, sobald sie bekannt ist.
       },
       projectThree:{
         projectNumber:'03',
@@ -240,8 +240,8 @@ export class TranslateContentService {
           firebase: '',
         },
         projectImg:'/assets/img/placeholder.png',
-        githubUrl: '#',
-        pageUrl: '#'
+        githubUrl: 'https://github.com/MyCodeLeonard/portfolio.da_bubble',
+        pageUrl: '#' //Seiten-URL einfügen, sobald sie bekannt ist.
       },
 
       html:{

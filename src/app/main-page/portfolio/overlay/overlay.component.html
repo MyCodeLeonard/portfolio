@@ -48,7 +48,7 @@
                 <a target="_blank" href={{translateContent.languageNeutral[selectedProject]?.pageUrl}}><span>Live Test</span></a>
             </div>
         </div>
-        <img src={{translateContent.languageNeutral[selectedProject]?.projectImg}} alt="">
+        <img [ngStyle]="{'object-fit': selectedProject == 'projectOne' ? 'fill' : ''}" src={{translateContent.languageNeutral[selectedProject]?.projectImg}} alt="">
         <button (click)="nextProject()"><span>{{translateContent[translateContent.language].portfolioOverlayNextProject}}</span></button>
     </div>
 </section>
