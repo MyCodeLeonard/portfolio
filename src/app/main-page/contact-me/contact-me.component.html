@@ -11,27 +11,27 @@
     </div>
     <div>
         <hr #hr1>
-        <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="reset(hr1, hr2)">
+        <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="highlightReset(hr1, hr2)">
             <h4>{{translateContent[translateContent.language].whatsYourName}}</h4>
-            <input (input)="inputEventName()" (blur)="checkName()" [(ngModel)]="name" #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
+            <input (input)="inputEventName()" (blur)="checkName()" [(ngModel)]="contactData.name" #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
             <span class="error-box" [ngStyle]="{'visibility': isCheckName == 0 ? 'visible' : ''}">{{yourNameError}}</span>
         </div>
         <hr #hr2>
-        <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="reset(hr2, hr3)">
+        <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="highlightReset(hr2, hr3)">
             <h4>{{translateContent[translateContent.language].whatsYourEmail}}</h4>
-            <input (input)="inputEventEmail()" (blur)="checkEmail()" [(ngModel)]="email" #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
+            <input (input)="inputEventEmail()" (blur)="checkEmail()" [(ngModel)]="contactData.email" #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
             <span class="error-box" [ngStyle]="{'visibility': isCheckEmail == 0 ? 'visible' : ''}">{{yourEmailError}}</span>
         </div>
         <hr #hr3>
-        <div (click)="setFocus(textareaMessage)" (mouseenter)="highlight(hr3, hr4)" (mouseleave)="reset(hr3, hr4)">
+        <div (click)="setFocus(textareaMessage)" (mouseenter)="highlight(hr3, hr4)" (mouseleave)="highlightReset(hr3, hr4)">
             <h4>{{translateContent[translateContent.language].howCanIHelpyou}}</h4>
-            <textarea class="placeholderUnder350" (input)="inputEventMassage(textareaMessage)" (blur)="blurEventMassage(textareaMessage)" [(ngModel)]="massage" #textareaMessage type="text" placeholder={{translateContent[translateContent.language].placeholderHelpyou}}></textarea>
+            <textarea class="placeholderUnder350" (input)="inputEventMassage(textareaMessage)" (blur)="blurEventMassage(textareaMessage)" [(ngModel)]="contactData.massage" #textareaMessage type="text" placeholder={{translateContent[translateContent.language].placeholderHelpyou}}></textarea>
             <span class="error-box" [ngStyle]="{'visibility': isCheckMassage == 0 ? 'visible' : ''}">{{helpyouError}}</span>
         </div>
         <hr #hr4>
         <div>
             <div>
-                <input (change)="changeEventPrivacyPolicy()" [(ngModel)]="privacyPolicy" type="checkbox" name="" id="privacy-policy">
+                <input (change)="changeEventPrivacyPolicy()" [(ngModel)]="privacyPolicy" type="checkbox" id="privacy-policy">
                 <label for="privacy-policy"></label>
                 <div></div>
                 <span>{{translateContent[translateContent.language].privacyPolicyPartOne}} <a (click)="openPrivacyPolicy()">{{translateContent[translateContent.language].privacyPolicyPartTwo}}</a> {{translateContent[translateContent.language].privacyPolicyPartThree}}</span>

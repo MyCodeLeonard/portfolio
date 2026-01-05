@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ClickButtonComponent } from '../../shared/components/click-button/click-button.component';
 import { TranslateContentService } from '../../shared/translate-content.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-me',
@@ -13,10 +14,25 @@ import { TranslateContentService } from '../../shared/translate-content.service'
 })
 export class ContactMeComponent {
   translateContent = inject(TranslateContentService);
+  http = inject(HttpClient);
 
-  name!:string;
-  email!:string;
-  massage!:string;
+  post = {
+    endPoint: 'https://leonard-fritzmann.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  contactData = {
+    name: "",
+    email: "",
+    massage: "",
+  };
+  
   privacyPolicy!:boolean;
 
   isCheckName:number = -1;
@@ -59,7 +75,7 @@ export class ContactMeComponent {
     if (nextHr) nextHr.style.borderColor = '#3DCFB6';
   }
 
-  reset(prevHr: HTMLElement, nextHr: HTMLElement) {
+  highlightReset(prevHr: HTMLElement, nextHr: HTMLElement) {
     if (prevHr) prevHr.attributeStyleMap.clear();
     if (nextHr) nextHr.attributeStyleMap.clear();
   }
@@ -85,19 +101,47 @@ export class ContactMeComponent {
   checkBeforSend(){
     if(this.isCheckName == 1 && this.isCheckEmail == 1 && this.isCheckMassage == 1 && this.isCheckPrivacyPolicy == 1){
       this.senderFeedbackShow = true;
-      this.resetInputFelds();
-      this.resetIsCheck();
-      
-      setTimeout(() => {
-        this.senderFeedbackShow = false;
-      }, 2000);
+
+      // this.phpSendMailTrigger(); //auf dem Server entkommentieren
+
+      this.toTest(); //auf dem server entfernen 
     } 
   }
 
+  toTest(){ //auf dem server entfernen
+    console.log(this.contactData); //auf dem server entfernen
+    
+    setTimeout(() => { //auf dem server entfernen
+      this.resetInputFelds(); //auf dem server entfernen
+      this.resetIsCheck(); //auf dem server entfernen
+    }, 1000); //auf dem server entfernen
+
+    setTimeout(() => { //auf dem server entfernen
+        this.senderFeedbackShow = false; //auf dem server entfernen
+    }, 2000); //auf dem server entfernen
+  } //auf dem server entfernen
+
+  phpSendMailTrigger(){
+    this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+      next: (response) => {
+        this.resetInputFelds();
+        this.resetIsCheck();
+      },
+      error: (error) => {
+        console.error(error);
+        this.senderFeedbackShow = false;
+      },
+      complete: () => {
+        console.info('send post complete');
+        this.senderFeedbackShow = false;
+      },
+    });
+  }
+
   resetInputFelds(){
-    this.name = '';
-    this.email = '';
-    this.massage = '';
+    this.contactData.name = "";
+    this.contactData.email = "";
+    this.contactData.massage = "";
     this.privacyPolicy = false;
   }
 
@@ -110,16 +154,16 @@ export class ContactMeComponent {
   }
 
   checkName(){
-    if (!this.name?.trim()) return this.isCheckName = 0;
+    if (!this.contactData.name?.trim()) return this.isCheckName = 0;
     else return this.isCheckName = 1;
   }
 
   checkEmail(){
-    if (!this.email?.trim()) {
+    if (!this.contactData.email?.trim()) {
       this.yourEmailError = this.translateContent[this.translateContent.language].yourEmailFirstError;
       return this.isCheckEmail = 0;
     }
-    else if (!/^\S+@\S+\.\S+$/.test(this.email)){
+    else if (!/^\S+@\S+\.\S+$/.test(this.contactData.email)){
       this.yourEmailError = this.translateContent[this.translateContent.language].yourEmailSecondError; 
       return this.isCheckEmail = 0;
     }
@@ -129,15 +173,16 @@ export class ContactMeComponent {
   }
 
   checkMassage(){
-    if (!this.massage?.trim()) {
+    if (!this.contactData.massage?.trim()) {
       this.helpyouError = this.translateContent[this.translateContent.language].helpyouFirstError;
       return this.isCheckMassage = 0;
     }
-    else if(this.massage.length < 20){
+    else if(this.contactData.massage.length < 20){
       this.helpyouError = this.translateContent[this.translateContent.language].helpyouSecondError;
       return this.isCheckMassage = 0
     }
     else{
+      this.helpyouError = "hidden";
       return this.isCheckMassage = 1;
     } 
   }
