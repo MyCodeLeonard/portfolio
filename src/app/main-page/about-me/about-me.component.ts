@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { TranslateContentService } from '../../shared/translate-content.service';
+import { CanvasAnimationComponent } from "./canvas-animation/canvas-animation.component";
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [CanvasAnimationComponent],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })

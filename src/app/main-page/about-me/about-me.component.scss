@@ -8,7 +8,7 @@ section{
 .profile-div{
     display: flex;
     
-    >div, >img{
+    >div, >img, >figure{
         height: clamp(358px, 39.444vw, 568px);
         aspect-ratio: 1 / 1;
         object-fit: cover;
@@ -22,8 +22,12 @@ section{
         background-size: cover;
     }
     
-    img{
-        background-color: black;
+    img, figure{
+        position: relative;
+        overflow: hidden;
+        font-family: 'Segoe UI', sans-serif;
+        background: #0a0f1f;
+        color: #fff;
         z-index: 1;
     }
     
@@ -125,7 +129,7 @@ section{
             height: auto;
         }
         
-        >img{
+        >img, figure{
             width: 100%;
             height: auto;
         }
