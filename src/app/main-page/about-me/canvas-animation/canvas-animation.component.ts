@@ -48,7 +48,6 @@ export class CanvasAnimationComponent implements AfterViewInit{
     for (let i = 0; i < Math.floor(this.canvas.clientWidth/10); i++) {
       this.particles.push(new Particle(this.canvas, this.symbols));
     }
-    console.log(this.particles);
   }
 
   animate() {
