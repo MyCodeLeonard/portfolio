@@ -44,6 +44,8 @@ export class TranslateContentService {
         itSecurity: 'IT Security',
         cloudAutomation: 'Cloud Automation',
 
+        currentlyLearning: 'Currently learning',
+
         portfolio: 'Portfolio',
         featuredProjects: 'Featured Projects',
         featuredProjectsFirstContent: 'Explore a selection of my work here - Interact with projects to see my skills in action.',
@@ -141,6 +143,8 @@ export class TranslateContentService {
         hoverWindowSecondContent: 'das Folgende noch zu lernen.',
         itSecurity: 'IT-Security',
         cloudAutomation: 'Cloud-Automation',
+
+        currentlyLearning: 'Derzeit am Lernen',
 
         portfolio: 'Portfolio',
         featuredProjects: 'Top-Projekte',
