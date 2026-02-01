@@ -66,8 +66,7 @@ export class ContactMeComponent {
   }
 
   adjustHeight(textarea: any) {
-    textarea.style.height = '24px';
-    textarea.style.height = (textarea.scrollHeight+2) + 'px';
+    textarea.style.height = (textarea.scrollHeight -1) + 'px';
   }
 
   highlight(prevHr: HTMLElement, nextHr: HTMLElement) {
@@ -78,6 +77,13 @@ export class ContactMeComponent {
   highlightReset(prevHr: HTMLElement, nextHr: HTMLElement) {
     if (prevHr) prevHr.attributeStyleMap.clear();
     if (nextHr) nextHr.attributeStyleMap.clear();
+  }
+
+  disabledButtonOnClick(){
+    this.checkName();
+    this.checkEmail();
+    this.checkMassage();
+    this.checkPrivacyPolicy();
   }
 
   buttonDisabled(){
@@ -102,24 +108,24 @@ export class ContactMeComponent {
     if(this.isCheckName == 1 && this.isCheckEmail == 1 && this.isCheckMassage == 1 && this.isCheckPrivacyPolicy == 1){
       this.senderFeedbackShow = true;
 
-      // this.phpSendMailTrigger(); //auf dem Server entkommentieren
+      // this.phpSendMailTrigger(); //auf dem eigenen Server entkommentieren
 
-      this.toTest(); //auf dem server entfernen 
+      this.toTest(); //auf dem eigenen server entfernen 
     } 
   }
 
-  toTest(){ //auf dem server entfernen
-    console.log(this.contactData); //auf dem server entfernen
+  toTest(){ //auf dem eigenen server entfernen
+    console.log(this.contactData); //auf dem eigenen server entfernen
     
-    setTimeout(() => { //auf dem server entfernen
-      this.resetInputFelds(); //auf dem server entfernen
-      this.resetIsCheck(); //auf dem server entfernen
-    }, 1000); //auf dem server entfernen
+    setTimeout(() => { //auf dem eigenen server entfernen
+      this.resetInputFelds(); //auf dem eigenen server entfernen
+      this.resetIsCheck(); //auf dem eigenen server entfernen
+    }, 1000); //auf dem eigenen server entfernen
 
-    setTimeout(() => { //auf dem server entfernen
-        this.senderFeedbackShow = false; //auf dem server entfernen
-    }, 2000); //auf dem server entfernen
-  } //auf dem server entfernen
+    setTimeout(() => { //auf dem eigenen server entfernen
+        this.senderFeedbackShow = false; //auf dem eigenen server entfernen
+    }, 2000); //auf dem eigenen server entfernen
+  } //auf dem eigenen server entfernen
 
   phpSendMailTrigger(){
     this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
@@ -199,25 +205,25 @@ export class ContactMeComponent {
     else this.privacyPolicyTab.focus();
   }
 
-  inputEventName(){
+  blurEventName(){
     this.checkName(); 
     this.buttonDisabled();
   }
 
-  inputEventEmail(){
+  blurEventEmail(){
     this.checkEmail(); 
     this.buttonDisabled();
   }
 
-  inputEventMassage(textarea:HTMLTextAreaElement){
+  blurEventMassage(textarea:HTMLTextAreaElement){
     this.checkMassage(); 
     this.buttonDisabled(); 
     this.adjustHeight(textarea);
     this.changePlaceholder(textarea);
   }
 
-  blurEventMassage(textarea:HTMLTextAreaElement){
-    this.checkMassage(); 
+  changeEventMassage(textarea:HTMLTextAreaElement){
+    this.adjustHeight(textarea);
     this.changePlaceholder(textarea);
   }
 
