@@ -68,7 +68,7 @@ section{
             >div:nth-of-type(2){
                 width: 300px;
                 height: 188px;
-                background-image: url('/assets/img/background-project-picture.png');
+                background-image: url('./../../../assets/img/background-project-picture.png');
                 position: absolute;
                 right: -380px;
                 border-radius: 16px;
@@ -90,7 +90,7 @@ section{
 
                 >h3::after{
                     content: "";
-                    background-image: url(/assets/img/arrow_outward.png);
+                    background-image: url('./../../../assets/img/arrow_outward.png');
                     height: 12px;
                     width: 12px;
                     display: block;

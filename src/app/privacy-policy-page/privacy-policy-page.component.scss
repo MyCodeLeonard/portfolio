@@ -3,7 +3,7 @@ div{
     max-width: 1440px;
     justify-self: center;
     width: 100%;
-    background-image: url(/assets/img/hero-background.png);
+    background-image: url('./../../../assets/img/hero-background.png');
     background-repeat: no-repeat;
     background-size: cover;
 }

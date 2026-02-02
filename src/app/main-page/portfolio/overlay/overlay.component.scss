@@ -12,7 +12,7 @@ section{
     display: none;
 
     >div{
-        background-image: url('/assets/img/hero-background.png');
+        background-image: url('./../../../assets/img/hero-background.png');
         background-repeat: no-repeat;
         background-size: cover;
         border: 1px solid #3DCFB6;
@@ -26,7 +26,7 @@ section{
         >button:nth-of-type(1){
             background-color: transparent;
             border: none;
-            background-image: url('/assets/img/close_small.png');
+            background-image: url('./../../../assets/img/close_small.png');
             height: 26px;
             width: 26px;
             background-repeat: no-repeat;
@@ -39,7 +39,7 @@ section{
             padding: 0;
 
             &:hover{
-                background-image: url('/assets/img/close.png');
+                background-image: url('./../../../assets/img/close.png');
             }
         }
 
@@ -125,7 +125,7 @@ section{
 
                         &::after{
                             content: "";
-                            background-image: url('/assets/img/arrow_outward-hover.png');
+                            background-image: url('./../../../assets/img/arrow_outward-hover.png');
                             height: 11px;
                             width: 11px;
                             background-size: cover;
@@ -175,7 +175,7 @@ section{
 
                 &::after{
                     content: "";
-                    background-image: url('/assets/img/arrow-forward-hover.png');
+                    background-image: url('./../../../assets/img/arrow-forward-hover.png');
                     height: 18px;
                     width: 18px;
                     background-size: cover;
