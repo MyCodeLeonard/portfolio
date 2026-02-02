@@ -19,14 +19,14 @@
 }
 
 .logo-name-a{
-    background-image: url('./../../../assets/img/logo_name.png');
+    background-image: url('./../../../../../assets/img/logo_name.png');
     height: 48px;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
 
     &:hover{
-        background-image: url('./../../../assets/img/logo_name-hover.png');
+        background-image: url('./../../../../../assets/img/logo_name-hover.png');
     }
 }
 

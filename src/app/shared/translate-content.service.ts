@@ -41,8 +41,8 @@ export class TranslateContentService {
         growthMindset:'Growth mindset',
         hoverWindowFirstContent: 'I have a special',
         hoverWindowSecondContent: 'interest in learning',
-        itSecurity: 'IT Security',
-        cloudAutomation: 'Cloud Automation',
+        itSecurity: 'Backend',
+        cloudAutomation: 'DevSecOps',
 
         currentlyLearning: 'Currently learning',
 
@@ -119,7 +119,7 @@ export class TranslateContentService {
         contactMeLink: 'Schreib mir',
 
         marqueeFrontendDeveloper: 'Fullstack-Entwickler',
-        marqueeBasedInAllgaeu: 'Mit Sitz im Allgaeu',
+        marqueeBasedInAllgaeu: 'Mit Sitz im Allgäu',
         marqueeOpenToWork: 'Offen für neue Möglichkeiten',
         marqueeAvailbleForRemoteWork: 'Für Remote-Arbeit verfügbar',
 
@@ -141,8 +141,8 @@ export class TranslateContentService {
         growthMindset:'Wachstums- mentalität',
         hoverWindowFirstContent: 'Ich bin daran interessiert,',
         hoverWindowSecondContent: 'das Folgende noch zu lernen.',
-        itSecurity: 'IT-Security',
-        cloudAutomation: 'Cloud-Automation',
+        itSecurity: 'Backend',
+        cloudAutomation: 'DevSecOps',
 
         currentlyLearning: 'Derzeit am Lernen',
 
@@ -218,9 +218,10 @@ export class TranslateContentService {
           javascript:'',
           firebase:'',
         },
-        projectImg:'/assets/img/join-overlay.png',
+        projectImg:'assets/img/join-overlay.png',
         githubUrl: 'https://github.com/MyCodeLeonard/portfolio.join',
-        pageUrl: 'https://join.leonard-fritzmann.com' //Seiten-URL ändert sich möglicherweise noch
+        // pageUrl: 'https://join.leonard-fritzmann.com' //Seiten-URL ändert sich möglicherweise noch
+        pageUrl: '/join/index.html' //auf dem eigenen server entfernen 
       },
       projectTwo:{
         projectNumber:'02',
@@ -230,7 +231,7 @@ export class TranslateContentService {
           html:'',
           css:'',
         },
-        projectImg:'/assets/img/overlay-el-pollo-loco.png',
+        projectImg:'assets/img/overlay-el-pollo-loco.png',
         githubUrl: 'https://github.com/MyCodeLeonard/portfolio.el_pollo_loco',
         pageUrl: 'https://el-pollo-loco.leonard-fritzmann.com' //Seiten-URL ändert sich möglicherweise noch
       },
@@ -243,33 +244,33 @@ export class TranslateContentService {
           typescript: '',
           firebase: '',
         },
-        projectImg:'/assets/img/placeholder.png',
+        projectImg:'assets/img/placeholder.png',
         githubUrl: 'https://github.com/MyCodeLeonard/portfolio.da_bubble',
         pageUrl: 'https://da-bubble.leonard-fritzmann.com' //Seiten-URL ändert sich möglicherweise noch
       },
 
       html:{
-        icon: '/assets/img/html-hover.png',
+        icon: 'assets/img/html-hover.png',
         name: 'HTML'
       },
       css:{
-        icon: '/assets/img/css-hover.png',
+        icon: 'assets/img/css-hover.png',
         name: 'CSS'
       },
       javascript:{
-        icon: '/assets/img/javascript-hover.png',
+        icon: 'assets/img/javascript-hover.png',
         name: 'JavaScript'
       },
       firebase:{
-        icon: '/assets/img/firebase-hover.png',
+        icon: 'assets/img/firebase-hover.png',
         name: 'Firebase'
       },
       angular:{
-        icon: '/assets/img/angular-hover.png',
+        icon: 'assets/img/angular-hover.png',
         name: 'Angular'
       },
       typescript:{
-        icon: '/assets/img/typescript-hover.png',
+        icon: 'assets/img/typescript-hover.png',
         name: 'TypeScript'
       },
     }
