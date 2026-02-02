@@ -41,10 +41,10 @@ export class TranslateContentService {
         growthMindset:'Growth mindset',
         hoverWindowFirstContent: 'I have a special',
         hoverWindowSecondContent: 'interest in learning',
-        itSecurity: 'Backend',
-        cloudAutomation: 'DevSecOps',
+        learningOne: 'DevSecOps',
 
         currentlyLearning: 'Currently learning',
+        interestInLearning: 'Interest in learning',
 
         portfolio: 'Portfolio',
         featuredProjects: 'Featured Projects',
@@ -141,10 +141,10 @@ export class TranslateContentService {
         growthMindset:'Wachstums- mentalität',
         hoverWindowFirstContent: 'Ich bin daran interessiert,',
         hoverWindowSecondContent: 'das Folgende noch zu lernen.',
-        itSecurity: 'Backend',
-        cloudAutomation: 'DevSecOps',
+        learningOne: 'DevSecOps',
 
         currentlyLearning: 'Derzeit am Lernen',
+        interestInLearning: 'Interesse am Lernen',
 
         portfolio: 'Portfolio',
         featuredProjects: 'Top-Projekte',
