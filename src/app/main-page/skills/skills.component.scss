@@ -81,6 +81,7 @@ section{
                 >div{
                     display: flex;
                     flex-wrap: wrap;
+                    justify-content: center;
                     gap: clamp(16px, 5vw, 72px);
                     &:nth-of-type(1){
                         gap: 12px clamp(16px, 2.361vw, 48px);
