@@ -13,7 +13,8 @@ export class OverlayComponent {
   @Input() isOpen!: boolean;
   @Output() isOpenChange = new EventEmitter<boolean>();
   
-  @Input() selectedProject!: "projectOne" | "projectTwo" | "projectThree";
+  // @Input() selectedProject!: "projectOne" | "projectTwo" | "projectThree";
+  @Input() selectedProject!: "projectOne" | "projectTwo";
   
   translateContent = inject(TranslateContentService);
 
@@ -30,8 +31,7 @@ export class OverlayComponent {
   nextProject(){
     const nextValue = {
       projectOne: 'projectTwo',
-      projectTwo: 'projectThree',
-      projectThree: 'projectOne'
+      projectTwo: 'projectOne',
     } as const;
 
     this.selectedProject = nextValue[this.selectedProject] ?? this.selectedProject;

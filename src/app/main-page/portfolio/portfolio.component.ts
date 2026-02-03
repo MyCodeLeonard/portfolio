@@ -14,9 +14,9 @@ export class PortfolioComponent {
   translateContent = inject(TranslateContentService)
 
   isOpenOverlay:boolean = false;
-  selectedProject!: "projectOne" | "projectTwo" | "projectThree";
+  selectedProject!: "projectOne" | "projectTwo";
 
-  openOverlay(selectedProject: "projectOne" | "projectTwo" | "projectThree"){
+  openOverlay(selectedProject: "projectOne" | "projectTwo"){
     this.isOpenOverlay = true;
     this.selectedProject = selectedProject
     document.body.style.overflow = 'hidden';
