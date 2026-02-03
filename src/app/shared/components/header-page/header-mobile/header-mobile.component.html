@@ -1,12 +1,12 @@
 <section class="mobile-section">
-    <a (click)="closeTab()" href=""></a>
+    <a routerLink="" (click)="shared.setSectionHandover(0)"></a>
     <app-hamburger-button-v1 (click)="overlayOpen()" [(active)]="activeOverlay"></app-hamburger-button-v1>
 </section>
 <div class="mobile-overlay" *ngIf="activeOverlay" (click)="overlayClose()">
     <div (click)="stopClickBubbling($event)">
-        <a href="#aboutMe" [class.active]="activeLink == 1" (click)="overlayClose(); setActive(1);">{{translateContent[translateContent.language].aboutMeLink}}</a>
-        <a href="#skills" [class.active]="activeLink == 2" (click)="overlayClose(); setActive(2);">{{translateContent[translateContent.language].skillsLink}}</a>
-        <a href="#portfolio" [class.active]="activeLink == 3" (click)="overlayClose(); setActive(3);">{{translateContent[translateContent.language].projectsLink}}</a>
+        <a href="#aboutMe" [class.active]="activeLink == 1" (click)="overlayClose(); activeLink = 1; shared.setSectionHandover(1);">{{translateContent[translateContent.language].aboutMeLink}}</a>
+        <a href="#skills" [class.active]="activeLink == 2" (click)="overlayClose(); activeLink = 2; shared.setSectionHandover(2);">{{translateContent[translateContent.language].skillsLink}}</a>
+        <a href="#portfolio" [class.active]="activeLink == 3" (click)="overlayClose(); activeLink = 3; shared.setSectionHandover(3);">{{translateContent[translateContent.language].projectsLink}}</a>
         
         <div>
             <div [class.selected]="translateContent.select == 'EN'" (click)="translateContent.setSelect('EN')" >EN</div>
