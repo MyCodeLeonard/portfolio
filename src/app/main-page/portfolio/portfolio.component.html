@@ -20,14 +20,6 @@
             </div>
         </div>
         <hr>
-        <div (click)="openOverlay('projectThree')">
-            <h3>DA Bubble</h3>
-            <div>Angular <span>|</span> TypeScript <span>|</span> Firebase</div>
-            <div [ngStyle]="{top: '-64' + 'px'}">
-                <img src="assets/img/placeholder.png" alt="">
-            </div>
-        </div>
-        <hr>
     </div>
 </section>
 <app-overlay [(isOpen)]="isOpenOverlay" [selectedProject]="selectedProject"></app-overlay>
