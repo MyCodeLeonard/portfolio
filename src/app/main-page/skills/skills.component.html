@@ -1,7 +1,7 @@
 <section id="skills">
     <span>{{translateContent[translateContent.language].technologies}}</span>
     <div>
-        <div>
+        <div data-aos="fade-right">
             <h1>{{translateContent[translateContent.language].skillSet}}</h1>
             <span>{{translateContent[translateContent.language].skillSetMeFirstContent}}</span>
             <h2>{{translateContent[translateContent.language].skillSetMeSecondOneContent}} <span>{{translateContent[translateContent.language].skillSetMeSecondTwoContent}}</span></h2>
@@ -9,7 +9,7 @@
             <app-link-button [ngStyle]="{'width': translateContent.select == 'DE' ? '164px' : ''}" [content] = translateContent[translateContent.language].buttonLetsTalk [contentId]="'contact'"></app-link-button>
         </div>
 
-        <div>
+        <div data-aos="fade-left">
             <div>
                 <span (click)="selectedFrontend();" [ngStyle]="{'color': isActiveFrontend ? '#ffffff' : '#ffffff1c'}">Frontend <app-hamburger-button-v2 [isActive]="isActiveFrontend"></app-hamburger-button-v2></span>
             </div>

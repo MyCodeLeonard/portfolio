@@ -1,11 +1,11 @@
 <section id="aboutMe">
-    <div class="profile-div" [class.moved]="hovered" (mouseenter)="hovered = true">
+    <div data-aos="fade-right" class="profile-div" [class.moved]="hovered" (mouseenter)="hovered = true">
         <figure>
             <app-canvas-animation></app-canvas-animation>
         </figure>
         <div></div>
     </div>
-    <div class="about-me-div">
+    <div data-aos="fade-left" class="about-me-div">
         <div>
             <span>{{translateContent[translateContent.language].whoIAm}}</span>
             <div>

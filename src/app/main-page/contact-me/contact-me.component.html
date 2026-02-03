@@ -1,5 +1,5 @@
 <section id="contact">
-    <div>
+    <div data-aos="fade-right">
         <h2>{{translateContent[translateContent.language].contactMe}}</h2>
         <h1>{{translateContent[translateContent.language].letsWorkTogether}}</h1>
         <h3>{{translateContent[translateContent.language].gotAProblemToSolve}}</h3>
@@ -9,7 +9,7 @@
             <span>{{translateContent[translateContent.language].contactMeSecondTwoContent}}</span>
         </p>
     </div>
-    <div>
+    <div data-aos="fade-left">
         <hr #hr1>
         <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="highlightReset(hr1, hr2)">
             <h4>{{translateContent[translateContent.language].whatsYourName}}</h4>
