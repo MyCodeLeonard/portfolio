@@ -34,7 +34,7 @@
                 <input (change)="changeEventPrivacyPolicy()" [(ngModel)]="privacyPolicy" type="checkbox" id="privacy-policy">
                 <label for="privacy-policy"></label>
                 <div></div>
-                <span>{{translateContent[translateContent.language].privacyPolicyPartOne}} <a (click)="openPrivacyPolicy()">{{translateContent[translateContent.language].privacyPolicyPartTwo}}</a> {{translateContent[translateContent.language].privacyPolicyPartThree}}</span>
+                <span>{{translateContent[translateContent.language].privacyPolicyPartOne}} <a routerLink="privacy-policy">{{translateContent[translateContent.language].privacyPolicyPartTwo}}</a> {{translateContent[translateContent.language].privacyPolicyPartThree}}</span>
             </div>
             <span [ngStyle]="{'visibility': isCheckPrivacyPolicy == 0 ? 'visible' : ''}">{{privacyPolicyError}}</span>
         </div>

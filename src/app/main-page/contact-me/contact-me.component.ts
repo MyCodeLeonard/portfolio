@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { ClickButtonComponent } from '../../shared/components/click-button/click-button.component';
 import { TranslateContentService } from '../../shared/translate-content.service';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [ClickButtonComponent, CommonModule, FormsModule],
+  imports: [ClickButtonComponent, CommonModule, FormsModule, RouterLink],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
@@ -196,13 +197,6 @@ export class ContactMeComponent {
   checkPrivacyPolicy(){
     if(this.privacyPolicy) return this.isCheckPrivacyPolicy = 1
     else return this.isCheckPrivacyPolicy = 0
-  }
-
-  openPrivacyPolicy() {
-    console.log(this.privacyPolicyTab);
-    
-    if (!this.privacyPolicyTab || this.privacyPolicyTab.closed) this.privacyPolicyTab = window.open('privacy-policy', '_blank');
-    else this.privacyPolicyTab.focus();
   }
 
   blurEventName(){
