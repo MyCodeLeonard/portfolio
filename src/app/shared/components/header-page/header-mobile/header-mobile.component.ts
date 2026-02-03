@@ -21,9 +21,6 @@ export class HeaderMobileComponent implements OnDestroy{
     
   constructor(protected shared: SharedService) {
     effect(() => {
-      // this.shared.getFooterTrigger() 
-      // this.activeLink = 0
-
       if(this.shared.sectionHandover() == 0) this.activeLink = 0
       if(this.shared.sectionHandover() == 1) this.activeLink = 1
       if(this.shared.sectionHandover() == 2) this.activeLink = 2
