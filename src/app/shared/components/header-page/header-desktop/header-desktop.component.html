@@ -1,14 +1,16 @@
-<section class="desktop-section">
-    <div>
+<div class="over-section">
+    <section class="desktop-section">
         <div>
-            <div [class.selected]="translateContent.select == 'EN'" (click)="translateContent.setSelect('EN')" >EN</div>
-            <div [class.selected]="translateContent.select == 'DE'" (click)="translateContent.setSelect('DE')" >DE</div>
+            <div>
+                <div [class.selected]="translateContent.select == 'EN'" (click)="translateContent.setSelect('EN')" >EN</div>
+                <div [class.selected]="translateContent.select == 'DE'" (click)="translateContent.setSelect('DE')" >DE</div>
+            </div>
+            
+            <a routerLink="" fragment="aboutMe" [class.active]="activeLink == 1" (click)="activeLink = 1; shared.setSectionHandover(1);">{{translateContent[translateContent.language].aboutMeLink}}</a>
+            <a routerLink="" fragment="skills" [class.active]="activeLink == 2" (click)="activeLink = 2; shared.setSectionHandover(2);">{{translateContent[translateContent.language].skillsLink}}</a>
+            <a routerLink="" fragment="portfolio" [class.active]="activeLink == 3" (click)="activeLink = 3; shared.setSectionHandover(3);">{{translateContent[translateContent.language].projectsLink}}</a>
         </div>
-        
-        <a routerLink="" fragment="aboutMe" [class.active]="activeLink == 1" (click)="activeLink = 1; shared.setSectionHandover(1);">{{translateContent[translateContent.language].aboutMeLink}}</a>
-        <a routerLink="" fragment="skills" [class.active]="activeLink == 2" (click)="activeLink = 2; shared.setSectionHandover(2);">{{translateContent[translateContent.language].skillsLink}}</a>
-        <a routerLink="" fragment="portfolio" [class.active]="activeLink == 3" (click)="activeLink = 3; shared.setSectionHandover(3);">{{translateContent[translateContent.language].projectsLink}}</a>
-    </div>
-
-    <a routerLink="" (click)="shared.setSectionHandover(0)"></a>
-</section>
+    
+        <a routerLink="" (click)="shared.setSectionHandover(0)"></a>
+    </section>
+</div>

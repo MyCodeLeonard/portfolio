@@ -1,34 +1,36 @@
-<section data-aos="zoom-in">
-    <h1>{{translateContent[translateContent.language].whatMyColleaguesSayAboutMe}}</h1>
-    <div>
-        <div (click)="previousReferences()">
-            <span>{{translateContent[translateContent.language][boxLeft].colleagueReference}}</span>
-            <div>
-                <hr>
-                <span>{{translateContent[translateContent.language][boxLeft].colleagueName}}</span>
+<div class="over-section">
+    <section data-aos="zoom-in">
+        <h1>{{translateContent[translateContent.language].whatMyColleaguesSayAboutMe}}</h1>
+        <div>
+            <div (click)="previousReferences()">
+                <span>{{translateContent[translateContent.language][boxLeft].colleagueReference}}</span>
+                <div>
+                    <hr>
+                    <span>{{translateContent[translateContent.language][boxLeft].colleagueName}}</span>
+                </div>
             </div>
+            <div>
+                <span>{{translateContent[translateContent.language][boxMiddle].colleagueReference}}</span>
+                <div>
+                    <hr>
+                    <span>{{translateContent[translateContent.language][boxMiddle].colleagueName}}</span>
+                </div>
+            </div>
+            <div (click)="nextReferences()">
+                <span>{{translateContent[translateContent.language][boxRight].colleagueReference}}</span>
+                <div>
+                    <hr>
+                    <span>{{translateContent[translateContent.language][boxRight].colleagueName}}</span>
+                </div>
+            </div>
+            <aside></aside>
         </div>
         <div>
-            <span>{{translateContent[translateContent.language][boxMiddle].colleagueReference}}</span>
-            <div>
-                <hr>
-                <span>{{translateContent[translateContent.language][boxMiddle].colleagueName}}</span>
-            </div>
+            <Button (click)="previousReferences()"></Button>
+            <span [ngClass]="{ 'active': currentReference == 1 }">•</span>
+            <span [ngClass]="{ 'active': currentReference == 2 }">•</span>
+            <span [ngClass]="{ 'active': currentReference == 3 }">•</span>
+            <Button (click)="nextReferences()"></Button>
         </div>
-        <div (click)="nextReferences()">
-            <span>{{translateContent[translateContent.language][boxRight].colleagueReference}}</span>
-            <div>
-                <hr>
-                <span>{{translateContent[translateContent.language][boxRight].colleagueName}}</span>
-            </div>
-        </div>
-        <aside></aside>
-    </div>
-    <div>
-        <Button (click)="previousReferences()"></Button>
-        <span [ngClass]="{ 'active': currentReference == 1 }">•</span>
-        <span [ngClass]="{ 'active': currentReference == 2 }">•</span>
-        <span [ngClass]="{ 'active': currentReference == 3 }">•</span>
-        <Button (click)="nextReferences()"></Button>
-    </div>
-</section>
+    </section>
+</div>

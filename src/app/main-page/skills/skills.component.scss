@@ -1,11 +1,22 @@
+.over-section{
+    background-image: url('./../../../assets/img/skills-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+section{
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    box-sizing: border-box
+}
+
 section{
     padding: clamp(100px, 8.889vw, 128px) clamp(16px, 7.222vw, 104px);
     gap: clamp(15px, 1.389vw, 20px);
     display: flex;
     flex-direction: column;
-    background-image: url('./../../../assets/img/skills-background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 
     >span{
         font-family: 'karla', sans-serif;

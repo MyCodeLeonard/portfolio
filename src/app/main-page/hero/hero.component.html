@@ -1,21 +1,23 @@
-<section>
-    <h2>{{translateContent[translateContent.language].frontendDeveloper}}</h2>
-    <h1>Leonard Fritzmann</h1>
-    <div class="section-links">
-        <app-link-button [content] = translateContent[translateContent.language].checkMyWorkLink [contentId]="'portfolio'"></app-link-button>
-        <app-link-button [content] = translateContent[translateContent.language].contactMeLink [contentId]="'contact'"></app-link-button>
-    </div>
-
-    <div class="left-object">
-        <span><img src="assets/img/arrow-down.png" alt=""></span>
-        <div></div>
-    </div>
-    <div class="right-object">
-        <a class="mail-link-desktop" href="mailto:contact@leonard-fritzmann.com" *ngIf="!isMobile">contact&#64;leonard-fritzmann.com</a>
-        <a class="mail-link-mobile" href="mailto:contact@leonard-fritzmann.com" *ngIf="isMobile"></a>
-        <a target="_blank" href="https://github.com/mycodeleonard"></a>
-        <a target="_blank" href="https://de.linkedin.com/in/leonard-fritzmann-302269352"></a>
-        <div></div>
-    </div>
-    <app-marquee></app-marquee>
-</section>
+<div class="over-section">
+    <section>
+        <h2>{{translateContent[translateContent.language].frontendDeveloper}}</h2>
+        <h1>Leonard Fritzmann</h1>
+        <div class="section-links">
+            <app-link-button [content] = translateContent[translateContent.language].checkMyWorkLink [contentId]="'portfolio'"></app-link-button>
+            <app-link-button [content] = translateContent[translateContent.language].contactMeLink [contentId]="'contact'"></app-link-button>
+        </div>
+    
+        <div class="left-object">
+            <span><img src="assets/img/arrow-down.png" alt=""></span>
+            <div></div>
+        </div>
+        <div class="right-object">
+            <a class="mail-link-desktop" href="mailto:contact@leonard-fritzmann.com" *ngIf="!isMobile">contact&#64;leonard-fritzmann.com</a>
+            <a class="mail-link-mobile" href="mailto:contact@leonard-fritzmann.com" *ngIf="isMobile"></a>
+            <a target="_blank" href="https://github.com/mycodeleonard"></a>
+            <a target="_blank" href="https://de.linkedin.com/in/leonard-fritzmann-302269352"></a>
+            <div></div>
+        </div>
+        <app-marquee></app-marquee>
+    </section>
+</div>

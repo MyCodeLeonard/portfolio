@@ -1,25 +1,27 @@
-<section id="portfolio" data-aos="zoom-in">
-    <h2>{{translateContent[translateContent.language].portfolio}}</h2>
-    <h1>{{translateContent[translateContent.language].featuredProjects}}</h1>
-    <span>{{translateContent[translateContent.language].featuredProjectsFirstContent}}</span>
-    <div>
-        <hr>
-        <div (click)="openOverlay('projectOne')">
-            <h3>Join</h3>
-            <div>HTML <span>|</span> CSS <span>|</span> JavaScript <span>|</span> Firebase</div>
-            <div [ngStyle]="{top: '-12' + 'px'}">
-                <img src="assets/img/join-hover.png" alt="">
+<div class="over-section">
+    <section id="portfolio" data-aos="zoom-in">
+        <h2>{{translateContent[translateContent.language].portfolio}}</h2>
+        <h1>{{translateContent[translateContent.language].featuredProjects}}</h1>
+        <span>{{translateContent[translateContent.language].featuredProjectsFirstContent}}</span>
+        <div>
+            <hr>
+            <div (click)="openOverlay('projectOne')">
+                <h3>Join</h3>
+                <div>HTML <span>|</span> CSS <span>|</span> JavaScript <span>|</span> Firebase</div>
+                <div [ngStyle]="{top: '-12' + 'px'}">
+                    <img src="assets/img/join-hover.png" alt="">
+                </div>
             </div>
-        </div>
-        <hr>
-        <div (click)="openOverlay('projectTwo')">
-            <h3>El Pollo Loco</h3>
-            <div>HTML <span>|</span> CSS <span>|</span> JavaScript</div>
-            <div [ngStyle]="{top: '-32' + 'px'}">
-                <img src="assets/img/el-pollo-loco.png" alt="">
+            <hr>
+            <div (click)="openOverlay('projectTwo')">
+                <h3>El Pollo Loco</h3>
+                <div>HTML <span>|</span> CSS <span>|</span> JavaScript</div>
+                <div [ngStyle]="{top: '-32' + 'px'}">
+                    <img src="assets/img/el-pollo-loco.png" alt="">
+                </div>
             </div>
+            <hr>
         </div>
-        <hr>
-    </div>
-</section>
+    </section>
+</div>
 <app-overlay [(isOpen)]="isOpenOverlay" [selectedProject]="selectedProject"></app-overlay>

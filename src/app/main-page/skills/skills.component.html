@@ -1,31 +1,33 @@
-<section id="skills">
-    <span>{{translateContent[translateContent.language].technologies}}</span>
-    <div>
-        <div data-aos="fade-right">
-            <h1>{{translateContent[translateContent.language].skillSet}}</h1>
-            <span>{{translateContent[translateContent.language].skillSetMeFirstContent}}</span>
-            <h2>{{translateContent[translateContent.language].skillSetMeSecondOneContent}} <span>{{translateContent[translateContent.language].skillSetMeSecondTwoContent}}</span></h2>
-            <span>{{translateContent[translateContent.language].skillSetMeThirdContent}}</span>
-            <app-link-button [ngStyle]="{'width': translateContent.select == 'DE' ? '164px' : ''}" [content] = translateContent[translateContent.language].buttonLetsTalk [contentId]="'contact'"></app-link-button>
-        </div>
-
-        <div data-aos="fade-left">
-            <div>
-                <span (click)="selectedFrontend();" [ngStyle]="{'color': isActiveFrontend ? '#ffffff' : '#ffffff1c'}">Frontend <app-hamburger-button-v2 [isActive]="isActiveFrontend"></app-hamburger-button-v2></span>
+<div class="over-section">
+    <section id="skills">
+        <span>{{translateContent[translateContent.language].technologies}}</span>
+        <div>
+            <div data-aos="fade-right">
+                <h1>{{translateContent[translateContent.language].skillSet}}</h1>
+                <span>{{translateContent[translateContent.language].skillSetMeFirstContent}}</span>
+                <h2>{{translateContent[translateContent.language].skillSetMeSecondOneContent}} <span>{{translateContent[translateContent.language].skillSetMeSecondTwoContent}}</span></h2>
+                <span>{{translateContent[translateContent.language].skillSetMeThirdContent}}</span>
+                <app-link-button [ngStyle]="{'width': translateContent.select == 'DE' ? '164px' : ''}" [content] = translateContent[translateContent.language].buttonLetsTalk [contentId]="'contact'"></app-link-button>
             </div>
-            <div [ngStyle]="{'display': isActiveFrontend ? '' : 'none'}">
-                <app-skill-set-icon [skillUrl]="'assets/img/html.png'" [skilName]="'HTML'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/css.png'" [skilName]="'CSS'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/javascript.png'" [skilName]="'JavaScript'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/material-design.png'" [skilName]="'Material'" [skilName2]="'Design'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/typescript.png'" [skilName]="'TypeScript'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/angular.png'" [skilName]="'Angular'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/firebase.png'" [skilName]="'Firebase'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/git.png'" [skilName]="'Git'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/api.png'" [skilName]="'REST-API'"></app-skill-set-icon>
-                <app-skill-set-icon [skillUrl]="'assets/img/scrum.png'" [skilName]="'Scrum'"></app-skill-set-icon>
-                <app-special-icon></app-special-icon>
+    
+            <div data-aos="fade-left">
+                <div>
+                    <span (click)="selectedFrontend();" [ngStyle]="{'color': isActiveFrontend ? '#ffffff' : '#ffffff1c'}">Frontend <app-hamburger-button-v2 [isActive]="isActiveFrontend"></app-hamburger-button-v2></span>
+                </div>
+                <div [ngStyle]="{'display': isActiveFrontend ? '' : 'none'}">
+                    <app-skill-set-icon [skillUrl]="'assets/img/html.png'" [skilName]="'HTML'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/css.png'" [skilName]="'CSS'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/javascript.png'" [skilName]="'JavaScript'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/material-design.png'" [skilName]="'Material'" [skilName2]="'Design'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/typescript.png'" [skilName]="'TypeScript'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/angular.png'" [skilName]="'Angular'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/firebase.png'" [skilName]="'Firebase'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/git.png'" [skilName]="'Git'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/api.png'" [skilName]="'REST-API'"></app-skill-set-icon>
+                    <app-skill-set-icon [skillUrl]="'assets/img/scrum.png'" [skilName]="'Scrum'"></app-skill-set-icon>
+                    <app-special-icon></app-special-icon>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>

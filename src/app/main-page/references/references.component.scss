@@ -1,4 +1,11 @@
 section{
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    box-sizing: border-box
+}
+
+section{
     overflow: hidden;
     padding: clamp(100px, 8.889vw, 128px) 0;
 

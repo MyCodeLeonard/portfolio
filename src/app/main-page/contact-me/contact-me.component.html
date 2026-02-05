@@ -1,48 +1,50 @@
-<section id="contact">
-    <div data-aos="fade-right">
-        <h2>{{translateContent[translateContent.language].contactMe}}</h2>
-        <h1>{{translateContent[translateContent.language].letsWorkTogether}}</h1>
-        <h3>{{translateContent[translateContent.language].gotAProblemToSolve}}</h3>
-        <span>{{translateContent[translateContent.language].contactMeFirstContent}}</span> 
-        <p>
-            <span>{{translateContent[translateContent.language].contactMeSecondOneContent}}</span><br>
-            <span>{{translateContent[translateContent.language].contactMeSecondTwoContent}}</span>
-        </p>
-    </div>
-    <div data-aos="fade-left">
-        <hr #hr1>
-        <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="highlightReset(hr1, hr2)">
-            <h4>{{translateContent[translateContent.language].whatsYourName}}</h4>
-            <input (blur)="blurEventName()" [(ngModel)]="contactData.name" #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
-            <span class="error-box" [ngStyle]="{'visibility': isCheckName == 0 ? 'visible' : ''}">{{yourNameError}}</span>
+<div class="over-section">
+    <section id="contact">
+        <div data-aos="fade-right">
+            <h2>{{translateContent[translateContent.language].contactMe}}</h2>
+            <h1>{{translateContent[translateContent.language].letsWorkTogether}}</h1>
+            <h3>{{translateContent[translateContent.language].gotAProblemToSolve}}</h3>
+            <span>{{translateContent[translateContent.language].contactMeFirstContent}}</span> 
+            <p>
+                <span>{{translateContent[translateContent.language].contactMeSecondOneContent}}</span><br>
+                <span>{{translateContent[translateContent.language].contactMeSecondTwoContent}}</span>
+            </p>
         </div>
-        <hr #hr2>
-        <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="highlightReset(hr2, hr3)">
-            <h4>{{translateContent[translateContent.language].whatsYourEmail}}</h4>
-            <input (blur)="blurEventEmail()" [(ngModel)]="contactData.email" #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
-            <span class="error-box" [ngStyle]="{'visibility': isCheckEmail == 0 ? 'visible' : ''}">{{yourEmailError}}</span>
-        </div>
-        <hr #hr3>
-        <div (click)="setFocus(textareaMessage)" (mouseenter)="highlight(hr3, hr4)" (mouseleave)="highlightReset(hr3, hr4)">
-            <h4>{{translateContent[translateContent.language].howCanIHelpyou}}</h4>
-            <textarea [ngStyle]="{'overflow': !this.contactData.massage.trim() ? 'hidden' : ''}" class="placeholderUnder350" (blur)="blurEventMassage(textareaMessage)" (input)="changeEventMassage(textareaMessage);" [(ngModel)]="contactData.massage" #textareaMessage type="text" placeholder={{translateContent[translateContent.language].placeholderHelpyou}}></textarea>
-            <span class="error-box" [ngStyle]="{'visibility': isCheckMassage == 0 ? 'visible' : ''}">{{helpyouError}}</span>
-        </div>
-        <hr #hr4>
-        <div>
-            <div>
-                <input (change)="changeEventPrivacyPolicy()" [(ngModel)]="privacyPolicy" type="checkbox" id="privacy-policy">
-                <label for="privacy-policy"></label>
-                <div></div>
-                <span>{{translateContent[translateContent.language].privacyPolicyPartOne}} <a routerLink="privacy-policy">{{translateContent[translateContent.language].privacyPolicyPartTwo}}</a> {{translateContent[translateContent.language].privacyPolicyPartThree}}</span>
+        <div data-aos="fade-left">
+            <hr #hr1>
+            <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="highlightReset(hr1, hr2)">
+                <h4>{{translateContent[translateContent.language].whatsYourName}}</h4>
+                <input (blur)="blurEventName()" [(ngModel)]="contactData.name" #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
+                <span class="error-box" [ngStyle]="{'visibility': isCheckName == 0 ? 'visible' : ''}">{{yourNameError}}</span>
             </div>
-            <span [ngStyle]="{'visibility': isCheckPrivacyPolicy == 0 ? 'visible' : ''}">{{privacyPolicyError}}</span>
+            <hr #hr2>
+            <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="highlightReset(hr2, hr3)">
+                <h4>{{translateContent[translateContent.language].whatsYourEmail}}</h4>
+                <input (blur)="blurEventEmail()" [(ngModel)]="contactData.email" #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
+                <span class="error-box" [ngStyle]="{'visibility': isCheckEmail == 0 ? 'visible' : ''}">{{yourEmailError}}</span>
+            </div>
+            <hr #hr3>
+            <div (click)="setFocus(textareaMessage)" (mouseenter)="highlight(hr3, hr4)" (mouseleave)="highlightReset(hr3, hr4)">
+                <h4>{{translateContent[translateContent.language].howCanIHelpyou}}</h4>
+                <textarea [ngStyle]="{'overflow': !this.contactData.massage.trim() ? 'hidden' : ''}" class="placeholderUnder350" (blur)="blurEventMassage(textareaMessage)" (input)="changeEventMassage(textareaMessage);" [(ngModel)]="contactData.massage" #textareaMessage type="text" placeholder={{translateContent[translateContent.language].placeholderHelpyou}}></textarea>
+                <span class="error-box" [ngStyle]="{'visibility': isCheckMassage == 0 ? 'visible' : ''}">{{helpyouError}}</span>
+            </div>
+            <hr #hr4>
+            <div>
+                <div>
+                    <input (change)="changeEventPrivacyPolicy()" [(ngModel)]="privacyPolicy" type="checkbox" id="privacy-policy">
+                    <label for="privacy-policy"></label>
+                    <div></div>
+                    <span>{{translateContent[translateContent.language].privacyPolicyPartOne}} <a routerLink="privacy-policy">{{translateContent[translateContent.language].privacyPolicyPartTwo}}</a> {{translateContent[translateContent.language].privacyPolicyPartThree}}</span>
+                </div>
+                <span [ngStyle]="{'visibility': isCheckPrivacyPolicy == 0 ? 'visible' : ''}">{{privacyPolicyError}}</span>
+            </div>
+            <app-click-button *ngIf="!isButtonDisabled" (click)="formSend()" [ngStyle]="{'width': translateContent.select == 'DE' ? '134px' : ''}" [content] = translateContent[translateContent.language].formButton></app-click-button>
+            <button *ngIf="isButtonDisabled" (click)="disabledButtonOnClick()">{{translateContent[translateContent.language].formButton}}</button>
+    
+            <div *ngIf="senderFeedbackShow">
+                <span>{{translateContent[translateContent.language].senderFeedbackPartOne}}<br>{{translateContent[translateContent.language].senderFeedbackPartTwo}}</span>
+            </div>
         </div>
-        <app-click-button *ngIf="!isButtonDisabled" (click)="formSend()" [ngStyle]="{'width': translateContent.select == 'DE' ? '134px' : ''}" [content] = translateContent[translateContent.language].formButton></app-click-button>
-        <button *ngIf="isButtonDisabled" (click)="disabledButtonOnClick()">{{translateContent[translateContent.language].formButton}}</button>
-
-        <div *ngIf="senderFeedbackShow">
-            <span>{{translateContent[translateContent.language].senderFeedbackPartOne}}<br>{{translateContent[translateContent.language].senderFeedbackPartTwo}}</span>
-        </div>
-    </div>
-</section>
+    </section>
+</div>

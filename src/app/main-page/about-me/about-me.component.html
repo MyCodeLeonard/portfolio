@@ -1,35 +1,37 @@
-<section id="aboutMe">
-    <div data-aos="fade-right" class="profile-div" [class.moved]="hovered" (mouseenter)="hovered = true">
-        <figure>
-            <app-canvas-animation></app-canvas-animation>
-        </figure>
-        <div></div>
-    </div>
-    <div data-aos="fade-left" class="about-me-div">
-        <div>
-            <span>{{translateContent[translateContent.language].whoIAm}}</span>
+<div class="over-section">
+    <section id="aboutMe">
+        <div data-aos="fade-right" class="profile-div" [class.moved]="hovered" (mouseenter)="hovered = true">
+            <figure>
+                <app-canvas-animation></app-canvas-animation>
+            </figure>
+            <div></div>
+        </div>
+        <div data-aos="fade-left" class="about-me-div">
             <div>
-                <h1>{{translateContent[translateContent.language].aboutMe}}</h1>
+                <span>{{translateContent[translateContent.language].whoIAm}}</span>
                 <div>
-                    <span>{{translateContent[translateContent.language].aboutMeFirstContent}}</span>
+                    <h1>{{translateContent[translateContent.language].aboutMe}}</h1>
                     <div>
+                        <span>{{translateContent[translateContent.language].aboutMeFirstContent}}</span>
                         <div>
-                            <img src="assets/img/location_on.png" alt="icon">
-                            <span>{{translateContent[translateContent.language].aboutMeSecondContent}}</span>
-                        </div>
-        
-                        <div>
-                            <img src="assets/img/cognition.png" alt="icon">
-                            <span>{{translateContent[translateContent.language].aboutMeThirdContent}}</span>
-                        </div>
-        
-                        <div>
-                            <img src="assets/img/new_releases.png" alt="icon">
-                            <span>{{translateContent[translateContent.language].aboutMeFourthContent}}</span>
+                            <div>
+                                <img src="assets/img/location_on.png" alt="icon">
+                                <span>{{translateContent[translateContent.language].aboutMeSecondContent}}</span>
+                            </div>
+            
+                            <div>
+                                <img src="assets/img/cognition.png" alt="icon">
+                                <span>{{translateContent[translateContent.language].aboutMeThirdContent}}</span>
+                            </div>
+            
+                            <div>
+                                <img src="assets/img/new_releases.png" alt="icon">
+                                <span>{{translateContent[translateContent.language].aboutMeFourthContent}}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
