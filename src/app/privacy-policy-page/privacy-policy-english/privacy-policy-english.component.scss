@@ -38,6 +38,13 @@ a{
 }
 
 section{
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    justify-self: center;
+}
+
+section{
     padding: 128px 237px 0;
     display: flex;
     flex-direction: column;

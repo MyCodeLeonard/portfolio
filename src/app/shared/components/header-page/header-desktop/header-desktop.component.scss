@@ -1,8 +1,8 @@
 .over-section{
     position: absolute;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.04);
     background: linear-gradient(to bottom, #1C1C1C 0%, rgb(28 28 28 / 4%) 100%);
+    z-index: 1;
 }
 
 .desktop-section{
