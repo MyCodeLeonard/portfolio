@@ -18,7 +18,7 @@ export class ContactMeComponent {
   http = inject(HttpClient);
 
   post = {
-    endPoint: 'https://leonard-fritzmann.com/sendMail.php',
+    endPoint: 'https://leonard-fritzmann.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -109,24 +109,24 @@ export class ContactMeComponent {
     if(this.isCheckName == 1 && this.isCheckEmail == 1 && this.isCheckMassage == 1 && this.isCheckPrivacyPolicy == 1){
       this.senderFeedbackShow = true;
 
-      // this.phpSendMailTrigger(); //auf dem eigenen Server entkommentieren
+      this.phpSendMailTrigger(); //auf dem eigenen Server entkommentieren
 
-      this.toTest(); //auf dem eigenen server entfernen 
+      // this.toTest(); //auf dem eigenen server entfernen 
     } 
   }
 
-  toTest(){ //auf dem eigenen server entfernen
-    console.log(this.contactData); //auf dem eigenen server entfernen
+  // toTest(){ //auf dem eigenen server entfernen
+  //   console.log(this.contactData); //auf dem eigenen server entfernen
     
-    setTimeout(() => { //auf dem eigenen server entfernen
-      this.resetInputFelds(); //auf dem eigenen server entfernen
-      this.resetIsCheck(); //auf dem eigenen server entfernen
-    }, 1000); //auf dem eigenen server entfernen
+  //   setTimeout(() => { //auf dem eigenen server entfernen
+  //     this.resetInputFelds(); //auf dem eigenen server entfernen
+  //     this.resetIsCheck(); //auf dem eigenen server entfernen
+  //   }, 1000); //auf dem eigenen server entfernen
 
-    setTimeout(() => { //auf dem eigenen server entfernen
-        this.senderFeedbackShow = false; //auf dem eigenen server entfernen
-    }, 2000); //auf dem eigenen server entfernen
-  } //auf dem eigenen server entfernen
+  //   setTimeout(() => { //auf dem eigenen server entfernen
+  //       this.senderFeedbackShow = false; //auf dem eigenen server entfernen
+  //   }, 2000); //auf dem eigenen server entfernen
+  // } //auf dem eigenen server entfernen
 
   phpSendMailTrigger(){
     this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
