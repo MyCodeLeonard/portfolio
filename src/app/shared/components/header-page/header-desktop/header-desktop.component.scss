@@ -5,17 +5,14 @@
     z-index: 1;
 }
 
-.desktop-section{
-    max-width: 1440px;
-    justify-self: center;
-}
-
 .desktop-section {
     display: none;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     padding-top: 25px;
+    max-width: 1440px;
+    justify-self: center;
     
     > div{
         padding-left: 96px;

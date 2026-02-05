@@ -1,15 +1,12 @@
-section{
-    max-width: 1440px;
-    width: 100%;
-    justify-self: center;
-    box-sizing: border-box
-}
-
 .desktop-section{
     display: none;
     justify-content: space-between;
     align-items: center;
     padding: 128px 104px 64px;
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    box-sizing: border-box;
 
     >div > .logo-name-a{
         background-image: url('./../../../../../assets/img/logo_name.png');

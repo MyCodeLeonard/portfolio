@@ -5,11 +5,6 @@
     background-position: center;
 }
 
-section{
-    max-width: 1440px;
-    justify-self: center;
-}
-
 section {
     height: 100vh;
     width: 100%;
@@ -19,6 +14,8 @@ section {
     align-items: center;
     position: relative;
     overflow: hidden;
+    max-width: 1440px;
+    justify-self: center;
 
     > h2{
         font-size: clamp(24px, 2.778vw, 40px);
