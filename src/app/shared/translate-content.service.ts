@@ -220,8 +220,7 @@ export class TranslateContentService {
       },
       projectImg:'assets/img/join-overlay.png',
       githubUrl: 'https://github.com/MyCodeLeonard/portfolio.join',
-      // pageUrl: 'https://join.leonard-fritzmann.com' //Seiten-URL ändert sich möglicherweise noch
-      pageUrl: '/join/index.html' //auf dem eigenen server entfernen 
+      pageUrl: 'https://join.leonard-fritzmann.com'
     },
     projectTwo:{
       projectNumber:'02',
@@ -233,7 +232,7 @@ export class TranslateContentService {
       },
       projectImg:'assets/img/overlay-el-pollo-loco.png',
       githubUrl: 'https://github.com/MyCodeLeonard/portfolio.el_pollo_loco',
-      pageUrl: 'https://el-pollo-loco.leonard-fritzmann.com' //Seiten-URL ändert sich möglicherweise noch
+      pageUrl: 'https://el-pollo-loco.leonard-fritzmann.com'
     },
     projectThree:{
       projectNumber:'03',
@@ -246,7 +245,7 @@ export class TranslateContentService {
       },
       projectImg:'assets/img/placeholder.png',
       githubUrl: 'https://github.com/MyCodeLeonard/portfolio.da_bubble',
-      pageUrl: 'https://da-bubble.leonard-fritzmann.com' //Seiten-URL ändert sich möglicherweise noch
+      pageUrl: 'https://da-bubble.leonard-fritzmann.com'
     },
   
     html:{
