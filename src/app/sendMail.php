@@ -6,28 +6,28 @@ switch ($_SERVER['REQUEST_METHOD']) {
         header("Access-Control-Allow-Methods: POST");
         header("Access-Control-Allow-Headers: content-type");
         exit;
-        case("POST"):
-            header("Access-Control-Allow-Origin: *");
-            $json = file_get_contents('php://input');
-            $params = json_decode($json);
-    
-            $name = $params->name;
-            $email = $params->email;
-            $message = $params->message;
-    
-            $recipient = 'contact@leonard-fritzmann.de';
-            $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
-    
-            $headers   = array();
-            $headers[] = 'MIME-Version: 1.0';
-            $headers[] = 'Content-type: text/html; charset=utf-8';
+    case("POST"):
+        header("Access-Control-Allow-Origin: *");
+        $json = file_get_contents('php://input');
+        $params = json_decode($json);
 
-            $headers[] = "From: noreply@leonard-fritzmann.de";
+        $name = trim($params->name);
+        $email = trim($params->email);
+        $message = trim($params->massage);
 
-            mail($recipient, $subject, $message, implode("\r\n", $headers));
-            break;
-            default:
-            header("Allow: POST", true, 405);
-            exit;
+        $recipient = 'contact@leonard-fritzmann.de';
+        $subject = "Contact From <$email>";
+        $mailMessage = "From: " . $name . "<br>" . nl2br(htmlspecialchars($message)) ;
+
+        $headers   = array();
+        $headers[] = 'MIME-Version: 1.0';
+        $headers[] = 'Content-type: text/html; charset=utf-8';
+
+        $headers[] = "From: $email";
+
+        mail($recipient, $subject, $mailMessage, implode("\r\n", $headers));
+        break;
+    default:
+        header("Allow: POST", true, 405);
+        exit;
 } 

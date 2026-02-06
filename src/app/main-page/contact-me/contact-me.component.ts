@@ -5,6 +5,7 @@ import { ClickButtonComponent } from '../../shared/components/click-button/click
 import { TranslateContentService } from '../../shared/translate-content.service';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from "@angular/router";
+import { AUTO_STYLE } from '@angular/animations';
 
 @Component({
   selector: 'app-contact-me',
@@ -67,7 +68,8 @@ export class ContactMeComponent {
   }
 
   adjustHeight(textarea: any) {
-    textarea.style.height = (textarea.scrollHeight -1) + 'px';
+    if(textarea.value.trim() != '') textarea.style.height = (textarea.scrollHeight -1) + 'px';
+    else textarea.value = '';
   }
 
   highlight(prevHr: HTMLElement, nextHr: HTMLElement) {
@@ -109,38 +111,23 @@ export class ContactMeComponent {
     if(this.isCheckName == 1 && this.isCheckEmail == 1 && this.isCheckMassage == 1 && this.isCheckPrivacyPolicy == 1){
       this.senderFeedbackShow = true;
 
-      this.phpSendMailTrigger(); //auf dem eigenen Server entkommentieren
-
-      // this.toTest(); //auf dem eigenen server entfernen 
+      this.phpSendMailTrigger();
     } 
   }
-
-  // toTest(){ //auf dem eigenen server entfernen
-  //   console.log(this.contactData); //auf dem eigenen server entfernen
-    
-  //   setTimeout(() => { //auf dem eigenen server entfernen
-  //     this.resetInputFelds(); //auf dem eigenen server entfernen
-  //     this.resetIsCheck(); //auf dem eigenen server entfernen
-  //   }, 1000); //auf dem eigenen server entfernen
-
-  //   setTimeout(() => { //auf dem eigenen server entfernen
-  //       this.senderFeedbackShow = false; //auf dem eigenen server entfernen
-  //   }, 2000); //auf dem eigenen server entfernen
-  // } //auf dem eigenen server entfernen
 
   phpSendMailTrigger(){
     this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
       next: (response) => {
         this.resetInputFelds();
         this.resetIsCheck();
+        this.senderFeedbackShow = true;
+        setTimeout(() => this.senderFeedbackShow = false, 2000);
       },
       error: (error) => {
         console.error(error);
-        this.senderFeedbackShow = false;
       },
       complete: () => {
         console.info('send post complete');
-        this.senderFeedbackShow = false;
       },
     });
   }
