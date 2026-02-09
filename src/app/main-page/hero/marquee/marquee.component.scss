@@ -12,13 +12,15 @@ section{
     
     >div {
         display: flex;
+        
         >div{
             display: flex;
             align-items: center;
             gap: 56px;
             animation: marquee 7s linear infinite;
             color: #3DCFB6;
-            text-wrap: nowrap;
+            white-space: nowrap;
+            flex: 0 0 auto;
             will-change: transform;
     
             >span{
