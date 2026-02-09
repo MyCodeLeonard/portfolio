@@ -5,7 +5,6 @@ import { ClickButtonComponent } from '../../shared/components/click-button/click
 import { TranslateContentService } from '../../shared/translate-content.service';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from "@angular/router";
-import { AUTO_STYLE } from '@angular/animations';
 
 @Component({
   selector: 'app-contact-me',
@@ -186,14 +185,16 @@ export class ContactMeComponent {
     else return this.isCheckPrivacyPolicy = 0
   }
 
-  blurEventName(){
+  blurEventName(input:HTMLInputElement){
     this.checkName(); 
     this.buttonDisabled();
+    input.value = input.value.trim();
   }
 
-  blurEventEmail(){
+  blurEventEmail(input:HTMLInputElement){
     this.checkEmail(); 
     this.buttonDisabled();
+    input.value = input.value.trim();
   }
 
   blurEventMassage(textarea:HTMLTextAreaElement){
@@ -201,6 +202,7 @@ export class ContactMeComponent {
     this.buttonDisabled(); 
     this.adjustHeight(textarea);
     this.changePlaceholder(textarea);
+    textarea.value = textarea.value.trim();
   }
 
   changeEventMassage(textarea:HTMLTextAreaElement){

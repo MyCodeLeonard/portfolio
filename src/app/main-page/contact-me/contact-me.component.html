@@ -14,13 +14,13 @@
             <hr #hr1>
             <div (click)="setFocus(inputName)" (mouseenter)="highlight(hr1, hr2)" (mouseleave)="highlightReset(hr1, hr2)">
                 <h4>{{translateContent[translateContent.language].whatsYourName}}</h4>
-                <input (blur)="blurEventName()" [(ngModel)]="contactData.name" #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
+                <input (blur)="blurEventName(inputName)" [(ngModel)]="contactData.name" #inputName type="text" placeholder={{translateContent[translateContent.language].placeholderName}}>
                 <span class="error-box" [ngStyle]="{'visibility': isCheckName == 0 ? 'visible' : ''}">{{yourNameError}}</span>
             </div>
             <hr #hr2>
             <div (click)="setFocus(inputMail)" (mouseenter)="highlight(hr2, hr3)" (mouseleave)="highlightReset(hr2, hr3)">
                 <h4>{{translateContent[translateContent.language].whatsYourEmail}}</h4>
-                <input (blur)="blurEventEmail()" [(ngModel)]="contactData.email" #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
+                <input (blur)="blurEventEmail(inputMail)" [(ngModel)]="contactData.email" #inputMail type="text" placeholder={{translateContent[translateContent.language].placeholderEmail}}>
                 <span class="error-box" [ngStyle]="{'visibility': isCheckEmail == 0 ? 'visible' : ''}">{{yourEmailError}}</span>
             </div>
             <hr #hr3>
