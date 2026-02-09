@@ -201,17 +201,9 @@ section{
         
                         &:hover{
                             color: white;
-        
-                            &::after{
-                                content: "";
-                                display: flex;
-                                position: absolute;
-                                height: 0.5px;
-                                right: -2px;
-                                left: -2px;
-                                bottom: -8px;
-                                background-color: #3DCFB6;
-                            }
+                            text-decoration: underline;
+                            text-decoration-color: #3DCFB6;
+                            text-underline-offset: 4px;
                         }
                     }
                 }
