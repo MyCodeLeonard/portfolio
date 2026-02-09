@@ -47,21 +47,21 @@ section{
         display: none;
 
         &:nth-of-type(1){
-            width: 150px;
+            width: 163px;
             border-radius: 16px;
-    
             padding: 12px 24px;
             flex-direction: column;
             align-items: center;
-    
             bottom: 104px;
             z-index: 1;
+            text-align: center;
     
             >span{
                 color: #3DCFB6;
+                font-family: "firaCode", sans-serif;
     
                 &:nth-of-type(3){
-                    margin-top: 8px;
+                    margin-top: 16px;
                     color: #007d67;
                 }
     

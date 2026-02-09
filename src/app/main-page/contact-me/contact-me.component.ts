@@ -32,7 +32,7 @@ export class ContactMeComponent {
   contactData = {
     name: "",
     email: "",
-    massage: "",
+    message: "",
   };
   
   privacyPolicy!:boolean;
@@ -135,7 +135,7 @@ export class ContactMeComponent {
   resetInputFelds(){
     this.contactData.name = "";
     this.contactData.email = "";
-    this.contactData.massage = "";
+    this.contactData.message = "";
     this.privacyPolicy = false;
   }
 
@@ -167,11 +167,11 @@ export class ContactMeComponent {
   }
 
   checkMassage(){
-    if (!this.contactData.massage?.trim()) {
+    if (!this.contactData.message?.trim()) {
       this.helpyouError = this.translateContent[this.translateContent.language].helpyouFirstError;
       return this.isCheckMassage = 0;
     }
-    else if(this.contactData.massage.length < 20){
+    else if(this.contactData.message?.trim().length < 20){
       this.helpyouError = this.translateContent[this.translateContent.language].helpyouSecondError;
       return this.isCheckMassage = 0
     }

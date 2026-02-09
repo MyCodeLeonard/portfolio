@@ -13,7 +13,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         $name = trim($params->name);
         $email = trim($params->email);
-        $message = trim($params->massage);
+        $message = trim($params->message);
 
         $recipient = 'contact@leonard-fritzmann.de';
         $subject = "Contact From <$email>";
