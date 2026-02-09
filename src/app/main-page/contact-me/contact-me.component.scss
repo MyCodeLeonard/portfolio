@@ -20,6 +20,7 @@ section{
     width: 100%;
     justify-self: center;
     box-sizing: border-box;
+    overflow: hidden;
     
     >div:nth-of-type(1){
         >h2{
@@ -276,7 +277,7 @@ section{
 @media (max-width:1180px) {
     section{
         flex-direction: column;
-        gap: 64;
+        gap: 64px;
     }
 }
 

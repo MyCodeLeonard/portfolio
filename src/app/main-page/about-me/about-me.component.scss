@@ -5,7 +5,8 @@ section{
     gap: clamp(40px, 6.597vw, 95px);
     max-width: 1440px;
     justify-self: center;
-    box-sizing: border-box
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .profile-div{
