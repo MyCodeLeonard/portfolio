@@ -31,3 +31,15 @@ body{
     transform: translate(-50%, -50%);
     z-index: 1;
 }
+
+app-legal-notice-page, app-privacy-policy-page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+app-legal-notice-english, app-legal-notice-german,
+app-privacy-policy-english, app-privacy-policy-german{
+    flex: 1;
+    display: flex;
+}

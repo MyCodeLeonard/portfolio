@@ -26,13 +26,9 @@ h5{
 }
 
 a{
-    text-underline-offset: 4px;
-    text-decoration-style: dotted;
-    text-decoration-thickness: from-font;
-    text-decoration-color: white;
+    text-decoration: none;
     
     &:hover{
-        text-decoration: none;
         color: white;
     }
 }
@@ -40,6 +36,14 @@ a{
 span{
     display: none;
     font-size: 32px;
+}
+
+.over-section{
+    background-image: url('./../../../assets/img/hero-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    flex: 1;
 }
 
 section{
