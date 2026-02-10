@@ -106,6 +106,8 @@ export class TranslateContentService {
       footerOne: 'Web Developer',
       footerTwo: 'Allgaeu Germany',
       footerThree: 'Legal Notice',
+
+      licensesH1: 'Open-Source-Licenses',
   };
   
   german = {
@@ -206,6 +208,8 @@ export class TranslateContentService {
       footerOne: 'Webentwickler',
       footerTwo: 'Allgäu Deutschland',
       footerThree: 'Impressum',
+
+      licensesH1: 'Open-Source-Lizenzen',
   };
   
   languageNeutral = {

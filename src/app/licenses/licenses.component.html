@@ -1,8 +1,37 @@
 <app-header-page></app-header-page>
 <div class="over-section">
     <section>
-        <h1>Open-Source-Licenses</h1>
-        <pre class="licenses">{{ text }}</pre>
+        <h1>Open-Source-Licenses {{translateContent[translateContent.language].licensesH1}} </h1>
+
+        <div class="german-div" *ngIf="translateContent.language == 'german'">
+            <p>Die Lizenztexte sind in Englisch. Es gibt nur eine Kurze Zusammenfassung auf Deutsch</p>
+
+
+
+            <h2>Kurze Zusammenfassung</h2>
+            <p>
+              Diese Website verwendet Open-Source-Software von Drittanbietern. Die vollständigen Lizenztexte sind im Original (englisch) unter dieser Zusammenfassung.
+            </p>
+            
+            <ul>
+              <li>
+                <strong>MIT-Lizenz:</strong> Sehr frei nutzbar. Sie dürfen die Software verwenden, ändern und weiterverbreiten. Wichtig ist nur, dass der Lizenztext und der Copyright-Hinweis erhalten bleiben.
+              </li>
+              <li>
+                <strong>Apache License 2.0:</strong> Frei nutzbar, inklusive einer Patentlizenz. Wenn Sie Änderungen vornehmen und weitergeben, müssen bestimmte Hinweise und der Lizenztext beibehalten werden.
+              </li>
+              <li>
+                <strong>0BSD:</strong> Extrem frei nutzbar. Praktisch ohne Einschränkungen, solange die Lizenzbedingungen nicht entfernt werden.
+              </li>
+            </ul>
+            
+            <p>
+              Die Originaltexte in <strong>3rdpartylicenses.txt</strong> sind rechtsverbindlich. Diese Zusammenfassung dient nur zur schnellen Orientierung.
+            </p>
+        </div>
+        
+
+        <div class="licenses">{{ text }}</div>
     </section>
 </div>
 <app-footer-page></app-footer-page>

@@ -6,8 +6,24 @@
     flex: 1;
 }
 
+.german-div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-block: 24px;
+    max-width: 80ch;
+
+    font-family: "karla", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1{
+    font-family: "karla", sans-serif;
+}
+
 section{
-    padding: clamp(100px, 8.889vw, 128px) 0;
+    padding: clamp(100px, 8.889vw, 128px) 24px;
     max-width: 1440px;
     width: 100%;
     justify-self: center;
@@ -20,6 +36,7 @@ section{
 
 .licenses {
   white-space: pre-wrap;
-  font-family: monospace;
-  font-size: 14px;
+  font-size: clamp(14px, 4.37vw, 16px);
+  font-family: "karla", sans-serif;
+  font-weight: 400;
 }
