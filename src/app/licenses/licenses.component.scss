@@ -1,0 +1,25 @@
+.over-section{
+    background-image: url('./../../assets/img/hero-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    flex: 1;
+}
+
+section{
+    padding: clamp(100px, 8.889vw, 128px) 0;
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #3DCFB6;
+}
+
+.licenses {
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 14px;
+}
