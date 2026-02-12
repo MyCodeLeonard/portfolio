@@ -107,6 +107,7 @@ section{
                 font-weight: 400;
                 font-size: clamp(16px, 1.25vw, 18px);
                 color: white;
+                outline: none;
 
                 &::placeholder{
                     color: #FFFFFFCC;

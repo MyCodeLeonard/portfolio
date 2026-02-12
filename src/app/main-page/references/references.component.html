@@ -1,6 +1,6 @@
 <div class="over-section">
   <section #referensesSection class="slider" data-aos="zoom-in">
-    <h1>What my colleagues say about me</h1>
+    <h1>{{translateContent[translateContent.language].whatMyColleaguesSayAboutMe}}</h1>
     <div>
         <div #track (transitionend)="onTransitionEnd()">
             <div #box *ngFor="let item of loopItems; let i = index" [class.active]="i === index + 1" (click)="boxClick(i)">
