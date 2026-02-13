@@ -3,10 +3,8 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-
     display: flex;
     justify-content: center;
-
 }
 
 section{
@@ -88,7 +86,7 @@ section{
             &:nth-of-type(2){
                 display: flex;
                 flex-wrap: wrap;
-                gap: 24px;
+                // gap: 24px;
                 width: 228.7%;
     
                 >div{
