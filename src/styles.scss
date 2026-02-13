@@ -43,11 +43,3 @@ app-privacy-policy-english, app-privacy-policy-german{
     flex: 1;
     display: flex;
 }
-
-@media (min-width: 1440px){
-    body{
-        display: flex;
-        justify-content: center;
-        overflow-x: hidden;
-    }
-}
